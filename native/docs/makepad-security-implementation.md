@@ -6,7 +6,7 @@
 
 - 唯一写集：`native/testkit/makepad-security/**` 与本文。
 - 只读依据：`makepad-plan.md` 的安全边界、已发布 `69d94d980e14a20085a0855512e6f127e6204a68:native/docs/makepad-security-report.md`、当前 Web Markdown parser `src/utils/markdown.ts`、历史 native Iced `content.rs` / Markdown / Mermaid viewer、M0 Makepad spike 的 `security.rs` 与 `Cargo.lock`。
-- Makepad upstream 依赖边界：M0 锁定 `makepad-widgets` at `152b11f20a8cf8e81bfd0086210cb9b0269c51e9`。对 `tessera-gallery` 执行 `cargo tree --locked -p tessera-gallery` 得到的精确实现依赖链为 `makepad-network 1.0.0 -> makepad-script 1.0.0 -> makepad-html 1.0.0`，并另含 `makepad-script-std 1.0.0`、`makepad-svg 1.0.0` 和 `makepad-live-reload-core 1.0.0`。这些只能作为 pinned upstream implementation dependency allowlist 存在；用户、远程文档、插件、剪贴板、拖放、文件和网络字节不得到达这些能力。机械 hard-cut 可通过，但 M1 runtime security 仍为 `NO-GO`，直到显式 allowlist、reviewed call graph 和 runtime negative probes 全部闭环。
+- Makepad upstream 依赖边界：M0 历史记录锁定 `makepad-widgets` at `152b11f20a8cf8e81bfd0086210cb9b0269c51e9`；当前发布锁定为其直接后继 `8b5caf41e1de9b93d396bedc379e16f601509503`，只修复 Intel macOS 的 CoreMedia Boolean binding。对 `tessera-gallery` 执行 `cargo tree --locked -p tessera-gallery` 得到的精确实现依赖链为 `makepad-network 1.0.0 -> makepad-script 1.0.0 -> makepad-html 1.0.0`，并另含 `makepad-script-std 1.0.0`、`makepad-svg 1.0.0` 和 `makepad-live-reload-core 1.0.0`。这些只能作为 pinned upstream implementation dependency allowlist 存在；用户、远程文档、插件、剪贴板、拖放、文件和网络字节不得到达这些能力。机械 hard-cut 可通过，但 M1 runtime security 仍为 `NO-GO`，直到显式 allowlist、reviewed call graph 和 runtime negative probes 全部闭环。
 
 ## 合同
 

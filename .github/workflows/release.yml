@@ -101,6 +101,7 @@ jobs:
         shell: bash
         run: |
           echo "RUSTFLAGS=--remap-path-prefix=$GITHUB_WORKSPACE=/tessera --remap-path-prefix=$HOME=/builder" >> "$GITHUB_ENV"
+      - run: python -m unittest discover -s scripts -p test_package_native_release.py -v
       - run: cargo test --manifest-path native/Cargo.toml --locked --workspace
       - run: cargo build --manifest-path native/Cargo.toml --locked --release -p tessera-gallery
       - name: Package application

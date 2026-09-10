@@ -21,6 +21,13 @@ def archive_info(info):
     info.uname = info.gname = ""
     return info
 
+def write_windows_archive(bundle, output):
+    # Registry license files can retain epoch timestamps, outside ZIP's range.
+    with zipfile.ZipFile(output, "w", zipfile.ZIP_DEFLATED, strict_timestamps=False) as archive:
+        for path in sorted(bundle.rglob("*")):
+            if path.is_file():
+                archive.write(path, path.relative_to(bundle.parent))
+
 def main():
     platform = os.environ["RELEASE_PLATFORM"]
     tag = os.environ["RELEASE_TAG"]
@@ -105,10 +112,7 @@ def main():
             subprocess.run(["hdiutil", "create", "-quiet", "-format", "UDZO", "-volname", "Tessera Makepad", "-srcfolder", str(stage), str(dmg)], check=True)
             subprocess.run(["hdiutil", "verify", str(dmg)], check=True)
         elif platform == "windows-x64":
-            with zipfile.ZipFile(output / (stem + ".zip"), "w", zipfile.ZIP_DEFLATED) as archive:
-                for path in bundle.rglob("*"):
-                    if path.is_file():
-                        archive.write(path, path.relative_to(stage))
+            write_windows_archive(bundle, output / (stem + ".zip"))
         else:
             with tarfile.open(output / (stem + ".tar.gz"), "w:gz") as archive:
                 archive.add(bundle, arcname=stem, filter=archive_info)
@@ -116,4 +120,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

@@ -14,11 +14,11 @@ license = "MIT"
 publish = false
 
 [workspace.dependencies]
-makepad-widgets = { git = "https://github.com/makepad/makepad.git", rev = "152b11f20a8cf8e81bfd0086210cb9b0269c51e9" }
-makepad-zune-inflate = { git = "https://github.com/makepad/makepad.git", rev = "152b11f20a8cf8e81bfd0086210cb9b0269c51e9" }
+makepad-widgets = { git = "https://github.com/makepad/makepad.git", rev = "8b5caf41e1de9b93d396bedc379e16f601509503" }
+makepad-zune-inflate = { git = "https://github.com/makepad/makepad.git", rev = "8b5caf41e1de9b93d396bedc379e16f601509503" }
 qrcodegen = "1.8.0"
 petgraph = { version = "=0.8.3", default-features = false, features = ["std"] }
-pulldown-cmark = { git = "https://github.com/makepad/makepad.git", rev = "152b11f20a8cf8e81bfd0086210cb9b0269c51e9" }
+pulldown-cmark = { git = "https://github.com/makepad/makepad.git", rev = "8b5caf41e1de9b93d396bedc379e16f601509503" }
 mermaid-rs-renderer = { version = "=0.3.1", default-features = false }
 unicode-width = "=0.2.2"
 tessera-core = { path = "crates/tessera-core" }

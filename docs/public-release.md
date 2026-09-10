@@ -30,6 +30,14 @@ the native SDK source archive. Cargo target caches are outside the checkout and
 keyed by platform, toolchain and lockfile; Bun dependency downloads are cached.
 CI uses disposable GitHub-hosted checkouts, not local VWS session storage.
 
+Makepad is pinned to `8b5caf41e1de9b93d396bedc379e16f601509503`, the immediate
+successor of the previous pin. Its only changes correct the CoreMedia Boolean
+binding and sample-attachments call for Intel macOS. Historical M0 security
+records retain their original revision; they are not evidence for this update.
+Windows ZIP creation clamps out-of-range file timestamps to ZIP's supported
+1980-2107 range without changing source files or license contents. Packaging
+regressions run on every native release platform.
+
 The archive scanner checks unpacked application bytes and notices before
 packaging. Platform manifests contain source revision, Cargo lockfile digest,
 packaged binary digest, compiler version and signing status. They contain no
