@@ -28,6 +28,12 @@ public identity, release regressions, Rust formatting and workspace tests.
 `main` with that existing tag. It builds macOS ARM64/Intel, Linux x64 and
 Windows x64 applications and packages the Native SDK. No Web build is involved.
 
+The SDK archive contains the current `native/` workspace, embedded resources,
+licenses and SDK usage document. Historical design files, standalone testkit,
+migration ledgers and diagnostic tools are excluded from the current tree.
+Their removal does not change the blocked acceptance decision in
+`native/docs/product-acceptance.md`.
+
 Cargo targets are external and cached by platform, Rust 1.88.0 and lockfile.
 Makepad remains pinned to `8b5caf41e1de9b93d396bedc379e16f601509503`.
 ZIP timestamps are clamped to the format's supported range. Platform manifests

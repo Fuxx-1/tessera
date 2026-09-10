@@ -8,8 +8,8 @@ Exported areas:
 
 - `foundation`: theme tokens, geometry and scale math, input/focus state, and
   the typed overlay host boundary.
-- `components`: reusable primitive descriptions and the shell widget used by
-  the demo app.
+- `components`: the component catalog, concrete native widget surfaces and
+  shell used by the Gallery.
 - `security`: bounded text refusal helpers for unsafe Markdown-like input.
 - `makepad_widgets`: the pinned upstream API re-export used by the Gallery
   application host.

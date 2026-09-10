@@ -48,7 +48,7 @@ jobs:
       - name: Package native SDK
         run: |
           mkdir -p release-assets
-          git archive --format=tar.gz --prefix=tessera-native-sdk/ -o release-assets/tessera-native-sdk.tar.gz HEAD native design LICENSE docs/component-library.md
+          git archive --format=tar.gz --prefix=tessera-native-sdk/ -o release-assets/tessera-native-sdk.tar.gz HEAD native LICENSE docs/component-library.md
       - uses: actions/upload-artifact@v4
         with:
           name: native-sdk

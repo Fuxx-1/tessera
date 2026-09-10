@@ -24,15 +24,6 @@ host font is needed for these default text families. The sidebar logo is embedde
 the same way. The macOS package includes this notice and the font license in
 `Contents/Resources/Notices`.
 
-On macOS, verify the distribution boundary against a managed release binary:
-
-```sh
-python3 -B native/testkit/makepad_font_smoke.py \
-  --binary /path/to/managed/tessera-gallery --out /path/to/new/report-directory \
-  --denied-source /path/to/tessera-session --denied-source /path/to/makepad-checkout
-```
-
-This probe first confirms that the sandbox denies source reads, then captures
-Light/Dark Chinese text, symbols and the sidebar logo from outside the source
-trees. Input values and clean exit are asserted; the PNGs still require visual
-review. This resource smoke is not AX, IME or component product acceptance.
+Font acceptance requires inspection of real Light/Dark CJK text, symbols and
+the sidebar logo from the packaged application. Embedded-byte integrity tests
+do not establish glyph rendering, IME or accessibility acceptance.
