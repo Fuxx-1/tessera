@@ -68,7 +68,7 @@ class TokenGeneratorTest(unittest.TestCase):
         self.assertEqual(first, second)
         self.assertEqual(first_hash, self.source_hash)
         self.assertTrue(first[ROOT / generator.TS_TARGET].isascii())
-        self.assertTrue(first[ROOT / generator.RUST_TARGET].isascii())
+        self.assertEqual(set(first), {ROOT / generator.TS_TARGET, ROOT / generator.CSS_TARGET})
         css = first[ROOT / generator.CSS_TARGET]
         start = css.index(generator.CSS_START)
         end = css.index(generator.CSS_END) + len(generator.CSS_END)

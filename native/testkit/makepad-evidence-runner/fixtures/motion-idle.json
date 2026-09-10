@@ -1,9 +1,0 @@
-{
-  "fixture_id": "motion-idle",
-  "profile": "motion-idle",
-  "required_samples": {
-    "idle_window_seconds": 60,
-    "meaningless_redraws": 0
-  },
-  "notes": "Contract fixture only; raw frame/idle counters must be real artifacts."
-}

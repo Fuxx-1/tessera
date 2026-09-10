@@ -1,38 +1,11 @@
-# Tessera
+# Tessera Web
+Tessera Web is an independent React component library and browser Gallery,
+covering base components, business components and charts. This `codex/web`
+branch contains Web source, tests and releases.
+The default [main branch](https://github.com/Fuxx-1/tessera) contains Rust/Makepad.
 
-Tessera is a component system with a native Makepad Gallery and a React library.
-It includes 75 base components, 11 business components and 15 charts.
-
-The native application uses Makepad directly. It does not embed a browser or
-depend on Iced. The Web library is a separate React implementation; its behavior
-and acceptance results do not establish native parity.
-
-## Download
-
-Download platform applications and component libraries from
-[GitHub Releases](https://github.com/Fuxx-1/tessera/releases).
-macOS builds are DMGs for Apple Silicon and Intel; Linux and Windows builds are
-portable archives. Each release includes SHA-256 checksums and platform manifests.
-
-Current releases are previews. The native
-[acceptance contract](native/docs/product-acceptance.md) and
-[component manifest](native/testkit/makepad-component-manifest-v1.json) retain
-blocked results until the required visual, interaction, accessibility and
-performance evidence is available. Catalog registration, builds and unit tests
-are not GUI acceptance.
-
-## Component Libraries
-
-The release includes a Web npm tarball with ESM, TypeScript declarations,
-component CSS and theme tokens, and a native SDK source archive with the locked
-Rust workspace. See [library installation and use](docs/component-library.md).
-
-The libraries are distributed through GitHub Releases; this repository does not
-automatically publish to npm or crates.io.
-
-## Development
-
-Web requires Bun 1.2.21 or newer:
+## Develop
+Use Bun 1.2.21 or newer:
 
 ```sh
 bun install --frozen-lockfile
@@ -42,31 +15,29 @@ bun run build:library
 bun run scan:deps
 ```
 
-Native requires Rust 1.88.0 and platform graphics development libraries. On
-Ubuntu, `bash scripts/install-linux-deps.sh` installs the build prerequisites.
-Use an external build cache; local development sessions are managed with
-git-vws rather than ordinary Git worktrees.
+No Rust toolchain or Native SDK is needed. Local development sessions use
+git-vws. Browser acceptance runs with `bun run acceptance` and requires
+Chrome/Chromium; see `CHROME_PATH`, `ACCEPTANCE_PORT` and `ACCEPTANCE_URL`
+in the acceptance script. Build checks do not establish browser acceptance.
+
+Design tokens come from `design/tokens.toml`. With Python 3.11+:
 
 ```sh
-export CARGO_TARGET_DIR="$HOME/.cache/tessera/target"
-cargo +1.88.0 test --manifest-path native/Cargo.toml --locked --workspace
-cargo +1.88.0 run --manifest-path native/Cargo.toml --locked --release -p tessera-gallery
+python3 scripts/generate-tokens.py --check
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/test_generate_tokens.py
 ```
 
-The application entry is `native/crates/tessera-gallery/src/main.rs`. Reusable
-widgets are in `native/crates/tessera-makepad`; framework-independent state and
-catalog types are in `native/crates/tessera-core`.
+The generator only writes Web CSS and TypeScript. The design documents are
+branch-local; shared changes are ported explicitly.
 
-The Web gallery runs through Vite; browser acceptance uses
-`bun run acceptance` and requires Chrome/Chromium. See the script's
-`CHROME_PATH`, `ACCEPTANCE_PORT` and `ACCEPTANCE_URL` options.
+## Download And Release
+[GitHub Releases](https://github.com/Fuxx-1/tessera/releases) with `web-v*` tags
+contain an installable React library tarball and a static browser Gallery.
+The library includes ESM, TypeScript declarations, CSS and tokens. See
+[library installation](docs/component-library.md) and [release procedure](docs/public-release.md).
 
-## Releases
+Rust `v*` releases are separate. Historical `v0.1.0` and `v0.1.1` previews
+contain both implementations and remain available. Web releases do not build
+or claim acceptance for the Rust application.
 
-CI checks the Web build, library declarations, dependency boundary, public
-identity rules, Rust formatting and native tests. An annotated `v*` tag triggers
-multi-platform builds and publishes a preview only after all packaging jobs pass.
-See [the release procedure](docs/public-release.md).
-
-Tessera code is MIT licensed. Bundled fonts and upstream dependencies retain
-their own licenses; application packages include their notices.
+Tessera is MIT licensed. Upstream dependencies retain their own licenses.

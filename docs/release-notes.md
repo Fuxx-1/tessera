@@ -1,13 +1,12 @@
-Tessera's first public preview includes the native Makepad Gallery and reusable Web and native component libraries.
+This Web preview contains the Tessera React component library and browser Gallery.
 
-- macOS 14+ Apple Silicon and Intel: DMG with the application and bundled font notices.
-- Linux x64 (Ubuntu 22.04 or newer): application tarball. Requires a graphical session and system X11/Wayland, EGL/OpenGL and audio libraries.
-- Windows x64: application ZIP.
-- Web: install the `fuxx-1-tessera-*.tgz` package with npm, Bun or pnpm. Includes ESM, TypeScript declarations, component CSS and theme tokens.
-- Native: `tessera-native-sdk.tar.gz` includes the Rust workspace, locked Makepad dependency, resources and acceptance contracts.
-- `SHA256SUMS` covers all assets; platform manifests record the source revision, lockfile hash and binary hash.
+- `fuxx-1-tessera-*.tgz`: installable ESM library with TypeScript declarations, component CSS and theme tokens. React 19 and React DOM 19 are peer dependencies.
+- `tessera-web-gallery.tar.gz`: static browser Gallery for serving over HTTP.
+- `SHA256SUMS`: asset checksums.
 
-This is a preview, not a claim that all 101 components have passed visual, interaction, accessibility or performance acceptance. The native acceptance manifest remains blocked where sealed runtime evidence is missing. CI builds and Rust tests do not replace GUI verification.
+Web is maintained on `codex/web` and versions independently with `web-v*` tags.
+Rust applications and the Native SDK remain on `main` with `v*` releases.
 
-macOS bundles are ad-hoc signed, not Developer ID signed or notarized; Windows binaries are not Authenticode signed. The operating system may require explicit approval to open them. No automatic updater is installed.
-
+This is a preview. Build success does not establish browser visual, interaction,
+accessibility or performance acceptance. This release does not publish to npm,
+deploy a site or claim native component acceptance.

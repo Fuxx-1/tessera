@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate Tessera's CSS, TypeScript, and Iced token projections from TOML."""
+"""Generate Tessera's CSS and TypeScript token projections from TOML."""
 
 from __future__ import annotations
 
@@ -17,7 +17,6 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 CSS_TARGET = Path("src/styles.css")
 TS_TARGET = Path("src/theme/tokens.ts")
-RUST_TARGET = Path("native/crates/tessera-iced/src/tokens.rs")
 CSS_START = "/* @generated begin: tessera design tokens"
 CSS_END = "/* @generated end: tessera design tokens */"
 HEX_COLOR = re.compile(r"^#[0-9a-f]{6}(?:[0-9a-f]{2})?$")
@@ -602,143 +601,6 @@ def generate_typescript(data: Mapping[str, Any], source_hash: str) -> str:
     )
 
 
-RUST_FIELDS = (
-    ("canvas", "colors.canvas"),
-    ("sidebar", "colors.sidebar"),
-    ("surface_sunken", "colors.surface_sunken"),
-    ("surface_muted", "colors.surface_muted"),
-    ("surface", "colors.surface"),
-    ("surface_elevated", "colors.surface_elevated"),
-    ("surface_glass", "colors.surface_glass"),
-    ("surface_hover", "colors.surface_hover"),
-    ("surface_active", "colors.surface_active"),
-    ("surface_selected", "colors.surface_selected"),
-    ("overlay", "colors.overlay"),
-    ("overlay_strong", "colors.overlay_strong"),
-    ("ink", "colors.ink"),
-    ("text", "colors.text"),
-    ("text_secondary", "colors.text_secondary"),
-    ("text_tertiary", "colors.text_tertiary"),
-    ("text_quaternary", "colors.text_quaternary"),
-    ("text_disabled", "colors.text_disabled"),
-    ("text_on_accent", "colors.text_on_accent"),
-    ("border_light", "colors.border_light"),
-    ("border", "colors.border"),
-    ("border_heavy", "colors.border_heavy"),
-    ("accent", "colors.accent"),
-    ("accent_hover", "colors.accent_hover"),
-    ("accent_soft", "colors.accent_soft"),
-    ("accent_text", "colors.accent_text"),
-    ("link_text", "colors.link_text"),
-    ("focus_gap", "colors.focus_gap"),
-    ("focus_ring", "colors.focus_ring"),
-    ("tooltip_bg", "colors.tooltip_bg"),
-    ("tooltip_fg", "colors.tooltip_fg"),
-    ("tooltip_border", "colors.tooltip_border"),
-    ("primary_button_bg", "colors.button_primary_bg"),
-    ("primary_button_bg_hover", "colors.button_primary_bg_hover"),
-    ("primary_button_fg", "colors.button_primary_fg"),
-    ("secondary_button_bg", "colors.button_secondary_bg"),
-    ("secondary_button_bg_hover", "colors.button_secondary_bg_hover"),
-    ("secondary_button_fg", "colors.button_secondary_fg"),
-    ("control_active", "colors.control_active"),
-    ("inverse", "colors.button_primary_bg"),
-    ("on_inverse", "colors.button_primary_fg"),
-    ("success", "status.success.fg"),
-    ("success_border", "status.success.border"),
-    ("success_soft", "status.success.bg"),
-    ("warning", "status.warning.fg"),
-    ("warning_border", "status.warning.border"),
-    ("warning_soft", "status.warning.bg"),
-    ("danger", "status.danger.fg"),
-    ("danger_border", "status.danger.border"),
-    ("danger_soft", "status.danger.bg"),
-    ("info", "status.info.fg"),
-    ("info_border", "status.info.border"),
-    ("info_soft", "status.info.bg"),
-)
-
-
-def nested(mapping: Mapping[str, Any], path: str) -> str:
-    value: Any = mapping
-    for key in path.split("."):
-        value = value[key]
-    assert isinstance(value, str)
-    return value
-
-
-def rust_color(value: str) -> str:
-    digits = value[1:]
-    if len(digits) == 6:
-        return f"rgb(0x{digits})"
-    return f"rgba(0x{digits})"
-
-
-def generate_rust(data: Mapping[str, Any], source_hash: str) -> str:
-    fields = "\n".join(f"    pub {name}: Color," for name, _ in RUST_FIELDS)
-    variants: list[str] = []
-    for mode in ("Light", "Dark"):
-        theme = data["themes"][mode.lower()]
-        assignments = "\n".join(
-            f"            {name}: {rust_color(nested(theme, path))}," for name, path in RUST_FIELDS
-        )
-        variants.append(f"        ThemeMode::{mode} => Tokens {{\n{assignments}\n        }},")
-    header = generated_header("//", source_hash).rstrip()
-    return f"""{header}
-
-use iced::{{Color, Theme, theme::Palette}};
-use tessera_core::ThemeMode;
-
-#[derive(Debug, Clone, Copy)]
-pub struct Tokens {{
-{fields}
-}}
-
-#[must_use]
-pub fn tokens(mode: ThemeMode) -> Tokens {{
-    match mode {{
-{chr(10).join(variants)}
-    }}
-}}
-
-#[must_use]
-pub fn theme(mode: ThemeMode) -> Theme {{
-    let t = tokens(mode);
-    Theme::custom(
-        match mode {{
-            ThemeMode::Light => "Tessera Light",
-            ThemeMode::Dark => "Tessera Dark",
-        }},
-        Palette {{
-            background: t.canvas,
-            text: t.text,
-            primary: t.accent,
-            success: t.success,
-            warning: t.warning,
-            danger: t.danger,
-        }},
-    )
-}}
-
-fn rgb(value: u32) -> Color {{
-    Color::from_rgb8(
-        ((value >> 16) & 0xff) as u8,
-        ((value >> 8) & 0xff) as u8,
-        (value & 0xff) as u8,
-    )
-}}
-
-fn rgba(value: u32) -> Color {{
-    Color::from_rgba8(
-        ((value >> 24) & 0xff) as u8,
-        ((value >> 16) & 0xff) as u8,
-        ((value >> 8) & 0xff) as u8,
-        (value & 0xff) as f32 / 255.0,
-    )
-}}
-"""
-
-
 def replace_css_block(path: Path, generated: str) -> str:
     if not generated.isascii():
         raise SchemaError("generated CSS token block is not ASCII")
@@ -757,7 +619,6 @@ def generate_outputs(root: Path) -> tuple[dict[Path, str], str]:
     outputs = {
         root / CSS_TARGET: replace_css_block(root / CSS_TARGET, css),
         root / TS_TARGET: generate_typescript(data, source_hash),
-        root / RUST_TARGET: generate_rust(data, source_hash),
     }
     return outputs, source_hash
 

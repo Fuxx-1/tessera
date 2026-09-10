@@ -1,12 +1,11 @@
-name: CI
+name: Web CI
 on:
   push:
-    branches: [main]
+    branches: [codex/web]
   pull_request:
+    branches: [codex/web]
 permissions:
   contents: read
-env:
-  CARGO_INCREMENTAL: '0'
 jobs:
   web:
     runs-on: ubuntu-24.04
@@ -25,21 +24,6 @@ jobs:
       - run: bun run build
       - run: bun run build:library
       - run: bun run scan:deps
-      - run: node --test scripts/public-release-scan.test.mjs
+      - run: node --test scripts/public-release-scan.test.mjs scripts/validate-release.test.mjs
       - run: node scripts/public-release-scan.mjs --history
-  native:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4
-      - run: echo "CARGO_TARGET_DIR=$RUNNER_TEMP/tessera-target" >> "$GITHUB_ENV"
-      - run: bash scripts/install-linux-deps.sh
-      - uses: dtolnay/rust-toolchain@stable
-        with:
-          toolchain: 1.88.0
-          components: rustfmt
-      - uses: Swatinem/rust-cache@v2
-        with:
-          workspaces: native -> ${{ env.CARGO_TARGET_DIR }}
-          shared-key: linux-x64-rust188
-      - run: cargo fmt --manifest-path native/Cargo.toml --all -- --check
-      - run: cargo test --manifest-path native/Cargo.toml --locked --workspace
+      - run: PYTHONDONTWRITEBYTECODE=1 python3 scripts/test_generate_tokens.py
