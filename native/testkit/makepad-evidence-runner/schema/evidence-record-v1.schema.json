@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tessera/makepad-evidence-record/v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "state",
+    "outcome",
+    "run",
+    "source",
+    "matrix",
+    "fixture",
+    "artifacts",
+    "seal"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "tessera/makepad-evidence-record/v1"
+    },
+    "state": {
+      "const": "sealed"
+    },
+    "outcome": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED"
+      ]
+    },
+    "artifacts": {
+      "type": "array"
+    }
+  }
+}

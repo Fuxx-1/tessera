@@ -1,0 +1,326 @@
+.c-typography {
+  min-width: 0;
+  color: var(--ct-text);
+}
+
+.c-typography > * + * {
+  margin-top: 10px;
+}
+
+.c-typography--compact > * + * {
+  margin-top: 6px;
+}
+
+.c-typography-text,
+.c-typography-link,
+.c-typography-title,
+.c-typography-paragraph,
+.c-typography-code,
+.c-typography-keyboard,
+.c-typography__text,
+.c-typography__title,
+.c-typography__paragraph,
+.c-typography__code,
+.c-typography__keyboard {
+  min-width: 0;
+}
+
+.c-typography__text,
+.c-typography__link,
+.c-typography__paragraph {
+  line-height: 1.55;
+}
+
+.c-typography__text {
+  display: inline;
+}
+
+.c-typography__text--sm {
+  font-size: var(--ct-text-sm);
+}
+
+.c-typography__text--md {
+  font-size: var(--ct-text-base);
+}
+
+.c-typography__text--lg {
+  font-size: var(--ct-text-lg);
+}
+
+mark.c-typography__text {
+  padding: 0 2px;
+  border-radius: var(--ct-radius-2xs);
+  background: var(--ct-warning-bg);
+  color: var(--ct-text);
+}
+
+.c-typography__title,
+.c-typography__paragraph {
+  margin: 0;
+}
+
+.c-typography__title {
+  color: var(--ct-text);
+  font-weight: var(--ct-weight-medium);
+  line-height: 1.2;
+}
+
+.c-typography__title--1 {
+  font-size: var(--ct-text-xl);
+}
+
+.c-typography__title--2 {
+  font-size: var(--ct-text-heading-lg);
+}
+
+.c-typography__title--3 {
+  font-size: var(--ct-text-heading-md);
+}
+
+.c-typography__title--4 {
+  font-size: var(--ct-text-heading-sm);
+}
+
+.c-typography__title--5 {
+  font-size: var(--ct-text-lg);
+}
+
+.c-typography__paragraph {
+  color: var(--ct-text-secondary);
+}
+
+.c-typography__paragraph--lead {
+  color: var(--ct-text);
+  font-size: var(--ct-text-lg);
+}
+
+.c-typography__link {
+  color: var(--ct-accent);
+  text-decoration: none;
+  text-underline-offset: 2px;
+  transition: color var(--ct-motion-fast) ease;
+}
+
+.c-typography__link:hover {
+  color: var(--ct-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.c-typography__link:focus-visible {
+  outline: 2px solid var(--ct-focus-ring);
+  outline-offset: 2px;
+}
+
+.c-typography--tone-default {
+  color: var(--ct-text);
+}
+
+.c-typography--tone-secondary {
+  color: var(--ct-text-secondary);
+}
+
+.c-typography--tone-muted {
+  color: var(--ct-text-tertiary);
+}
+
+.c-typography--tone-success {
+  color: var(--ct-success);
+}
+
+.c-typography--tone-warning {
+  color: var(--ct-warning);
+}
+
+.c-typography--tone-danger {
+  color: var(--ct-danger);
+}
+
+.c-typography--weight-regular {
+  font-weight: var(--ct-weight-normal);
+}
+
+.c-typography--weight-medium {
+  font-weight: var(--ct-weight-medium);
+}
+
+.c-typography--weight-strong {
+  font-weight: var(--ct-weight-semibold);
+}
+
+.c-typography--underline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.c-typography--wrap-normal {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.c-typography--wrap-anywhere {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.c-typography--wrap-nowrap {
+  white-space: nowrap;
+}
+
+.c-typography--ellipsis {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+
+.c-typography--ellipsis-multiline {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--typography-ellipsis-lines, 2);
+  white-space: normal;
+}
+
+.c-typography__affordance {
+  display: inline-flex;
+  max-width: 100%;
+  min-width: 0;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  vertical-align: baseline;
+}
+
+.c-typography__affordance > .c-typography--ellipsis {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.c-typography__affordance--block {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.c-typography__affordance--block > .c-typography__title,
+.c-typography__affordance--block > .c-typography__paragraph {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.c-typography__copy,
+.c-typography__expand {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  min-height: 24px;
+  padding: 0 7px;
+  border: 1px solid var(--ct-border);
+  border-radius: var(--ct-radius-sm);
+  background: var(--ct-surface-muted);
+  color: var(--ct-text-secondary);
+  cursor: pointer;
+  font-size: var(--ct-text-sm);
+  line-height: 1;
+  transition:
+    background-color var(--ct-motion-fast) ease,
+    border-color var(--ct-motion-fast) ease,
+    color var(--ct-motion-fast) ease;
+}
+
+.c-typography__copy:not(:disabled):hover,
+.c-typography__expand:not(:disabled):hover {
+  border-color: var(--ct-border-heavy);
+  background: var(--ct-surface-hover);
+  color: var(--ct-text);
+}
+
+.c-typography__copy:not(:disabled):active,
+.c-typography__expand:not(:disabled):active {
+  background: var(--ct-surface-active);
+}
+
+.c-typography__copy:focus-visible,
+.c-typography__expand:focus-visible {
+  outline: 2px solid var(--ct-focus-ring);
+  outline-offset: 2px;
+}
+
+.c-typography__copy:disabled,
+.c-typography__expand:disabled {
+  border-color: var(--ct-border-light);
+  background: var(--ct-surface-muted);
+  color: var(--ct-text-disabled);
+  cursor: not-allowed;
+}
+
+.c-typography__copy[data-copy-state="copied"] {
+  color: var(--ct-success);
+}
+
+.c-typography__copy[data-copy-state="failed"] {
+  color: var(--ct-danger);
+}
+
+.c-typography__code {
+  display: inline-block;
+  max-width: 100%;
+  padding: 1px 5px;
+  border: 1px solid var(--ct-border-light);
+  border-radius: var(--ct-radius-xs);
+  background: var(--ct-surface-sunken);
+  color: var(--ct-text);
+  font-family: var(--ct-font-mono);
+  font-size: 0.93em;
+  line-height: 1.45;
+}
+
+.c-typography__keyboard {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 1px 6px;
+  border: 1px solid var(--ct-border-heavy);
+  border-bottom-width: 2px;
+  border-radius: var(--ct-radius-sm);
+  background: var(--ct-surface);
+  color: var(--ct-text);
+  font-family: var(--ct-font-mono);
+  font-size: 0.88em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.c-typography__quote {
+  margin: 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--ct-border-heavy);
+  background: var(--ct-surface-muted);
+  color: var(--ct-text-secondary);
+}
+
+.c-typography__quote footer {
+  margin-top: 7px;
+  color: var(--ct-text-tertiary);
+  font-size: var(--ct-text-sm);
+}
+
+@media (pointer: coarse) {
+  .c-typography__copy,
+  .c-typography__expand {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-typography__link,
+  .c-typography__copy,
+  .c-typography__expand {
+    transition: none;
+  }
+}

@@ -1,0 +1,195 @@
+.c-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+.c-dropdown__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  width: max-content;
+  max-width: min(280px, calc(100vw - 32px));
+  border: 1px solid var(--ct-border);
+  border-radius: var(--ct-radius-lg);
+  background: var(--ct-surface);
+  color: var(--ct-text);
+  box-shadow: var(--ct-shadow-xl);
+}
+
+.c-dropdown__menu {
+  display: grid;
+  gap: 3px;
+  min-width: 160px;
+  max-width: calc(100vw - 24px);
+  padding: 5px;
+  overflow: auto;
+  font-size: 13px;
+  line-height: 1.35;
+  outline: none;
+}
+
+.c-dropdown__item {
+  display: grid;
+  gap: 2px;
+  width: 100%;
+  min-width: 0;
+  min-height: 34px;
+  padding: 7px 9px;
+  border: 1px solid transparent;
+  border-radius: var(--ct-radius-sm);
+  background: transparent;
+  color: var(--ct-text);
+  cursor: pointer;
+  font: inherit;
+  line-height: 1.35;
+  text-align: left;
+  touch-action: manipulation;
+}
+
+.c-dropdown__item:hover:not(:disabled),
+.c-dropdown__item--active:not(:disabled) {
+  border-color: var(--ct-border);
+  background: var(--ct-bg);
+}
+
+.c-dropdown__item:active:not(:disabled) {
+  background: var(--ct-surface-sunken);
+}
+
+.c-dropdown__item:focus-visible {
+  outline: 2px solid var(--ct-focus-ring);
+  outline-offset: -2px;
+}
+
+.c-dropdown__item:focus {
+  border-color: var(--ct-focus-ring);
+  box-shadow: inset 0 0 0 1px var(--ct-focus-ring);
+}
+
+.c-dropdown__item--danger:not(:disabled) {
+  color: var(--ct-danger);
+}
+
+.c-dropdown__item--danger:hover:not(:disabled),
+.c-dropdown__item--danger.c-dropdown__item--active:not(:disabled) {
+  border-color: var(--ct-danger-border);
+  background: var(--ct-danger-bg);
+}
+
+.c-dropdown__item:disabled {
+  background: transparent;
+  color: var(--ct-text-tertiary);
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+.c-dropdown__item-label,
+.c-dropdown__item-description {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.c-dropdown__item-label {
+  font-weight: 580;
+}
+
+.c-dropdown__item-description {
+  color: var(--ct-text-secondary);
+  font-size: 12px;
+}
+
+.c-dropdown__item:disabled .c-dropdown__item-description {
+  color: var(--ct-text-tertiary);
+}
+
+.c-dropdown__separator {
+  height: 1px;
+  margin: 4px 3px;
+  background: var(--ct-border-light);
+}
+
+@media (pointer: coarse) {
+.c-dropdown__item {
+    min-height: 44px;
+    padding: 9px 10px;
+  }
+}
+
+.c-dropdown__menu {
+  border-color: var(--ct-border);
+  border-radius: var(--ct-radius-lg);
+  background: var(--ct-surface-elevated);
+  color: var(--ct-text);
+  box-shadow: var(--ct-shadow-xl);
+}
+
+.c-dropdown__item {
+  border-radius: var(--ct-radius-md);
+}
+
+.c-dropdown__item:hover:not(:disabled),
+.c-dropdown__item--active:not(:disabled) {
+  border-color: var(--ct-border-light);
+  background: var(--ct-surface-hover);
+  color: var(--ct-text);
+}
+
+.c-dropdown__menu {
+  border-color: var(--ct-border);
+  border-radius: var(--ct-radius-lg);
+  background: var(--ct-surface-elevated);
+  color: var(--ct-text);
+  box-shadow: var(--ct-shadow-floating);
+}
+
+.c-dropdown__item {
+  border-radius: var(--ct-radius-md);
+}
+
+.c-dropdown__item:hover:not(:disabled),
+.c-dropdown__item--active:not(:disabled) {
+  border-color: var(--ct-border-light);
+  background: var(--ct-surface-hover);
+  color: var(--ct-text);
+}
+
+.c-dropdown {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.c-dropdown__menu {
+  box-sizing: border-box;
+  grid-auto-rows: min-content;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+.c-dropdown__item {
+  box-sizing: border-box;
+  justify-items: stretch;
+  max-width: 100%;
+}
+
+.c-dropdown__item:focus {
+  border-color: var(--ct-focus-ring);
+  box-shadow: inset 0 0 0 1px var(--ct-focus-ring);
+}
+
+@media (max-width: 430px) {
+.c-dropdown__item {
+    min-height: 44px;
+    padding: 9px 10px;
+  }
+}
+
+.c-dropdown__item:focus,
+.c-dropdown__item:focus-visible,
+.c-dropdown__item--active:not(:disabled) {
+  border-color: var(--ct-focus-ring);
+  box-shadow: inset 0 0 0 1px var(--ct-focus-ring);
+}

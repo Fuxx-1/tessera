@@ -1,0 +1,228 @@
+@media (pointer: coarse), (max-width: 430px) {
+.c-list__item,
+.c-list--compact .c-list__item {
+    min-height: 48px;
+  }
+}
+
+.c-list {
+  --list-surface: var(--c-config-color-surface, #ffffff);
+  --list-surface-subtle: var(--c-config-color-surface-subtle, var(--ct-surface-muted));
+  --list-border: var(--c-config-color-border, var(--ct-border));
+  --list-divider: #ededeb;
+  --list-text: var(--c-config-color-text, var(--ct-text));
+  --list-text-muted: var(--c-config-color-text-muted, var(--ct-text-secondary));
+  --list-error-text: var(--ct-danger);
+  overflow: hidden;
+  background: var(--list-surface);
+  color: var(--list-text);
+}
+
+.c-config-provider[data-theme="dark"] .c-list {
+  --list-divider: #33332e;
+  --list-error-text: var(--ct-danger);
+}
+
+:root[data-theme="dark"]:not(.c-config-provider) .c-list {
+  --list-surface: #20201d;
+  --list-surface-subtle: #252521;
+  --list-border: var(--ct-text);
+  --list-divider: #33332e;
+  --list-text: var(--ct-surface-muted);
+  --list-text-muted: #b8b8ad;
+  --list-error-text: var(--ct-danger);
+}
+
+.c-config-provider[data-theme="light"] .c-list {
+  --list-surface: var(--c-config-color-surface, #ffffff);
+  --list-surface-subtle: var(--c-config-color-surface-subtle, var(--ct-surface-muted));
+  --list-border: var(--c-config-color-border, var(--ct-border));
+  --list-divider: #ededeb;
+  --list-text: var(--c-config-color-text, var(--ct-text));
+  --list-text-muted: var(--c-config-color-text-muted, var(--ct-text-secondary));
+  --list-error-text: var(--ct-danger);
+}
+
+.c-list--bordered {
+  border: 1px solid var(--list-border);
+  border-radius: var(--ct-radius-md);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.c-list__header,
+.c-list__footer {
+  padding: 11px 13px;
+  background: var(--list-surface-subtle);
+  color: var(--list-text-muted);
+  font-size: 13px;
+  font-weight: 620;
+}
+
+.c-list__header {
+  border-bottom: 1px solid var(--list-border);
+}
+
+.c-list__footer {
+  border-top: 1px solid var(--list-border);
+}
+
+.c-list__items {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c-list__item {
+  min-width: 0;
+  min-height: 52px;
+  padding: 13px;
+  border-bottom: 1px solid var(--list-divider);
+  overflow-wrap: anywhere;
+}
+
+.c-list__item:last-child {
+  border-bottom: 0;
+}
+
+.c-list__item--overflow {
+  min-height: 0;
+  background: var(--list-surface-subtle);
+  color: var(--list-text-muted);
+  font-size: 12px;
+  font-weight: 620;
+}
+
+.c-list--compact .c-list__item {
+  min-height: 44px;
+  padding: 9px 11px;
+}
+
+.c-list__state {
+  display: grid;
+  gap: 8px;
+  place-items: center;
+  min-height: 86px;
+  padding: 18px;
+  text-align: center;
+}
+
+.c-list__state--error {
+  color: var(--list-error-text, var(--ct-danger));
+  font-size: 13px;
+  font-weight: 580;
+}
+
+.c-list__deferred-error {
+  max-width: 42rem;
+  color: var(--list-error-text, var(--ct-danger));
+  font-size: 12px;
+  font-weight: 560;
+}
+
+@media (max-width: 760px) {
+.c-list__header,
+.c-list__footer,
+.c-list__item {
+    padding-inline: 12px;
+  }
+
+.c-list--bordered {
+    border-radius: var(--ct-radius-sm);
+  }
+}
+
+.c-list--bordered {
+  border-color: var(--ct-border);
+  border-radius: var(--ct-radius-xl);
+  background: var(--ct-surface);
+  box-shadow: var(--ct-shadow-sm);
+}
+
+.c-list__header,
+.c-list__footer {
+  background: var(--ct-surface-muted);
+}
+
+.c-list {
+  --list-surface: var(--ct-surface);
+  --list-surface-subtle: var(--ct-surface-muted);
+  --list-border: var(--ct-border);
+  --list-divider: var(--ct-border-light);
+  --list-text: var(--ct-text);
+  --list-text-muted: var(--ct-text-secondary);
+}
+
+:root[data-theme="dark"] .c-list {
+    border-color: var(--ct-border);
+    background: var(--ct-surface);
+    color: var(--ct-text);
+  }
+
+.c-list {
+  --list-surface: var(--ct-surface);
+  --list-surface-subtle: var(--ct-surface-muted);
+  --list-border: var(--ct-border);
+  --list-divider: var(--ct-border-light);
+  --list-text: var(--ct-text);
+  --list-text-muted: var(--ct-text-secondary);
+  --list-error-text: var(--ct-danger);
+  min-inline-size: 0;
+}
+
+.c-list__item,
+.c-list__header,
+.c-list__footer,
+.c-list__state {
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+}
+
+.c-list__item > *,
+.c-list__header > *,
+.c-list__footer > * {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+
+.c-list--bordered {
+  border-color: var(--ct-border);
+  background: var(--ct-surface);
+  box-shadow: var(--ct-shadow-sm);
+}
+
+.c-list__header,
+.c-list__footer {
+  background: var(--ct-surface-muted);
+}
+
+:root[data-theme="dark"] .c-list--bordered {
+    border-color: var(--ct-border);
+    background: var(--ct-surface);
+    color: var(--ct-text);
+  }
+
+:root[data-theme="dark"] .c-list {
+    color: var(--ct-text-secondary);
+  }
+
+.c-list--bordered {
+  border-color: var(--ct-border);
+  border-radius: var(--ct-radius-xl);
+  background: var(--ct-surface);
+  box-shadow: var(--ct-shadow-sm);
+}
+
+.c-list__header,
+.c-list__footer {
+  background: var(--ct-surface-muted);
+}
+
+.c-list {
+  --list-surface: var(--ct-surface);
+  --list-surface-subtle: var(--ct-surface-muted);
+  --list-border: var(--ct-border);
+  --list-divider: var(--ct-border-light);
+  --list-text: var(--ct-text);
+  --list-text-muted: var(--ct-text-secondary);
+}

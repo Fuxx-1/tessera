@@ -1,0 +1,3344 @@
+{
+  "schema_version": "tessera/makepad-component-manifest/v1",
+  "component_count": 101,
+  "category_counts": {
+    "Base": 75,
+    "Business": 11,
+    "Charts": 15
+  },
+  "components": [
+    {
+      "id": "affix",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/07-other.md#Affix",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for affix (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for affix (composite)",
+        "docs": "src/docs/AffixDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#affix",
+        "structure_style": "design/02-base/07-other.md#Affix"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "alert",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/06-feedback.md#Alert",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for alert (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for alert (composite)",
+        "docs": "src/docs/AlertDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#alert",
+        "structure_style": "design/02-base/06-feedback.md#Alert"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "anchor",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/03-navigation.md#Anchor",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for anchor (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for anchor (composite)",
+        "docs": "src/docs/AnchorDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#anchor",
+        "structure_style": "design/02-base/03-navigation.md#Anchor"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "app",
+      "category": "Base",
+      "kind": "service",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/07-other.md#App",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for app (service)",
+        "gallery_route": "blocked:no Makepad gallery route for app (service)",
+        "docs": "src/docs/AppDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#app",
+        "structure_style": "design/02-base/07-other.md#App"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "auto-complete",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#AutoComplete",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for auto-complete (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for auto-complete (composite)",
+        "docs": "src/docs/AutoCompleteDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#auto-complete",
+        "structure_style": "design/02-base/04-data-entry.md#AutoComplete"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "avatar",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Avatar",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for avatar (content)",
+        "gallery_route": "blocked:no Makepad gallery route for avatar (content)",
+        "docs": "src/docs/AvatarDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#avatar",
+        "structure_style": "design/02-base/05-data-display.md#Avatar"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "badge",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Badge",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for badge (content)",
+        "gallery_route": "blocked:no Makepad gallery route for badge (content)",
+        "docs": "src/docs/BadgeDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#badge",
+        "structure_style": "design/02-base/05-data-display.md#Badge"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "border-beam",
+      "category": "Base",
+      "kind": "primitive",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/08-extensions.md#BorderBeam",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for border-beam (primitive)",
+        "gallery_route": "blocked:no Makepad gallery route for border-beam (primitive)",
+        "docs": "src/docs/BorderBeamDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#border-beam",
+        "structure_style": "design/02-base/08-extensions.md#BorderBeam"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "breadcrumb",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/03-navigation.md#Breadcrumb",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for breadcrumb (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for breadcrumb (composite)",
+        "docs": "src/docs/BreadcrumbDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#breadcrumb",
+        "structure_style": "design/02-base/03-navigation.md#Breadcrumb"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "button",
+      "category": "Base",
+      "kind": "primitive",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/01-general.md#Button",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for button (primitive)",
+        "gallery_route": "blocked:no Makepad gallery route for button (primitive)",
+        "docs": "src/docs/ButtonDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#button",
+        "structure_style": "design/02-base/01-general.md#Button"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "calendar",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Calendar",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for calendar (content)",
+        "gallery_route": "blocked:no Makepad gallery route for calendar (content)",
+        "docs": "src/docs/CalendarDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#calendar",
+        "structure_style": "design/02-base/05-data-display.md#Calendar"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "card",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Card",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for card (content)",
+        "gallery_route": "blocked:no Makepad gallery route for card (content)",
+        "docs": "src/docs/CardDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#card",
+        "structure_style": "design/02-base/05-data-display.md#Card"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "carousel",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Carousel",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for carousel (content)",
+        "gallery_route": "blocked:no Makepad gallery route for carousel (content)",
+        "docs": "src/docs/CarouselDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#carousel",
+        "structure_style": "design/02-base/05-data-display.md#Carousel"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "cascader",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#Cascader",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for cascader (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for cascader (composite)",
+        "docs": "src/docs/CascaderDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#cascader",
+        "structure_style": "design/02-base/04-data-entry.md#Cascader"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "checkbox",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#Checkbox",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for checkbox (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for checkbox (composite)",
+        "docs": "src/docs/CheckboxDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#checkbox",
+        "structure_style": "design/02-base/04-data-entry.md#Checkbox"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "collapse",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Collapse",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for collapse (content)",
+        "gallery_route": "blocked:no Makepad gallery route for collapse (content)",
+        "docs": "src/docs/CollapseDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#collapse",
+        "structure_style": "design/02-base/05-data-display.md#Collapse"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "color-picker",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#ColorPicker",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for color-picker (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for color-picker (composite)",
+        "docs": "src/docs/ColorPickerDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#color-picker",
+        "structure_style": "design/02-base/04-data-entry.md#ColorPicker"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "config-provider",
+      "category": "Base",
+      "kind": "service",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/07-other.md#ConfigProvider",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for config-provider (service)",
+        "gallery_route": "blocked:no Makepad gallery route for config-provider (service)",
+        "docs": "src/docs/ConfigProviderDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#config-provider",
+        "structure_style": "design/02-base/07-other.md#ConfigProvider"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "date-picker",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#DatePicker",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for date-picker (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for date-picker (composite)",
+        "docs": "src/docs/DatePickerDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#date-picker",
+        "structure_style": "design/02-base/04-data-entry.md#DatePicker"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "descriptions",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Descriptions",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for descriptions (content)",
+        "gallery_route": "blocked:no Makepad gallery route for descriptions (content)",
+        "docs": "src/docs/DescriptionsDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#descriptions",
+        "structure_style": "design/02-base/05-data-display.md#Descriptions"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "divider",
+      "category": "Base",
+      "kind": "primitive",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/02-layout.md#Divider",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for divider (primitive)",
+        "gallery_route": "blocked:no Makepad gallery route for divider (primitive)",
+        "docs": "src/docs/DividerDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#divider",
+        "structure_style": "design/02-base/02-layout.md#Divider"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "drawer",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/06-feedback.md#Drawer",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for drawer (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for drawer (composite)",
+        "docs": "src/docs/DrawerDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#drawer",
+        "structure_style": "design/02-base/06-feedback.md#Drawer"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "dropdown",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/03-navigation.md#Dropdown",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for dropdown (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for dropdown (composite)",
+        "docs": "src/docs/DropdownDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#dropdown",
+        "structure_style": "design/02-base/03-navigation.md#Dropdown"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "empty",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Empty",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for empty (content)",
+        "gallery_route": "blocked:no Makepad gallery route for empty (content)",
+        "docs": "src/docs/EmptyDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#empty",
+        "structure_style": "design/02-base/05-data-display.md#Empty"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "flex",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/02-layout.md#Flex",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for flex (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for flex (composite)",
+        "docs": "src/docs/FlexDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#flex",
+        "structure_style": "design/02-base/02-layout.md#Flex"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "float-button",
+      "category": "Base",
+      "kind": "primitive",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/01-general.md#FloatButton",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for float-button (primitive)",
+        "gallery_route": "blocked:no Makepad gallery route for float-button (primitive)",
+        "docs": "src/docs/FloatButtonDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#float-button",
+        "structure_style": "design/02-base/01-general.md#FloatButton"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "form",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#Form",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for form (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for form (composite)",
+        "docs": "src/docs/FormDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#form",
+        "structure_style": "design/02-base/04-data-entry.md#Form"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "grid",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/02-layout.md#Grid",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for grid (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for grid (composite)",
+        "docs": "src/docs/GridDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#grid",
+        "structure_style": "design/02-base/02-layout.md#Grid"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "icon",
+      "category": "Base",
+      "kind": "primitive",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/01-general.md#Icon",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for icon (primitive)",
+        "gallery_route": "blocked:no Makepad gallery route for icon (primitive)",
+        "docs": "src/docs/IconDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#icon",
+        "structure_style": "design/02-base/01-general.md#Icon"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "icon-button",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/08-extensions.md#IconButton",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for icon-button (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for icon-button (composite)",
+        "docs": "src/docs/IconButtonDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#icon-button",
+        "structure_style": "design/02-base/08-extensions.md#IconButton"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "image",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Image",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for image (content)",
+        "gallery_route": "blocked:no Makepad gallery route for image (content)",
+        "docs": "src/docs/ImageDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#image",
+        "structure_style": "design/02-base/05-data-display.md#Image"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "input",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#Input",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for input (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for input (composite)",
+        "docs": "src/docs/InputDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#input",
+        "structure_style": "design/02-base/04-data-entry.md#Input"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "input-number",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#InputNumber",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for input-number (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for input-number (composite)",
+        "docs": "src/docs/InputNumberDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#input-number",
+        "structure_style": "design/02-base/04-data-entry.md#InputNumber"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/02-layout.md#Layout",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for layout (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for layout (composite)",
+        "docs": "src/docs/LayoutDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#layout",
+        "structure_style": "design/02-base/02-layout.md#Layout"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#List",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for list (content)",
+        "gallery_route": "blocked:no Makepad gallery route for list (content)",
+        "docs": "src/docs/ListDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#list",
+        "structure_style": "design/02-base/05-data-display.md#List"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "masonry",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/02-layout.md#Masonry",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for masonry (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for masonry (composite)",
+        "docs": "src/docs/MasonryDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#masonry",
+        "structure_style": "design/02-base/02-layout.md#Masonry"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "mentions",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#Mentions",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for mentions (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for mentions (composite)",
+        "docs": "src/docs/MentionsDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#mentions",
+        "structure_style": "design/02-base/04-data-entry.md#Mentions"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "menu",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/03-navigation.md#Menu",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for menu (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for menu (composite)",
+        "docs": "src/docs/MenuDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#menu",
+        "structure_style": "design/02-base/03-navigation.md#Menu"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/06-feedback.md#Message",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for message (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for message (composite)",
+        "docs": "src/docs/MessageDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#message",
+        "structure_style": "design/02-base/06-feedback.md#Message"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "modal",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/06-feedback.md#Modal",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for modal (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for modal (composite)",
+        "docs": "src/docs/ModalDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#modal",
+        "structure_style": "design/02-base/06-feedback.md#Modal"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "notification",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/06-feedback.md#Notification",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for notification (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for notification (composite)",
+        "docs": "src/docs/NotificationDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#notification",
+        "structure_style": "design/02-base/06-feedback.md#Notification"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "pagination",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/03-navigation.md#Pagination",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for pagination (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for pagination (composite)",
+        "docs": "src/docs/PaginationDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#pagination",
+        "structure_style": "design/02-base/03-navigation.md#Pagination"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "popconfirm",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/06-feedback.md#Popconfirm",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for popconfirm (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for popconfirm (composite)",
+        "docs": "src/docs/PopconfirmDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#popconfirm",
+        "structure_style": "design/02-base/06-feedback.md#Popconfirm"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "popover",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Popover",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for popover (content)",
+        "gallery_route": "blocked:no Makepad gallery route for popover (content)",
+        "docs": "src/docs/PopoverDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#popover",
+        "structure_style": "design/02-base/05-data-display.md#Popover"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "progress",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/06-feedback.md#Progress",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for progress (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for progress (composite)",
+        "docs": "src/docs/ProgressDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#progress",
+        "structure_style": "design/02-base/06-feedback.md#Progress"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "qr-code",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#QRCode",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for qr-code (content)",
+        "gallery_route": "blocked:no Makepad gallery route for qr-code (content)",
+        "docs": "src/docs/QRCodeDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#qr-code",
+        "structure_style": "design/02-base/05-data-display.md#QRCode"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "radio",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#Radio",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for radio (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for radio (composite)",
+        "docs": "src/docs/RadioDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#radio",
+        "structure_style": "design/02-base/04-data-entry.md#Radio"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "rate",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#Rate",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for rate (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for rate (composite)",
+        "docs": "src/docs/RateDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#rate",
+        "structure_style": "design/02-base/04-data-entry.md#Rate"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "result",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/06-feedback.md#Result",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for result (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for result (composite)",
+        "docs": "src/docs/ResultDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#result",
+        "structure_style": "design/02-base/06-feedback.md#Result"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "segmented",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Segmented",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for segmented (content)",
+        "gallery_route": "blocked:no Makepad gallery route for segmented (content)",
+        "docs": "src/docs/SegmentedDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#segmented",
+        "structure_style": "design/02-base/05-data-display.md#Segmented"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "select",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#Select",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for select (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for select (composite)",
+        "docs": "src/docs/SelectDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#select",
+        "structure_style": "design/02-base/04-data-entry.md#Select"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "skeleton",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/06-feedback.md#Skeleton",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for skeleton (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for skeleton (composite)",
+        "docs": "src/docs/SkeletonDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#skeleton",
+        "structure_style": "design/02-base/06-feedback.md#Skeleton"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "slider",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#Slider",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for slider (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for slider (composite)",
+        "docs": "src/docs/SliderDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#slider",
+        "structure_style": "design/02-base/04-data-entry.md#Slider"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "space",
+      "category": "Base",
+      "kind": "primitive",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/02-layout.md#Space",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for space (primitive)",
+        "gallery_route": "blocked:no Makepad gallery route for space (primitive)",
+        "docs": "src/docs/SpaceDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#space",
+        "structure_style": "design/02-base/02-layout.md#Space"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "spin",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/06-feedback.md#Spin",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for spin (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for spin (composite)",
+        "docs": "src/docs/SpinDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#spin",
+        "structure_style": "design/02-base/06-feedback.md#Spin"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "splitter",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/02-layout.md#Splitter",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for splitter (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for splitter (composite)",
+        "docs": "src/docs/SplitterDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#splitter",
+        "structure_style": "design/02-base/02-layout.md#Splitter"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "statistic",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Statistic",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for statistic (content)",
+        "gallery_route": "blocked:no Makepad gallery route for statistic (content)",
+        "docs": "src/docs/StatisticDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#statistic",
+        "structure_style": "design/02-base/05-data-display.md#Statistic"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "steps",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/03-navigation.md#Steps",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for steps (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for steps (composite)",
+        "docs": "src/docs/StepsDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#steps",
+        "structure_style": "design/02-base/03-navigation.md#Steps"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "switch",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#Switch",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for switch (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for switch (composite)",
+        "docs": "src/docs/SwitchDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#switch",
+        "structure_style": "design/02-base/04-data-entry.md#Switch"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "table",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Table",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for table (content)",
+        "gallery_route": "blocked:no Makepad gallery route for table (content)",
+        "docs": "src/docs/TableDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#table",
+        "structure_style": "design/02-base/05-data-display.md#Table"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "tabs",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/03-navigation.md#Tabs",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for tabs (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for tabs (composite)",
+        "docs": "src/docs/TabsDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#tabs",
+        "structure_style": "design/02-base/03-navigation.md#Tabs"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "tag",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Tag",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for tag (content)",
+        "gallery_route": "blocked:no Makepad gallery route for tag (content)",
+        "docs": "src/docs/TagDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#tag",
+        "structure_style": "design/02-base/05-data-display.md#Tag"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "textarea",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/08-extensions.md#Textarea",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for textarea (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for textarea (composite)",
+        "docs": "src/docs/TextareaDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#textarea",
+        "structure_style": "design/02-base/08-extensions.md#Textarea"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "time-picker",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#TimePicker",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for time-picker (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for time-picker (composite)",
+        "docs": "src/docs/TimePickerDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#time-picker",
+        "structure_style": "design/02-base/04-data-entry.md#TimePicker"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "timeline",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Timeline",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for timeline (content)",
+        "gallery_route": "blocked:no Makepad gallery route for timeline (content)",
+        "docs": "src/docs/TimelineDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#timeline",
+        "structure_style": "design/02-base/05-data-display.md#Timeline"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "toolbar",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/08-extensions.md#Toolbar",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for toolbar (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for toolbar (composite)",
+        "docs": "src/docs/ToolbarDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#toolbar",
+        "structure_style": "design/02-base/08-extensions.md#Toolbar"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "tooltip",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Tooltip",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for tooltip (content)",
+        "gallery_route": "blocked:no Makepad gallery route for tooltip (content)",
+        "docs": "src/docs/TooltipDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#tooltip",
+        "structure_style": "design/02-base/05-data-display.md#Tooltip"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "tour",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Tour",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for tour (content)",
+        "gallery_route": "blocked:no Makepad gallery route for tour (content)",
+        "docs": "src/docs/TourDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#tour",
+        "structure_style": "design/02-base/05-data-display.md#Tour"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#Transfer",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for transfer (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for transfer (composite)",
+        "docs": "src/docs/TransferDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#transfer",
+        "structure_style": "design/02-base/04-data-entry.md#Transfer"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "tree",
+      "category": "Base",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/05-data-display.md#Tree",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for tree (content)",
+        "gallery_route": "blocked:no Makepad gallery route for tree (content)",
+        "docs": "src/docs/TreeDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#tree",
+        "structure_style": "design/02-base/05-data-display.md#Tree"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "tree-select",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#TreeSelect",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for tree-select (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for tree-select (composite)",
+        "docs": "src/docs/TreeSelectDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#tree-select",
+        "structure_style": "design/02-base/04-data-entry.md#TreeSelect"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "typography",
+      "category": "Base",
+      "kind": "primitive",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/01-general.md#Typography",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for typography (primitive)",
+        "gallery_route": "blocked:no Makepad gallery route for typography (primitive)",
+        "docs": "src/docs/TypographyDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#typography",
+        "structure_style": "design/02-base/01-general.md#Typography"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "upload",
+      "category": "Base",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/04-data-entry.md#Upload",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for upload (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for upload (composite)",
+        "docs": "src/docs/UploadDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#upload",
+        "structure_style": "design/02-base/04-data-entry.md#Upload"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "util",
+      "category": "Base",
+      "kind": "service",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/07-other.md#Util",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for util (service)",
+        "gallery_route": "blocked:no Makepad gallery route for util (service)",
+        "docs": "src/docs/UtilDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#util",
+        "structure_style": "design/02-base/07-other.md#Util"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "watermark",
+      "category": "Base",
+      "kind": "primitive",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/02-base/07-other.md#Watermark",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for watermark (primitive)",
+        "gallery_route": "blocked:no Makepad gallery route for watermark (primitive)",
+        "docs": "src/docs/WatermarkDoc.tsx",
+        "theme_style": "design/01-foundations/07-interaction-states.md#watermark",
+        "structure_style": "design/02-base/07-other.md#Watermark"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "code-block",
+      "category": "Business",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/03-business/03-content-render.md#CodeBlock",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for code-block (content)",
+        "gallery_route": "blocked:no Makepad gallery route for code-block (content)",
+        "docs": "src/docs/CodeBlockDoc.tsx",
+        "theme_style": "design/03-business/README.md#code-block",
+        "structure_style": "design/03-business/03-content-render.md#CodeBlock"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "command-palette",
+      "category": "Business",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/03-business/02-toolbar-filter.md#CommandPalette",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for command-palette (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for command-palette (composite)",
+        "docs": "src/docs/CommandPaletteDoc.tsx",
+        "theme_style": "design/03-business/README.md#command-palette",
+        "structure_style": "design/03-business/02-toolbar-filter.md#CommandPalette"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "data-toolbar",
+      "category": "Business",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/03-business/02-toolbar-filter.md#DataToolbar",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for data-toolbar (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for data-toolbar (composite)",
+        "docs": "src/docs/DataToolbarDoc.tsx",
+        "theme_style": "design/03-business/README.md#data-toolbar",
+        "structure_style": "design/03-business/02-toolbar-filter.md#DataToolbar"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "filter-panel",
+      "category": "Business",
+      "kind": "composite",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/03-business/02-toolbar-filter.md#FilterPanel",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for filter-panel (composite)",
+        "gallery_route": "blocked:no Makepad gallery route for filter-panel (composite)",
+        "docs": "src/docs/FilterPanelDoc.tsx",
+        "theme_style": "design/03-business/README.md#filter-panel",
+        "structure_style": "design/03-business/02-toolbar-filter.md#FilterPanel"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "markdown-editor",
+      "category": "Business",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/03-business/03-content-render.md#MarkdownEditor",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for markdown-editor (content)",
+        "gallery_route": "blocked:no Makepad gallery route for markdown-editor (content)",
+        "docs": "src/docs/MarkdownEditorDoc.tsx",
+        "theme_style": "design/03-business/README.md#markdown-editor",
+        "structure_style": "design/03-business/03-content-render.md#MarkdownEditor"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "mermaid-svg-viewer",
+      "category": "Business",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/03-business/03-content-render.md#MermaidSvgViewer",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for mermaid-svg-viewer (content)",
+        "gallery_route": "blocked:no Makepad gallery route for mermaid-svg-viewer (content)",
+        "docs": "src/docs/MermaidSvgViewerDoc.tsx",
+        "theme_style": "design/03-business/README.md#mermaid-svg-viewer",
+        "structure_style": "design/03-business/03-content-render.md#MermaidSvgViewer"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "metric-card",
+      "category": "Business",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/03-business/01-metrics.md#MetricCard",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for metric-card (content)",
+        "gallery_route": "blocked:no Makepad gallery route for metric-card (content)",
+        "docs": "src/docs/MetricCardDoc.tsx",
+        "theme_style": "design/03-business/README.md#metric-card",
+        "structure_style": "design/03-business/01-metrics.md#MetricCard"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "mini-chart-card",
+      "category": "Business",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/03-business/01-metrics.md#MiniChartCard",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for mini-chart-card (content)",
+        "gallery_route": "blocked:no Makepad gallery route for mini-chart-card (content)",
+        "docs": "src/docs/MiniChartCardDoc.tsx",
+        "theme_style": "design/03-business/README.md#mini-chart-card",
+        "structure_style": "design/03-business/01-metrics.md#MiniChartCard"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "mobile-preview-frame",
+      "category": "Business",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/03-business/03-content-render.md#MobilePreviewFrame",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for mobile-preview-frame (content)",
+        "gallery_route": "blocked:no Makepad gallery route for mobile-preview-frame (content)",
+        "docs": "src/docs/MobilePreviewFrameDoc.tsx",
+        "theme_style": "design/03-business/README.md#mobile-preview-frame",
+        "structure_style": "design/03-business/03-content-render.md#MobilePreviewFrame"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "property-list",
+      "category": "Business",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/03-business/01-metrics.md#PropertyList",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for property-list (content)",
+        "gallery_route": "blocked:no Makepad gallery route for property-list (content)",
+        "docs": "src/docs/PropertyListDoc.tsx",
+        "theme_style": "design/03-business/README.md#property-list",
+        "structure_style": "design/03-business/01-metrics.md#PropertyList"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "status-timeline",
+      "category": "Business",
+      "kind": "content",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/03-business/01-metrics.md#StatusTimeline",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for status-timeline (content)",
+        "gallery_route": "blocked:no Makepad gallery route for status-timeline (content)",
+        "docs": "src/docs/StatusTimelineDoc.tsx",
+        "theme_style": "design/03-business/README.md#status-timeline",
+        "structure_style": "design/03-business/01-metrics.md#StatusTimeline"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "area-chart",
+      "category": "Charts",
+      "kind": "chart",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/04-charts/01-basic.md#AreaChart",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for area-chart (chart)",
+        "gallery_route": "blocked:no Makepad gallery route for area-chart (chart)",
+        "docs": "src/docs/AreaChartDoc.tsx",
+        "theme_style": "design/04-charts/README.md#area-chart",
+        "structure_style": "design/04-charts/01-basic.md#AreaChart"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "bar-chart",
+      "category": "Charts",
+      "kind": "chart",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/04-charts/01-basic.md#BarChart",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for bar-chart (chart)",
+        "gallery_route": "blocked:no Makepad gallery route for bar-chart (chart)",
+        "docs": "src/docs/BarChartDoc.tsx",
+        "theme_style": "design/04-charts/README.md#bar-chart",
+        "structure_style": "design/04-charts/01-basic.md#BarChart"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "funnel-chart",
+      "category": "Charts",
+      "kind": "chart",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/04-charts/02-statistical.md#FunnelChart",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for funnel-chart (chart)",
+        "gallery_route": "blocked:no Makepad gallery route for funnel-chart (chart)",
+        "docs": "src/docs/FunnelChartDoc.tsx",
+        "theme_style": "design/04-charts/README.md#funnel-chart",
+        "structure_style": "design/04-charts/02-statistical.md#FunnelChart"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "gauge-chart",
+      "category": "Charts",
+      "kind": "chart",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/04-charts/02-statistical.md#GaugeChart",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for gauge-chart (chart)",
+        "gallery_route": "blocked:no Makepad gallery route for gauge-chart (chart)",
+        "docs": "src/docs/GaugeChartDoc.tsx",
+        "theme_style": "design/04-charts/README.md#gauge-chart",
+        "structure_style": "design/04-charts/02-statistical.md#GaugeChart"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "heatmap",
+      "category": "Charts",
+      "kind": "chart",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/04-charts/02-statistical.md#Heatmap",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for heatmap (chart)",
+        "gallery_route": "blocked:no Makepad gallery route for heatmap (chart)",
+        "docs": "src/docs/HeatmapDoc.tsx",
+        "theme_style": "design/04-charts/README.md#heatmap",
+        "structure_style": "design/04-charts/02-statistical.md#Heatmap"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "line-chart",
+      "category": "Charts",
+      "kind": "chart",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/04-charts/01-basic.md#LineChart",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for line-chart (chart)",
+        "gallery_route": "blocked:no Makepad gallery route for line-chart (chart)",
+        "docs": "src/docs/LineChartDoc.tsx",
+        "theme_style": "design/04-charts/README.md#line-chart",
+        "structure_style": "design/04-charts/01-basic.md#LineChart"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "mind-map",
+      "category": "Charts",
+      "kind": "chart",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/04-charts/03-relation-text.md#MindMap",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for mind-map (chart)",
+        "gallery_route": "blocked:no Makepad gallery route for mind-map (chart)",
+        "docs": "src/docs/MindMapDoc.tsx",
+        "theme_style": "design/04-charts/README.md#mind-map",
+        "structure_style": "design/04-charts/03-relation-text.md#MindMap"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "organization-chart",
+      "category": "Charts",
+      "kind": "chart",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/04-charts/03-relation-text.md#OrganizationChart",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for organization-chart (chart)",
+        "gallery_route": "blocked:no Makepad gallery route for organization-chart (chart)",
+        "docs": "src/docs/OrganizationChartDoc.tsx",
+        "theme_style": "design/04-charts/README.md#organization-chart",
+        "structure_style": "design/04-charts/03-relation-text.md#OrganizationChart"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "pie-chart",
+      "category": "Charts",
+      "kind": "chart",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/04-charts/01-basic.md#PieChart",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for pie-chart (chart)",
+        "gallery_route": "blocked:no Makepad gallery route for pie-chart (chart)",
+        "docs": "src/docs/PieChartDoc.tsx",
+        "theme_style": "design/04-charts/README.md#pie-chart",
+        "structure_style": "design/04-charts/01-basic.md#PieChart"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "radar-chart",
+      "category": "Charts",
+      "kind": "chart",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/04-charts/02-statistical.md#RadarChart",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for radar-chart (chart)",
+        "gallery_route": "blocked:no Makepad gallery route for radar-chart (chart)",
+        "docs": "src/docs/RadarChartDoc.tsx",
+        "theme_style": "design/04-charts/README.md#radar-chart",
+        "structure_style": "design/04-charts/02-statistical.md#RadarChart"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "sankey-chart",
+      "category": "Charts",
+      "kind": "chart",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/04-charts/03-relation-text.md#SankeyChart",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for sankey-chart (chart)",
+        "gallery_route": "blocked:no Makepad gallery route for sankey-chart (chart)",
+        "docs": "src/docs/SankeyChartDoc.tsx",
+        "theme_style": "design/04-charts/README.md#sankey-chart",
+        "structure_style": "design/04-charts/03-relation-text.md#SankeyChart"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "scatter-chart",
+      "category": "Charts",
+      "kind": "chart",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/04-charts/02-statistical.md#ScatterChart",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for scatter-chart (chart)",
+        "gallery_route": "blocked:no Makepad gallery route for scatter-chart (chart)",
+        "docs": "src/docs/ScatterChartDoc.tsx",
+        "theme_style": "design/04-charts/README.md#scatter-chart",
+        "structure_style": "design/04-charts/02-statistical.md#ScatterChart"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "sparkline",
+      "category": "Charts",
+      "kind": "chart",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/04-charts/01-basic.md#Sparkline",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for sparkline (chart)",
+        "gallery_route": "blocked:no Makepad gallery route for sparkline (chart)",
+        "docs": "src/docs/SparklineDoc.tsx",
+        "theme_style": "design/04-charts/README.md#sparkline",
+        "structure_style": "design/04-charts/01-basic.md#Sparkline"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "treemap",
+      "category": "Charts",
+      "kind": "chart",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/04-charts/02-statistical.md#Treemap",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for treemap (chart)",
+        "gallery_route": "blocked:no Makepad gallery route for treemap (chart)",
+        "docs": "src/docs/TreemapDoc.tsx",
+        "theme_style": "design/04-charts/README.md#treemap",
+        "structure_style": "design/04-charts/02-statistical.md#Treemap"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    },
+    {
+      "id": "word-cloud",
+      "category": "Charts",
+      "kind": "chart",
+      "strategy": "deferred",
+      "status": "blocked",
+      "source_ref": "design/04-charts/03-relation-text.md#WordCloud",
+      "owner": {
+        "product": "tessera-product",
+        "ui": "design-owner",
+        "engineering": "makepad-engineering",
+        "test": "evidence-owner",
+        "security": "security-owner"
+      },
+      "implementation": {
+        "rust": "blocked:no Makepad production crate for word-cloud (chart)",
+        "gallery_route": "blocked:no Makepad gallery route for word-cloud (chart)",
+        "docs": "src/docs/WordCloudDoc.tsx",
+        "theme_style": "design/04-charts/README.md#word-cloud",
+        "structure_style": "design/04-charts/03-relation-text.md#WordCloud"
+      },
+      "case_ids": [],
+      "evidence_refs": [],
+      "constraints": [
+        {
+          "code": "MAKEPAD_PRODUCTION_PATH_MISSING",
+          "reason": "The repository does not contain a Makepad production crate or sealed runtime evidence for this component.",
+          "alternative": "Keep the component blocked until a native Makepad implementation, gallery route, and sealed evidence ledger are available.",
+          "owner": "makepad-engineering",
+          "deadline": "Before Makepad runtime verification"
+        }
+      ]
+    }
+  ]
+}

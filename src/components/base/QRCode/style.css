@@ -1,0 +1,159 @@
+.c-qrcode {
+  position: relative;
+  display: inline-grid;
+  justify-items: center;
+  gap: 10px;
+  width: fit-content;
+  color: var(--ct-text);
+}
+
+.c-qrcode__canvas {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: var(--qr-size);
+  height: var(--qr-size);
+  overflow: hidden;
+  border: 1px solid var(--ct-border);
+  border-radius: var(--ct-radius-md);
+  background: var(--ct-surface);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.c-qrcode__svg,
+.c-qrcode__svg svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c-qrcode__svg svg {
+  image-rendering: pixelated;
+}
+
+.c-qrcode__placeholder {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+.c-qrcode__status {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--ct-text);
+  font-size: 13px;
+  font-weight: 660;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.c-qrcode--inactive .c-qrcode__svg {
+  opacity: 0.34;
+}
+
+.c-qrcode__download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  padding: 0;
+  border: 1px solid var(--ct-border);
+  border-radius: var(--ct-radius-sm);
+  background: var(--ct-surface);
+  color: var(--ct-text);
+  font-size: 13px;
+  font-weight: 620;
+  text-decoration: none;
+}
+
+.c-qrcode__download:hover {
+  border-color: var(--ct-border-heavy);
+  background: var(--ct-surface-muted);
+}
+
+.c-local-tools .c-qrcode__download {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+}
+
+.c-qrcode__floating-tools {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-2px);
+  transition: opacity 140ms ease, transform 140ms ease;
+}
+
+.c-qrcode:hover .c-qrcode__floating-tools,
+.c-qrcode:focus-within .c-qrcode__floating-tools {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  border-color: var(--ct-border-heavy);
+  background: var(--ct-surface-elevated);
+  box-shadow: var(--ct-shadow-md);
+}
+
+@media (hover: none), (pointer: coarse), (max-width: 780px) {
+.c-local-tools .c-qrcode__download {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+
+.c-qrcode__canvas {
+  border-color: var(--ct-border);
+  background: var(--ct-surface);
+  box-shadow: var(--ct-shadow-sm);
+}
+
+.c-qrcode__status {
+  background: var(--ct-surface-muted);
+}
+
+.c-qrcode__status {
+  overflow-wrap: anywhere;
+}
+
+.c-qrcode {
+  max-inline-size: 100%;
+}
+
+.c-qrcode__canvas {
+  inline-size: min(var(--qr-size), calc(100vw - 32px));
+  block-size: min(var(--qr-size), calc(100vw - 32px));
+  aspect-ratio: 1;
+}
+
+.c-qrcode__status {
+  color: var(--ct-text);
+  backdrop-filter: blur(2px);
+}
+
+:root[data-theme="dark"] .c-qrcode__canvas {
+    border-color: var(--ct-border);
+    background: var(--ct-surface);
+    color: var(--ct-text);
+  }
+
+:root[data-theme="dark"] .c-qrcode__status {
+    background: color-mix(in oklab, var(--ct-surface-elevated) 88%, transparent);
+    color: var(--ct-text);
+  }

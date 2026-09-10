@@ -1,0 +1,225 @@
+schema_version = 1
+
+[metadata]
+name = "Tessera cross-platform design tokens"
+owner = "design-system"
+authority = "native/docs/ui-spec.md"
+
+[shared.palette]
+gray_0 = "#ffffff"
+gray_50 = "#f9f9f9"
+gray_100 = "#ededed"
+gray_200 = "#e3e3e1"
+gray_300 = "#afafaf"
+gray_500 = "#5d5d5d"
+gray_600 = "#414141"
+gray_700 = "#303030"
+gray_800 = "#212121"
+gray_900 = "#181818"
+gray_1000 = "#0d0d0d"
+
+[shared.typography]
+font_sans = "ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+font_mono = "ui-monospace, \"SF Mono\", \"SFMono-Regular\", Menlo, Consolas, \"Liberation Mono\", monospace"
+text_xs = "11px"
+text_sm = "12px"
+text_base = "14px"
+text_lg = "16px"
+text_heading_sm = "18px"
+text_heading_md = "20px"
+text_heading_lg = "24px"
+text_xl = "28px"
+text_2xl = "36px"
+weight_normal = 400
+weight_medium = 500
+weight_semibold = 600
+weight_bold = 700
+leading_tight = 1.25
+leading_snug = 1.375
+leading_normal = 1.5
+leading_relaxed = 1.625
+tracking_tight = 0
+tracking_heading = 0
+
+[shared.geometry]
+corner_radius_scale = 1
+radius_2xs = "2px"
+radius_xs = "4px"
+radius_sm = "6px"
+radius_md = "8px"
+radius_lg = "10px"
+radius_xl = "12px"
+radius_2xl = "16px"
+radius_3xl = "20px"
+radius_4xl = "24px"
+radius_full = "9999px"
+space_1 = "4px"
+space_2 = "8px"
+space_3 = "12px"
+space_4 = "16px"
+space_5 = "20px"
+space_6 = "24px"
+space_8 = "32px"
+control_height_sm = "30px"
+control_height = "36px"
+control_height_lg = "44px"
+topbar_height = "46px"
+panel_toolbar_height = "36px"
+shell_sidebar_width = "252px"
+navigation_rail_width = "64px"
+content_max_width = "1120px"
+hit_target_min = "24px"
+hit_target_coarse = "40px"
+focus_gap_width = "1px"
+focus_ring_width = "2px"
+focus_ring_offset = "2px"
+
+[shared.motion]
+fast = "120ms"
+base = "160ms"
+panel = "200ms"
+easing_standard = "cubic-bezier(.4, 0, .2, 1)"
+easing_enter = "cubic-bezier(.19, 1, .22, 1)"
+easing_exit = "cubic-bezier(.65, 0, .4, 1)"
+
+[themes.light.colors]
+canvas = "#f9f9f9"
+sidebar = "#f3f3f2"
+surface_sunken = "#f0f0ee"
+surface_muted = "#f5f5f4"
+surface = "#ffffff"
+surface_elevated = "#ffffff"
+surface_glass = "#f9f9f9f0"
+surface_hover = "#1a1c1f0a"
+surface_active = "#1a1c1f14"
+surface_selected = "#1a1c1f0d"
+overlay = "#00000047"
+overlay_strong = "#0000006b"
+ink = "#1a1c1f"
+text = "#1a1c1f"
+text_secondary = "#5d5d5d"
+text_tertiary = "#6b6d6f"
+text_quaternary = "#6e7072"
+text_disabled = "#6b6d6f"
+text_on_accent = "#ffffff"
+border_light = "#1a1c1f0d"
+border = "#1a1c1f14"
+border_heavy = "#1a1c1f24"
+accent = "#0285ff"
+accent_hover = "#339cff"
+accent_soft = "#e5f3ff"
+accent_text = "#005ea8"
+link_text = "#005ea8"
+focus_gap = "#ffffff"
+focus_ring = "#006dba"
+tooltip_bg = "#1f1f1d"
+tooltip_fg = "#ffffff"
+tooltip_border = "#1f1f1d"
+button_primary_bg = "#0d0d0d"
+button_primary_bg_hover = "#2c2c2a"
+button_primary_fg = "#ffffff"
+button_secondary_bg = "#1a1c1f0d"
+button_secondary_bg_hover = "#1a1c1f14"
+button_secondary_fg = "#1a1c1f"
+control_active = "#1a1c1f1f"
+
+[themes.light.status.success]
+fg = "#2f6d4a"
+border = "#9fc1ac"
+bg = "#e9f4ec"
+
+[themes.light.status.warning]
+fg = "#8a6724"
+border = "#ddc891"
+bg = "#fbf8ef"
+
+[themes.light.status.danger]
+fg = "#9f2424"
+border = "#ddc1c1"
+bg = "#fbf5f5"
+
+[themes.light.status.info]
+fg = "#4d5f77"
+border = "#b8cfde"
+bg = "#f4f7fa"
+
+[themes.light.shadow]
+hairline = "0px 0px 0px 0.5px #0000001a"
+sm = "0px 1px 2px -1px #00000014"
+md = "0px 2px 4px -1px #00000014"
+lg = "0px 4px 8px -2px #0000001a"
+xl = "0px 8px 16px -4px #0000001f"
+2xl = "0px 16px 32px -8px #00000030"
+floating = "0px 12px 28px -8px #00000024"
+modal = "0px 18px 48px -12px #00000038"
+
+[themes.dark.colors]
+canvas = "#181818"
+sidebar = "#202020"
+surface_sunken = "#0d0d0d"
+surface_muted = "#212121"
+surface = "#303030"
+surface_elevated = "#303030"
+surface_glass = "#212121eb"
+surface_hover = "#ffffff0f"
+surface_active = "#ffffff1a"
+surface_selected = "#ffffff14"
+overlay = "#00000075"
+overlay_strong = "#00000094"
+ink = "#ededed"
+text = "#ededed"
+text_secondary = "#b6b6b6"
+text_tertiary = "#a3a3a3"
+text_quaternary = "#9f9f9f"
+text_disabled = "#999999"
+text_on_accent = "#ffffff"
+border_light = "#ffffff0f"
+border = "#ffffff1a"
+border_heavy = "#ffffff2e"
+accent = "#0a8bff"
+accent_hover = "#4aa8ff"
+accent_soft = "#0285ff38"
+accent_text = "#66b5f0"
+link_text = "#66b5f0"
+focus_gap = "#303030"
+focus_ring = "#66b5f0"
+tooltip_bg = "#ededed"
+tooltip_fg = "#0d0d0d"
+tooltip_border = "#ededed"
+button_primary_bg = "#ededed"
+button_primary_bg_hover = "#ffffff"
+button_primary_fg = "#0d0d0d"
+button_secondary_bg = "#ffffff14"
+button_secondary_bg_hover = "#ffffff1f"
+button_secondary_fg = "#ededed"
+control_active = "#ffffff29"
+
+[themes.dark.status.success]
+fg = "#6cc08b"
+border = "#6cc08b66"
+bg = "#6cc08b24"
+
+[themes.dark.status.warning]
+fg = "#e3b341"
+border = "#e3b34166"
+bg = "#e3b34124"
+
+[themes.dark.status.danger]
+fg = "#f0786f"
+border = "#f0786fb3"
+bg = "#f0786f08"
+
+[themes.dark.status.info]
+fg = "#8ab3d6"
+border = "#8ab3d666"
+bg = "#8ab3d624"
+
+[themes.dark.shadow]
+hairline = "0px 0px 0px 0.5px #00000066"
+sm = "0px 1px 2px -1px #00000066"
+md = "0px 2px 6px -1px #00000080"
+lg = "0px 6px 14px -4px #0000008c"
+xl = "0px 12px 24px -8px #00000099"
+2xl = "0px 20px 40px -12px #000000b3"
+floating = "0px 14px 34px -10px #000000a3"
+modal = "0px 22px 54px -14px #000000c2"

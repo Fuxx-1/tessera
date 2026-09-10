@@ -1,0 +1,64 @@
+.b-mini-chart-card {
+  overflow: hidden;
+}
+
+.b-mini-chart-card__status {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 20px;
+  padding: 0 7px;
+  border: 1px solid var(--ct-border);
+  border-radius: var(--ct-radius-full);
+  background: var(--ct-surface-muted);
+  color: var(--ct-text-secondary);
+  font-size: var(--ct-text-xs);
+  font-weight: var(--ct-weight-medium);
+  line-height: 1;
+  overflow-wrap: anywhere;
+  text-transform: none;
+}
+
+.b-mini-chart-card__status--success {
+  border-color: var(--ct-success-border);
+  background: var(--ct-success-bg);
+  color: var(--ct-success);
+}
+
+.b-mini-chart-card__status--warning {
+  border-color: var(--ct-warning-border);
+  background: var(--ct-warning-bg);
+  color: var(--ct-warning);
+}
+
+.b-mini-chart-card__status--critical {
+  border-color: var(--ct-danger-border);
+  background: var(--ct-danger-bg);
+  color: var(--ct-danger);
+}
+
+.b-mini-chart-card .b-metric-card__chart {
+  min-height: 48px;
+}
+
+.b-mini-chart-card .c-sparkline--compact {
+  width: 100%;
+}
+
+.b-mini-chart-card .c-sparkline--compact .c-chart__body {
+  width: 100%;
+}
+
+.b-mini-chart-card .c-chart__body {
+  overflow: hidden;
+}
+
+.b-mini-chart-card .c-chart__svg--sparkline {
+  min-width: 0;
+}
+
+.b-mini-chart-card .c-sparkline__trend-label {
+  flex: 0 1 46px;
+  min-width: 0;
+}

@@ -1,0 +1,17 @@
+{
+  "fixture_id": "long-document",
+  "profile": "long-markdown-document",
+  "content_shape": {
+    "blocks": 1200,
+    "long_url": true,
+    "cjk": true,
+    "emoji": true
+  },
+  "required_events": [
+    "layout",
+    "scroll",
+    "selection",
+    "scheme-reject"
+  ],
+  "notes": "Small descriptor only; the document body and runtime capture are separate artifacts."
+}

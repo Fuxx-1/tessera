@@ -1,0 +1,339 @@
+.c-progress {
+  --progress-track-color: #e7e7e4;
+  --progress-stroke-color: var(--ct-text-secondary);
+  --progress-stroke-fill: var(--progress-stroke-color);
+  display: grid;
+  gap: 7px;
+  width: 100%;
+  min-width: 0;
+}
+
+.c-progress--circle,
+.c-progress--dashboard {
+  justify-items: center;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.c-progress__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  min-width: 0;
+  color: var(--ct-text-secondary);
+  font-size: 13px;
+  font-weight: 580;
+}
+
+.c-progress__meta span {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.c-progress__meta span:last-child {
+  flex: 0 1 auto;
+  max-inline-size: min(60%, 100%);
+  text-align: right;
+}
+
+.c-progress__meta span:only-child {
+  flex: 1 1 auto;
+  max-inline-size: 100%;
+  text-align: left;
+}
+
+.c-progress__track {
+  position: relative;
+  overflow: hidden;
+  height: 8px;
+  border-radius: var(--ct-radius-full);
+  background: var(--progress-track-color);
+}
+
+.c-progress__bar {
+  display: block;
+  height: 100%;
+  inline-size: var(--progress-value, 0%);
+  border-radius: inherit;
+  background: var(--progress-stroke-fill);
+  transition: inline-size 160ms ease;
+}
+
+.c-progress--sm .c-progress__track {
+  height: 5px;
+}
+
+.c-progress--lg .c-progress__track {
+  height: 12px;
+}
+
+.c-progress--indeterminate .c-progress__bar {
+  position: absolute;
+  inset-block: 0;
+  inline-size: 36%;
+  animation: c-progress-indeterminate 1.2s ease-in-out infinite;
+}
+
+.c-progress--steps .c-progress__track {
+  display: flex;
+  gap: 3px;
+  overflow: visible;
+  border-radius: 0;
+  background: transparent;
+}
+
+.c-progress__step {
+  flex: 1 1 0;
+  min-inline-size: 6px;
+  height: 100%;
+  border-radius: var(--ct-radius-full);
+  background: var(--progress-track-color);
+}
+
+.c-progress__step--filled {
+  background: var(--progress-stroke-fill);
+}
+
+.c-progress--success {
+  --progress-stroke-color: var(--ct-success);
+  --progress-stroke-fill: var(--progress-stroke-color);
+}
+
+.c-progress--warning {
+  --progress-stroke-color: var(--ct-warning);
+  --progress-stroke-fill: var(--progress-stroke-color);
+}
+
+.c-progress--error {
+  --progress-stroke-color: var(--ct-danger);
+  --progress-stroke-fill: var(--progress-stroke-color);
+}
+
+.c-progress__circle {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 112px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  min-width: 0;
+}
+
+.c-progress--sm .c-progress__circle {
+  width: 84px;
+}
+
+.c-progress--lg .c-progress__circle {
+  width: 136px;
+}
+
+.c-progress__circle-svg {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transform: rotate(-90deg);
+}
+
+.c-progress__circle-track,
+.c-progress__circle-bar {
+  fill: none;
+  stroke-width: 8;
+}
+
+.c-progress--sm .c-progress__circle-track,
+.c-progress--sm .c-progress__circle-bar {
+  stroke-width: 7;
+}
+
+.c-progress--lg .c-progress__circle-track,
+.c-progress--lg .c-progress__circle-bar {
+  stroke-width: 9;
+}
+
+.c-progress__circle-track {
+  stroke: var(--progress-track-color);
+}
+
+.c-progress__circle-bar {
+  stroke: var(--progress-stroke-color);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 180ms ease;
+}
+
+.c-progress--dashboard .c-progress__circle-svg {
+  transform: rotate(0deg);
+}
+
+.c-progress__circle-bar-spin {
+  transform-origin: 50px 50px;
+}
+
+.c-progress--indeterminate .c-progress__circle-bar-spin {
+  animation: c-progress-circle-indeterminate 1.25s ease-in-out infinite;
+}
+
+.c-progress--indeterminate .c-progress__circle-bar {
+  stroke-dasharray: 80 276.4601535;
+  stroke-dashoffset: 0;
+}
+
+.c-progress__circle-value,
+.c-progress__circle-label {
+  grid-area: 1 / 1;
+  max-width: 72%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--ct-text);
+  text-align: center;
+}
+
+.c-progress__circle-value {
+  font-size: 18px;
+  font-weight: 720;
+  line-height: 1.1;
+}
+
+.c-progress--sm .c-progress__circle-value {
+  font-size: 15px;
+}
+
+.c-progress--lg .c-progress__circle-value {
+  font-size: 21px;
+}
+
+.c-progress__circle-label {
+  align-self: end;
+  margin-bottom: 18%;
+  color: var(--ct-text-secondary);
+  font-size: 11px;
+  font-weight: 620;
+  line-height: 1.15;
+}
+
+:root[data-theme="dark"] .c-progress {
+    --progress-track-color: #333330;
+    --progress-stroke-color: #d6d6d1;
+    --progress-stroke-fill: var(--progress-stroke-color);
+  }
+
+:root[data-theme="dark"] .c-progress--success {
+    --progress-stroke-color: var(--ct-success);
+    --progress-stroke-fill: var(--progress-stroke-color);
+  }
+
+:root[data-theme="dark"] .c-progress--warning {
+    --progress-stroke-color: var(--ct-warning);
+    --progress-stroke-fill: var(--progress-stroke-color);
+  }
+
+:root[data-theme="dark"] .c-progress--error {
+    --progress-stroke-color: var(--ct-danger);
+    --progress-stroke-fill: var(--progress-stroke-color);
+  }
+
+:root[data-theme="dark"] .c-progress__meta,
+:root[data-theme="dark"] .c-progress__circle-label {
+    color: var(--ct-text-tertiary);
+  }
+
+:root[data-theme="dark"] .c-progress__circle-value {
+    color: var(--ct-text-disabled);
+  }
+
+.c-config-provider[data-theme="dark"] .c-progress {
+  --progress-track-color: #333330;
+  --progress-stroke-color: #d6d6d1;
+  --progress-stroke-fill: var(--progress-stroke-color);
+}
+
+.c-config-provider[data-theme="dark"] .c-progress--success {
+  --progress-stroke-color: var(--ct-success);
+  --progress-stroke-fill: var(--progress-stroke-color);
+}
+
+.c-config-provider[data-theme="dark"] .c-progress--warning {
+  --progress-stroke-color: var(--ct-warning);
+  --progress-stroke-fill: var(--progress-stroke-color);
+}
+
+.c-config-provider[data-theme="dark"] .c-progress--error {
+  --progress-stroke-color: var(--ct-danger);
+  --progress-stroke-fill: var(--progress-stroke-color);
+}
+
+.c-config-provider[data-theme="dark"] .c-progress__meta,
+.c-config-provider[data-theme="dark"] .c-progress__circle-label {
+  color: var(--ct-text-tertiary);
+}
+
+.c-config-provider[data-theme="dark"] .c-progress__circle-value {
+  color: var(--ct-text-disabled);
+}
+
+@keyframes c-progress-indeterminate {
+  0% {
+    transform: translateX(-110%);
+  }
+
+  100% {
+    transform: translateX(280%);
+  }
+}
+
+@keyframes c-progress-circle-indeterminate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+.c-progress--indeterminate .c-progress__bar,
+.c-progress--indeterminate .c-progress__circle-bar-spin {
+    animation: none;
+  }
+
+.c-progress__bar,
+.c-progress__circle-bar {
+    transition: none;
+    will-change: auto;
+  }
+
+.c-progress--indeterminate .c-progress__bar {
+    inline-size: 100%;
+    opacity: 0.72;
+    transform: none;
+  }
+
+.c-progress--indeterminate .c-progress__circle-bar {
+    opacity: 0.72;
+    stroke-dasharray: 276.4601535;
+  }
+}
+
+.c-progress {
+  --progress-track-color: var(--ct-surface-sunken);
+}
+
+.c-progress__meta,
+.c-progress__circle-label {
+  color: var(--ct-text-secondary);
+}
+
+.c-progress__circle-value {
+  color: var(--ct-text);
+}
+
+:root[data-theme="dark"] .c-progress__circle-value {
+    color: var(--ct-text);
+  }
+
+:root[data-theme="dark"] .c-progress__meta,
+:root[data-theme="dark"] .c-progress__circle-label {
+    color: var(--ct-text-secondary);
+  }

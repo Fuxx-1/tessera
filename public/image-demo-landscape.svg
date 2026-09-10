@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">Soft landscape fallback</title>
+  <desc id="desc">Layered hills, sky, and a small path used as a fallback image.</desc>
+  <rect width="900" height="560" fill="#dce9ef"/>
+  <circle cx="698" cy="132" r="58" fill="#f4ca6b"/>
+  <path d="M0 345c100-58 184-78 252-60 89 24 157 15 239-26 92-46 186-39 409 66v235H0z" fill="#7f9d84"/>
+  <path d="M0 412c118-50 236-56 354-17 88 29 183 19 286-29 84-39 171-32 260 21v173H0z" fill="#506e5c"/>
+  <path d="M375 560c48-92 91-161 129-207 16-19 47-18 62 2 37 50 75 118 114 205z" fill="#d8cfb6"/>
+</svg>

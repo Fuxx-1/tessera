@@ -1,0 +1,116 @@
+.c-textarea-field {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.c-textarea {
+  width: 100%;
+  max-width: 100%;
+  min-height: 72px;
+  padding: 10px 12px;
+  border: 1px solid var(--ct-border);
+  border-radius: var(--ct-radius-md);
+  background: var(--ct-surface);
+  color: var(--ct-text);
+  font-family: var(--ct-font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  overflow: auto;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  scrollbar-gutter: stable;
+  resize: vertical;
+  transition:
+    border-color var(--ct-motion-fast) ease,
+    background-color var(--ct-motion-fast) ease;
+}
+
+.c-textarea--autosize {
+  overflow-y: hidden;
+  resize: none;
+  transition:
+    border-color var(--ct-motion-fast) ease,
+    background-color var(--ct-motion-fast) ease,
+    height var(--ct-motion-base) ease;
+}
+
+.c-textarea::placeholder {
+  color: var(--ct-text-tertiary);
+}
+
+.c-textarea:hover:not(:disabled):not(:read-only) {
+  border-color: var(--ct-border-heavy);
+}
+
+.c-textarea:focus-visible {
+  border-color: var(--ct-accent);
+  outline: 2px solid var(--ct-focus-ring);
+  outline-offset: 2px;
+}
+
+.c-textarea:disabled {
+  border-color: var(--ct-border-light);
+  background: var(--ct-surface-muted);
+  color: var(--ct-text-disabled);
+  cursor: not-allowed;
+  resize: none;
+}
+
+.c-textarea-field--readonly .c-textarea {
+  background: var(--ct-surface-muted);
+}
+
+.c-textarea-field--error .c-textarea {
+  border-color: var(--ct-danger-border);
+}
+
+.c-textarea-field--error .c-textarea:focus-visible {
+  border-color: var(--ct-danger);
+  outline-color: var(--ct-danger);
+}
+
+.c-textarea-field__footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: start;
+}
+
+.c-textarea-field__footer .c-field__hint {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.c-textarea-field__count {
+  color: var(--ct-text-tertiary);
+  font-size: 11px;
+  line-height: 1.35;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.c-textarea-field--error .c-textarea-field__count {
+  color: var(--ct-danger);
+}
+
+@media (max-width: 760px), (pointer: coarse) {
+  .c-textarea {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .c-textarea-field__footer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .c-textarea-field__count {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-textarea,
+  .c-textarea--autosize {
+    transition: none;
+  }
+}

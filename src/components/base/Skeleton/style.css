@@ -1,0 +1,264 @@
+.c-skeleton {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 11px;
+  box-sizing: border-box;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  contain: layout paint;
+  min-width: 0;
+}
+
+.c-skeleton--with-avatar {
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: start;
+}
+
+.c-skeleton__body {
+  display: grid;
+  gap: 8px;
+  max-inline-size: 100%;
+  min-width: 0;
+}
+
+.c-skeleton__avatar,
+.c-skeleton__title,
+.c-skeleton__line,
+.c-skeleton__button,
+.c-skeleton__cell,
+.c-skeleton__image,
+.c-skeleton__media {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--ct-radius-full);
+  background: var(--ct-surface-sunken);
+}
+
+.c-skeleton__avatar {
+  width: 38px;
+  height: 38px;
+}
+
+.c-skeleton__avatar--sm {
+  width: 30px;
+  height: 30px;
+}
+
+.c-skeleton__avatar--lg {
+  width: 46px;
+  height: 46px;
+}
+
+.c-skeleton__title {
+  width: var(--skeleton-title-width, min(220px, 62%));
+  max-width: 100%;
+  height: 17px;
+}
+
+.c-skeleton__line {
+  width: var(--skeleton-line-width, 100%);
+  max-width: 100%;
+  height: 12px;
+}
+
+.c-skeleton__line:last-child {
+  width: var(--skeleton-line-width, 72%);
+}
+
+.c-skeleton--sm {
+  gap: 8px;
+}
+
+.c-skeleton--sm.c-skeleton--with-avatar {
+  grid-template-columns: 30px minmax(0, 1fr);
+}
+
+.c-skeleton--sm .c-skeleton__title {
+  height: 13px;
+}
+
+.c-skeleton--sm .c-skeleton__line {
+  height: 9px;
+}
+
+.c-skeleton--lg {
+  gap: 13px;
+}
+
+.c-skeleton--lg.c-skeleton--with-avatar {
+  grid-template-columns: 46px minmax(0, 1fr);
+}
+
+.c-skeleton--lg .c-skeleton__title {
+  height: 21px;
+}
+
+.c-skeleton--lg .c-skeleton__line {
+  height: 14px;
+}
+
+.c-skeleton--round .c-skeleton__title,
+.c-skeleton--round .c-skeleton__line {
+  border-radius: var(--ct-radius-sm);
+}
+
+.c-skeleton__button {
+  inline-size: min(var(--skeleton-button-width, 108px), 100%);
+  max-inline-size: 100%;
+  height: 36px;
+  border-radius: var(--ct-radius-sm);
+}
+
+.c-skeleton--sm .c-skeleton__button {
+  height: 30px;
+}
+
+.c-skeleton--lg .c-skeleton__button {
+  height: 42px;
+}
+
+.c-skeleton__image {
+  inline-size: min(var(--skeleton-image-width, 100%), 100%);
+  max-inline-size: 100%;
+  block-size: var(--skeleton-image-height, auto);
+  min-block-size: 64px;
+  aspect-ratio: var(--skeleton-image-ratio, 16 / 9);
+  border-radius: var(--ct-radius-sm);
+}
+
+.c-skeleton__table {
+  display: grid;
+  gap: 10px;
+  max-inline-size: 100%;
+  min-width: 0;
+}
+
+.c-skeleton__table-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: 10px;
+  min-width: 0;
+  padding-block: 3px;
+}
+
+.c-skeleton__cell {
+  width: 100%;
+  max-width: 100%;
+  height: 12px;
+}
+
+.c-skeleton__cell--short {
+  width: 68%;
+}
+
+.c-skeleton__cell--medium {
+  width: 82%;
+}
+
+.c-skeleton__card {
+  display: grid;
+  gap: 12px;
+  max-inline-size: 100%;
+  min-width: 0;
+}
+
+.c-skeleton__media {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 7;
+  border-radius: var(--ct-radius-sm);
+}
+
+.c-skeleton--active .c-skeleton__avatar,
+.c-skeleton--active .c-skeleton__title,
+.c-skeleton--active .c-skeleton__line,
+.c-skeleton--active .c-skeleton__button,
+.c-skeleton--active .c-skeleton__cell,
+.c-skeleton--active .c-skeleton__image,
+.c-skeleton--active .c-skeleton__media {
+  background: linear-gradient(90deg, var(--ct-surface-sunken) 0%, var(--ct-surface-muted) 48%, var(--ct-surface-sunken) 100%);
+  background-size: 220% 100%;
+  animation: c-skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes c-skeleton-shimmer {
+  to {
+    background-position: -220% 0;
+  }
+}
+
+:root[data-theme="dark"] .c-skeleton__avatar,
+:root[data-theme="dark"] .c-skeleton__title,
+:root[data-theme="dark"] .c-skeleton__line,
+:root[data-theme="dark"] .c-skeleton__button,
+:root[data-theme="dark"] .c-skeleton__cell,
+:root[data-theme="dark"] .c-skeleton__image,
+:root[data-theme="dark"] .c-skeleton__media {
+    background: var(--ct-ink);
+  }
+
+:root[data-theme="dark"] .c-skeleton--active .c-skeleton__avatar,
+:root[data-theme="dark"] .c-skeleton--active .c-skeleton__title,
+:root[data-theme="dark"] .c-skeleton--active .c-skeleton__line,
+:root[data-theme="dark"] .c-skeleton--active .c-skeleton__button,
+:root[data-theme="dark"] .c-skeleton--active .c-skeleton__cell,
+:root[data-theme="dark"] .c-skeleton--active .c-skeleton__image,
+:root[data-theme="dark"] .c-skeleton--active .c-skeleton__media {
+    background: linear-gradient(90deg, var(--ct-ink) 0%, var(--ct-text) 48%, var(--ct-ink) 100%);
+    background-size: 220% 100%;
+  }
+
+@media (prefers-reduced-motion: reduce) {
+.c-skeleton--active .c-skeleton__avatar,
+.c-skeleton--active .c-skeleton__title,
+.c-skeleton--active .c-skeleton__line,
+.c-skeleton--active .c-skeleton__button,
+.c-skeleton--active .c-skeleton__cell,
+.c-skeleton--active .c-skeleton__image,
+.c-skeleton--active .c-skeleton__media {
+    animation: none;
+  }
+}
+
+.c-skeleton__avatar,
+.c-skeleton__title,
+.c-skeleton__line,
+.c-skeleton__button,
+.c-skeleton__cell,
+.c-skeleton__image,
+.c-skeleton__media {
+  background: var(--ct-surface-sunken);
+}
+
+.c-skeleton--active .c-skeleton__avatar,
+.c-skeleton--active .c-skeleton__title,
+.c-skeleton--active .c-skeleton__line,
+.c-skeleton--active .c-skeleton__button,
+.c-skeleton--active .c-skeleton__cell,
+.c-skeleton--active .c-skeleton__image,
+.c-skeleton--active .c-skeleton__media {
+  background: linear-gradient(90deg, var(--ct-surface-sunken) 0%, var(--ct-surface-muted) 48%, var(--ct-surface-sunken) 100%);
+  background-size: 220% 100%;
+}
+
+:root[data-theme="dark"] .c-skeleton__avatar,
+:root[data-theme="dark"] .c-skeleton__title,
+:root[data-theme="dark"] .c-skeleton__line,
+:root[data-theme="dark"] .c-skeleton__button,
+:root[data-theme="dark"] .c-skeleton__cell,
+:root[data-theme="dark"] .c-skeleton__image,
+:root[data-theme="dark"] .c-skeleton__media {
+    background: var(--ct-surface-sunken);
+  }
+
+:root[data-theme="dark"] .c-skeleton--active .c-skeleton__avatar,
+:root[data-theme="dark"] .c-skeleton--active .c-skeleton__title,
+:root[data-theme="dark"] .c-skeleton--active .c-skeleton__line,
+:root[data-theme="dark"] .c-skeleton--active .c-skeleton__button,
+:root[data-theme="dark"] .c-skeleton--active .c-skeleton__cell,
+:root[data-theme="dark"] .c-skeleton--active .c-skeleton__image,
+:root[data-theme="dark"] .c-skeleton--active .c-skeleton__media {
+    background: linear-gradient(90deg, var(--ct-surface-sunken) 0%, var(--ct-surface-muted) 48%, var(--ct-surface-sunken) 100%);
+    background-size: 220% 100%;
+  }

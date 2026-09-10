@@ -1,0 +1,44 @@
+{
+  "schema_version": "tessera.iced.testkit-repair-result/v1",
+  "repair_version": "v5",
+  "observed_at": "2026-08-16T20:27:22Z",
+  "scope": "private G0 evidence-contract testkit only",
+  "contract_test": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 native/testkit/tests/test_contract.py",
+    "result": "pass",
+    "tests": 12,
+    "duration_seconds": 4.782,
+    "signal_before_spawn_runs": 20,
+    "signal_during_child_runs": 20,
+    "during_child_assertion": "each child-ready PID was absent after runner completion",
+    "signal_bundle_assertions": [
+      "finalized_by=signal_trap",
+      "signal and 128+signal exit code",
+      "fail status and handback",
+      "evidence, manifest, provenance, and validation envelopes"
+    ],
+    "negative_probe": "inconsistent SIGTERM signal_trap exit is rejected as RUNNER_SIGNAL"
+  },
+  "frozen_authority": {
+    "catalog_cell_count": 218,
+    "catalog_file_sha256": "adb0d47f73e2201fe52c947a1d6826ae9897f7261297555962a999eb4e63d58f",
+    "catalog_canonical_sha256": "5632ad6d6d31c168eebf003bcc2116beab6d6b36093f5d958e3b8b590b6d1793",
+    "crosswalk_file_sha256": "0939b2cd7aaf84a2e20ee20cb070bdc6f1181c20b3b041f59d41cffe5538f354",
+    "crosswalk_canonical_sha256": "8a7c7efdfcaae083c2b899d669389944907a25ec331cbb192090b967b9f7e655"
+  },
+  "frozen_repair_files": {
+    "native/testkit/lib/run_evidence.py": "1d373cba8a52ec13fa07aea13fcb4b85f3836030d82291e538e017d9c05a0c05",
+    "native/testkit/lib/evidence_contract.py": "320b41a388da9661200eb0b0563b45ef34a49591f4afd5230701181e8cb0526b",
+    "native/testkit/tests/test_contract.py": "23fade938b705a308aa5477849d4e08d9f7ff32a98f7df4013a2117f01de3174",
+    "native/testkit/schema/evidence-v1.schema.json": "f1f0f2f3c5f674b0a5bd9e95769da46cf47c1fc4713395c56ba64adb1ff3836b",
+    "native/testkit/fixtures/negative-fixtures.json": "ba79fc7a102ca7521403db81ae221d137acbac81fc9c4bda52559fb0e5b527d2",
+    "native/docs/test-strategy.md": "522792ee57b6c050b5f08dc950f6b695fa44d6f261a0c5f181f77e30de10d7bf",
+    "native/docs/evidence-schema.md": "8303d10b24b94f58ea892a8409c6200638106e738e726f8251d2c9648433ccc1"
+  },
+  "remaining_unverified": [
+    "Windows runner behavior",
+    "trusted CI signer and verifier",
+    "Metal, DX12, renderer, GUI, low-spec, and screen-reader evidence",
+    "6-hour and 24-hour soak runs"
+  ]
+}

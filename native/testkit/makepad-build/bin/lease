@@ -1,0 +1,112 @@
+#!/usr/bin/env python3
+"""Acquire, heartbeat, inspect, and release a Makepad writer lease."""
+
+from __future__ import annotations
+
+import argparse
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from _common import add_root_arguments, load_json_argument, roots_from_args, run, write_report  # noqa: E402
+from makepad_build import (  # noqa: E402
+    acquire_lease,
+    assert_lease,
+    heartbeat_lease,
+    lease_liveness,
+    read_lease,
+    release_lease,
+    validate_managed_lease_path,
+)
+
+
+def add_common(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument("--lease-path", required=True)
+    parser.add_argument("--now", type=float)
+    add_root_arguments(parser)
+
+
+def expected_record(args: argparse.Namespace, lease_path: Path) -> dict[str, object]:
+    if args.expected:
+        value = load_json_argument(args.expected)
+        if not isinstance(value, dict):
+            raise ValueError("expected lease JSON must be an object")
+        return value
+    return read_lease(lease_path)
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    commands = parser.add_subparsers(dest="operation", required=True)
+
+    acquire = commands.add_parser("acquire")
+    add_common(acquire)
+    acquire.add_argument("--key-sha256", required=True)
+    acquire.add_argument("--source-revision", required=True)
+    acquire.add_argument("--writer-session", required=True)
+    acquire.add_argument("--ttl-seconds", type=int, default=60)
+    acquire.add_argument("--heartbeat-seconds", type=int, default=10)
+    acquire.add_argument("--pid", type=int)
+    acquire.add_argument("--process-start-token")
+    acquire.add_argument("--host-id")
+    acquire.add_argument("--process-checker", choices=("alive", "dead", "unknown"))
+    acquire.add_argument("--out")
+
+    for name in ("heartbeat", "release", "check"):
+        command = commands.add_parser(name)
+        add_common(command)
+        command.add_argument("--expected")
+        if name == "heartbeat":
+            command.add_argument("--ttl-seconds", type=int)
+            command.add_argument("--no-process-check", action="store_true")
+
+    args = parser.parse_args()
+    roots = roots_from_args(args)
+    lease_path = validate_managed_lease_path(args.lease_path, roots)
+    if args.operation == "acquire":
+        checker = None
+        if args.process_checker is not None:
+            checker = lambda _record: args.process_checker
+        lease = acquire_lease(
+            lease_path,
+            key_sha256=args.key_sha256,
+            source_revision=args.source_revision,
+            writer_session=args.writer_session,
+            ttl_seconds=args.ttl_seconds,
+            heartbeat_seconds=args.heartbeat_seconds,
+            pid=args.pid,
+            process_start_token=args.process_start_token,
+            host_id=args.host_id,
+            now=args.now,
+            process_checker=checker,
+        )
+        report = {"ok": True, "operation": "acquire", "lease": lease}
+        if args.out:
+            write_report(lease, args.out)
+        else:
+            write_report(report)
+        return 0
+    expected = expected_record(args, lease_path)
+    if args.operation == "heartbeat":
+        lease = heartbeat_lease(
+            lease_path,
+            expected,
+            now=args.now,
+            ttl_seconds=args.ttl_seconds,
+            verify_process=not args.no_process_check,
+        )
+        write_report({"ok": True, "operation": "heartbeat", "lease": lease})
+        return 0
+    if args.operation == "release":
+        release_lease(lease_path, expected, now=args.now)
+        write_report({"ok": True, "operation": "release"})
+        return 0
+    current = read_lease(lease_path)
+    state, reason = lease_liveness(current, now=args.now)
+    write_report({"ok": True, "operation": "check", "state": state, "reason": reason, "lease": current})
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(run(main))

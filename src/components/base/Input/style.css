@@ -1,0 +1,211 @@
+.c-input {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: var(--ct-control-height);
+  padding: 0 12px;
+  border: 1px solid var(--ct-border);
+  border-radius: var(--ct-radius-md);
+  background: var(--ct-surface);
+  color: var(--ct-text);
+  font-family: var(--ct-font-sans);
+  font-size: 14px;
+  transition:
+    border-color var(--ct-motion-fast) ease,
+    background-color var(--ct-motion-fast) ease;
+}
+
+.c-input::placeholder {
+  color: var(--ct-text-tertiary);
+}
+
+.c-input:hover:not(:disabled):not(:read-only) {
+  border-color: var(--ct-border-heavy);
+}
+
+.c-input:focus-visible {
+  border-color: var(--ct-accent);
+  outline: 2px solid var(--ct-focus-ring);
+  outline-offset: 2px;
+}
+
+.c-input:disabled {
+  border-color: var(--ct-border-light);
+  background: var(--ct-surface-muted);
+  color: var(--ct-text-disabled);
+  cursor: not-allowed;
+}
+
+.c-field--error .c-input {
+  border-color: var(--ct-danger-border);
+}
+
+.c-field--error .c-input:focus-visible {
+  border-color: var(--ct-danger);
+  outline-color: var(--ct-danger);
+}
+
+.c-input-field {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.c-input-field__control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: var(--ct-control-height);
+  overflow: hidden;
+  border: 1px solid var(--ct-border);
+  border-radius: var(--ct-radius-md);
+  background: var(--ct-surface);
+  transition:
+    border-color var(--ct-motion-fast) ease,
+    background-color var(--ct-motion-fast) ease;
+}
+
+.c-input-field__control:hover {
+  border-color: var(--ct-border-heavy);
+}
+
+.c-input-field__control:has(.c-input:focus-visible),
+.c-input-field__control:focus-within {
+  border-color: var(--ct-accent);
+  box-shadow: 0 0 0 2px var(--ct-focus-ring);
+}
+
+.c-input-field--error .c-input-field__control {
+  border-color: var(--ct-danger-border);
+}
+
+.c-input-field--error .c-input-field__control:has(.c-input:focus-visible),
+.c-input-field--error .c-input-field__control:focus-within {
+  border-color: var(--ct-danger);
+  box-shadow: 0 0 0 2px var(--ct-danger);
+}
+
+.c-input-field--disabled .c-input-field__control {
+  border-color: var(--ct-border-light);
+  background: var(--ct-surface-muted);
+  cursor: not-allowed;
+}
+
+.c-input-field--disabled .c-input-field__control .c-input {
+  color: var(--ct-text-disabled);
+}
+
+.c-input-field--readonly .c-input-field__control {
+  background: var(--ct-surface-muted);
+}
+
+.c-input-field .c-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: calc(var(--ct-control-height) - 2px);
+  border: 0;
+  background: transparent;
+  outline: 0;
+}
+
+.c-input-field .c-input:focus-visible {
+  outline: 0;
+}
+
+.c-input-field__affix {
+  flex: 0 0 auto;
+  max-width: 42%;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--ct-text-tertiary);
+  font-size: 13px;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.c-input-field__control--prefixed.c-input-field__control--suffixed .c-input-field__affix {
+  max-width: 32%;
+}
+
+.c-input-field__prefix {
+  padding-inline-start: 12px;
+}
+
+.c-input-field__suffix {
+  padding-inline-end: 12px;
+}
+
+.c-input-field__clear {
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  margin-inline-end: 2px;
+  border: 0;
+  border-radius: var(--ct-radius-sm);
+  background: transparent;
+  color: var(--ct-text-tertiary);
+  cursor: pointer;
+  opacity: 0;
+  transition:
+    opacity var(--ct-motion-fast) ease,
+    background-color var(--ct-motion-fast) ease,
+    color var(--ct-motion-fast) ease;
+  touch-action: manipulation;
+}
+
+.c-input-field__control:hover .c-input-field__clear,
+.c-input-field__control:focus-within .c-input-field__clear,
+.c-input-field__clear:focus-visible {
+  opacity: 1;
+}
+
+.c-input-field__clear:hover:not(:disabled) {
+  background: var(--ct-surface-hover);
+  color: var(--ct-text);
+}
+
+.c-input-field__clear:focus-visible {
+  outline: 2px solid var(--ct-focus-ring);
+  outline-offset: -2px;
+}
+
+.c-input-field__clear:disabled {
+  color: var(--ct-text-disabled);
+  cursor: not-allowed;
+}
+
+@media (max-width: 760px), (pointer: coarse) {
+  .c-input,
+  .c-input-field__control {
+    min-height: var(--ct-control-height-lg);
+    font-size: 16px;
+  }
+
+  .c-input-field .c-input {
+    min-height: calc(var(--ct-control-height-lg) - 2px);
+  }
+
+  .c-input-field__clear {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-input,
+  .c-input-field__control,
+  .c-input-field__clear {
+    transition: none;
+  }
+}

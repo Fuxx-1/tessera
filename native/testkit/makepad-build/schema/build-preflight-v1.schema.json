@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tessera/build-preflight/v1",
+  "title": "Tessera Makepad build admission report",
+  "type": "object",
+  "required": ["schema_version", "ok", "errors", "warnings", "key_sha256", "supplied_target_dir", "target_dir", "lockfile_sha256", "estimated_peak_bytes", "minimum_free_bytes", "available_bytes", "volume", "cargo_build_jobs", "admission"],
+  "properties": {
+    "schema_version": {"const": "tessera/build-preflight/v1"},
+    "ok": {"type": "boolean"},
+    "errors": {"type": "array"},
+    "warnings": {"type": "array"},
+    "key_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_revision": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "supplied_target_dir": {"type": ["string", "null"]},
+    "target_dir": {"type": "string"},
+    "lockfile_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "estimated_peak_bytes": {"type": "integer", "minimum": 1},
+    "minimum_free_bytes": {"type": "integer", "minimum": 0},
+    "available_bytes": {"type": "integer"},
+    "volume": {"type": "object"},
+    "cargo_build_jobs": {"const": 2},
+    "admission": {"enum": ["admitted", "rejected"]}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,66 @@
+{
+  "broker_requests": [],
+  "case_id": "REJECT-PATH-TRAVERSAL",
+  "expect": {
+    "codes": [
+      "PATH_TRAVERSAL",
+      "RESOURCE_KIND",
+      "URL_SCHEME",
+      "REMOTE_RESOURCE"
+    ],
+    "verdict": "BLOCKED"
+  },
+  "input": {
+    "declared_byte_length": 9,
+    "media_type": "text/markdown",
+    "text": "safe text"
+  },
+  "operation": "markdown_to_safe_ir",
+  "resources": [
+    {
+      "kind": "file",
+      "path": "../outside/payload.svg"
+    },
+    {
+      "kind": "network",
+      "url": "data:image/svg+xml,%3Csvg%3E%3C/svg%3E"
+    }
+  ],
+  "runtime_constraints": {
+    "external_actions_outside_broker": 0,
+    "forbidden_runtime_paths": [],
+    "ui_thread_sync_io_bytes": 0,
+    "ui_thread_sync_io_operations": 0
+  },
+  "safe_ir": {
+    "kind": "markdown_document",
+    "links": [],
+    "max_depth": 1,
+    "node_count": 1,
+    "resource_counters": {
+      "dom_node_count": 0,
+      "external_resource_count": 0,
+      "raw_svg_count": 0,
+      "script_count": 0,
+      "shader_count": 0
+    }
+  },
+  "schema_version": "tessera.makepad.security.fixture/v1",
+  "task": {
+    "active_generation": 9,
+    "cancelled": false,
+    "deadline_ms": 3500,
+    "elapsed_ms": 1,
+    "generation": 9,
+    "timed_out": false
+  },
+  "trust_boundary": {
+    "may_accept_raw_svg": false,
+    "may_accept_shader": false,
+    "may_create_live": false,
+    "may_execute_js": false,
+    "may_execute_script": false,
+    "may_use_dom": false,
+    "source": "drag_drop"
+  }
+}

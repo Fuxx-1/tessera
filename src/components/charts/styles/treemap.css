@@ -1,0 +1,56 @@
+.c-treemap__group rect {
+  fill: var(--ct-surface-muted);
+  stroke: var(--chart-border);
+  stroke-width: 1;
+}
+
+.c-treemap__group-label {
+  fill: var(--ct-text-secondary);
+  font-size: 11px;
+  font-weight: 680;
+  pointer-events: none;
+}
+
+.c-treemap__cell {
+  outline: none;
+}
+
+.c-treemap__cell rect {
+  stroke: color-mix(in srgb, var(--chart-surface) 84%, transparent);
+  stroke-width: 1.4;
+  vector-effect: non-scaling-stroke;
+  transition:
+    filter 140ms ease,
+    stroke 140ms ease,
+    stroke-width 140ms ease;
+}
+
+.c-treemap__cell:hover rect,
+.c-treemap__cell:focus rect,
+.c-treemap__cell:focus-visible rect {
+  filter: brightness(0.96);
+  stroke: var(--ct-text);
+  stroke-width: 2.4;
+}
+
+.c-treemap__cell--other rect {
+  opacity: 0.72;
+}
+
+.c-treemap__label,
+.c-treemap__value {
+  fill: var(--ct-text-on-accent);
+  pointer-events: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+}
+
+.c-treemap__label {
+  font-size: 12px;
+  font-weight: 720;
+}
+
+.c-treemap__value {
+  font-size: 11px;
+  font-weight: 620;
+  opacity: 0.9;
+}

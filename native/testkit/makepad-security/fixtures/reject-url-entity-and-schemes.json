@@ -1,0 +1,77 @@
+{
+  "broker_requests": [
+    {
+      "action": "open_url",
+      "audience": "tessera.makepad.external-action-broker",
+      "capability": {
+        "audience": "tessera.makepad.external-action-broker",
+        "kind": "open_url",
+        "nonce": "fedcba9876543210fedcba9876543210",
+        "one_time": true,
+        "ttl_ms": 5000
+      },
+      "replay_nonce_history": [],
+      "replayed": false,
+      "url": "ftp://example.test/file",
+      "user_gesture": {
+        "id": "gesture-bad-scheme-1",
+        "kind": "click"
+      }
+    }
+  ],
+  "case_id": "REJECT-URL-ENTITY",
+  "expect": {
+    "codes": [
+      "URL_ENTITY_ENCODED_SCHEME",
+      "URL_SCHEME"
+    ],
+    "verdict": "BLOCKED"
+  },
+  "input": {
+    "declared_byte_length": 59,
+    "media_type": "text/markdown",
+    "text": "[encoded](java&#x73;cript:alert(1)) and [ftp](ftp://e.test)"
+  },
+  "operation": "markdown_to_safe_ir",
+  "resources": [],
+  "runtime_constraints": {
+    "external_actions_outside_broker": 0,
+    "forbidden_runtime_paths": [],
+    "ui_thread_sync_io_bytes": 0,
+    "ui_thread_sync_io_operations": 0
+  },
+  "safe_ir": {
+    "kind": "markdown_document",
+    "links": [
+      "java&#x73;cript:alert(1)",
+      "ftp://e.test"
+    ],
+    "max_depth": 2,
+    "node_count": 3,
+    "resource_counters": {
+      "dom_node_count": 0,
+      "external_resource_count": 0,
+      "raw_svg_count": 0,
+      "script_count": 0,
+      "shader_count": 0
+    }
+  },
+  "schema_version": "tessera.makepad.security.fixture/v1",
+  "task": {
+    "active_generation": 5,
+    "cancelled": false,
+    "deadline_ms": 3500,
+    "elapsed_ms": 5,
+    "generation": 5,
+    "timed_out": false
+  },
+  "trust_boundary": {
+    "may_accept_raw_svg": false,
+    "may_accept_shader": false,
+    "may_create_live": false,
+    "may_execute_js": false,
+    "may_execute_script": false,
+    "may_use_dom": false,
+    "source": "user"
+  }
+}

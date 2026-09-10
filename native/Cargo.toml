@@ -1,0 +1,36 @@
+[workspace]
+members = [
+  "crates/tessera-core",
+  "crates/tessera-makepad",
+  "crates/tessera-gallery",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+license = "MIT"
+publish = false
+
+[workspace.dependencies]
+makepad-widgets = { git = "https://github.com/makepad/makepad.git", rev = "152b11f20a8cf8e81bfd0086210cb9b0269c51e9" }
+makepad-zune-inflate = { git = "https://github.com/makepad/makepad.git", rev = "152b11f20a8cf8e81bfd0086210cb9b0269c51e9" }
+qrcodegen = "1.8.0"
+petgraph = { version = "=0.8.3", default-features = false, features = ["std"] }
+pulldown-cmark = { git = "https://github.com/makepad/makepad.git", rev = "152b11f20a8cf8e81bfd0086210cb9b0269c51e9" }
+mermaid-rs-renderer = { version = "=0.3.1", default-features = false }
+unicode-width = "=0.2.2"
+tessera-core = { path = "crates/tessera-core" }
+tessera-makepad = { path = "crates/tessera-makepad" }
+
+[profile.release]
+# Makepad's pinned runtime currently has an optimizer-sensitive VM ownership
+# assertion on macOS at opt-level 3. Keep the shipped profile at the highest
+# level already validated by the release startup gate until that upstream
+# invariant is fixed.
+opt-level = 2
+lto = "thin"
+codegen-units = 1
+panic = "abort"
+strip = "symbols"

@@ -1,0 +1,14 @@
+{
+  "fixture_id": "cjk-ime",
+  "profile": "cjk-composition",
+  "required_events": [
+    "composition-start",
+    "composition-update",
+    "candidate-position",
+    "composition-commit",
+    "composition-cancel",
+    "undo-restore"
+  ],
+  "sample_text": "zhong wen shu ru",
+  "notes": "Contains only expected IME lifecycle labels, not captured IME evidence."
+}

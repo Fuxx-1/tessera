@@ -1,0 +1,17 @@
+[package]
+name = "tessera-makepad"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+license = "MIT"
+publish = false
+description = "Tessera Makepad foundation crate"
+
+[dependencies]
+makepad-widgets.workspace = true
+qrcodegen.workspace = true
+petgraph.workspace = true
+pulldown-cmark.workspace = true
+mermaid-rs-renderer.workspace = true
+unicode-width.workspace = true
+tessera-core.workspace = true

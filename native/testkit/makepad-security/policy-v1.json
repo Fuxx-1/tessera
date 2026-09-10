@@ -1,0 +1,193 @@
+{
+  "schema_version": "tessera.makepad.security.policy/v1",
+  "policy_id": "makepad-safe-ir-input-boundary-v1",
+  "validator_version": "makepad-security-validator/1.0.0",
+  "status": "contract-only-blocked-runtime-unverified",
+  "source_context": {
+    "makepad_m0_tessera_revision": "80a9f7a7bf182c8a1043497b52032d281eb35748",
+    "makepad_upstream_revision": "152b11f20a8cf8e81bfd0086210cb9b0269c51e9",
+    "makepad_upstream_tree": "4ef79d52749299967bcddc00a8243ccdbc9b0a24",
+    "makepad_m0_lock_sha256": "37421ee29ce3977be5f5b2ebb852ebdf7835f809bac7322a3750c324dce79db3"
+  },
+  "trusted_boundary": {
+    "untrusted_sources": [
+      "user",
+      "remote_document",
+      "plugin",
+      "clipboard",
+      "drag_drop",
+      "file",
+      "network"
+    ],
+    "only_allowed_crossing": [
+      "typed_request",
+      "safe_ir",
+      "broker_action_request",
+      "auditable_error"
+    ],
+    "forbidden_crossing": [
+      "html",
+      "dom",
+      "javascript",
+      "live",
+      "script",
+      "raw_svg",
+      "foreign_object",
+      "shader",
+      "dynamic_resource_path",
+      "shell_command",
+      "process",
+      "network_without_broker",
+      "file_without_broker"
+    ]
+  },
+  "limits": {
+    "fixture_bytes": 1048576,
+    "markdown_source_bytes": 80000,
+    "markdown_nodes": 4096,
+    "markdown_inline_nodes": 16384,
+    "mermaid_source_bytes": 12000,
+    "mermaid_blocks": 8,
+    "mermaid_statements": 260,
+    "safe_ir_depth": 64,
+    "svg_source_bytes": 2097152,
+    "svg_nodes": 1200,
+    "svg_path_commands": 50000,
+    "svg_depth": 64,
+    "curve_control_points_per_edge": 2,
+    "curve_coordinate_abs": 4096,
+    "task_deadline_ms": 3500,
+    "worker_rss_mib": 256,
+    "url_bytes": 8192,
+    "broker_ttl_ms": 30000,
+    "ui_thread_sync_io_operations": 0,
+    "ui_thread_sync_io_bytes": 0
+  },
+  "url_policy": {
+    "allowed_schemes": [
+      "http",
+      "https"
+    ],
+    "forbidden_schemes": [
+      "about",
+      "blob",
+      "chrome",
+      "data",
+      "file",
+      "ftp",
+      "intent",
+      "javascript",
+      "mailto",
+      "shell",
+      "tel",
+      "vbscript",
+      "ws",
+      "wss"
+    ],
+    "reject": [
+      "entity_encoded_scheme",
+      "percent_encoded_scheme",
+      "credentials",
+      "empty_host",
+      "protocol_relative",
+      "relative_url",
+      "control_character",
+      "whitespace",
+      "backslash",
+      "unknown_scheme"
+    ]
+  },
+  "safe_ir": {
+    "allowed_kinds": [
+      "markdown_document",
+      "mermaid_diagram",
+      "plain_text",
+      "none"
+    ],
+    "forbidden_keys": [
+      "css",
+      "d",
+      "dom",
+      "dom_node",
+      "eval",
+      "foreignObject",
+      "html",
+      "javascript",
+      "jsx",
+      "live",
+      "live_value",
+      "path",
+      "raw_html",
+      "raw_path",
+      "raw_svg",
+      "script",
+      "shader",
+      "svg",
+      "svg_path"
+    ],
+    "curve_types": [
+      "cubic_bezier",
+      "line"
+    ]
+  },
+  "broker": {
+    "allowed_actions": [
+      "open_url"
+    ],
+    "audience": "tessera.makepad.external-action-broker",
+    "requires_user_gesture": true,
+    "requires_one_time_capability": true,
+    "requires_replay_nonce": true,
+    "forbidden_actions": [
+      "open_file",
+      "read_file",
+      "write_file",
+      "spawn_process",
+      "shell",
+      "dynamic_library",
+      "network_request",
+      "clipboard_poll",
+      "live_reload",
+      "remote_control"
+    ]
+  },
+  "makepad_upstream_risk_boundary": {
+    "blocked_user_reachable": [
+      "makepad-script",
+      "makepad-script-std",
+      "makepad-live-reload-core",
+      "makepad-html",
+      "makepad-svg",
+      "makepad-network",
+      "Splash",
+      "runsplash",
+      "eval_with_append_source",
+      "ScriptVm"
+    ],
+    "contract": "These packages or symbols may exist in the pinned upstream dependency closure, but untrusted Tessera bytes must not be routed to them. This testkit only validates fixtures and contract records; it is not runtime evidence."
+  },
+  "static_source_allowlist": {
+    "version": "tessera.makepad.static-source-allowlist/v1",
+    "scope": "repository production source only; security negative fixtures and test constants are scanned separately",
+    "allowed_symbols": [
+      {"path": "native/crates/tessera-gallery/src/app.rs", "symbol": "script_mod!", "expected_count": 1, "purpose": "compile-time Gallery App UI registration"},
+      {"path": "native/crates/tessera-gallery/src/app.rs", "symbol": "ScriptVm", "expected_count": 2, "purpose": "AppMain registration hook and theme registration helper type"},
+      {"path": "native/crates/tessera-gallery/src/component_catalog.rs", "symbol": "script_mod!", "expected_count": 1, "purpose": "compile-time catalog preview widget registration"},
+      {"path": "native/crates/tessera-gallery/src/component_detail.rs", "symbol": "script_mod!", "expected_count": 1, "purpose": "compile-time detail host widget registration"},
+      {"path": "native/crates/tessera-gallery/src/main.rs", "symbol": "app_main!(App)", "expected_count": 1, "purpose": "sole production Makepad application entry"},
+      {"path": "native/crates/tessera-makepad/src/components/shell.rs", "symbol": "script_mod!", "expected_count": 1, "purpose": "compile-time reusable shell widget registration"},
+      {"path_glob": "native/crates/tessera-makepad/src/components/surfaces/*.rs", "symbol": "script_mod!", "expected_count": 61, "purpose": "compile-time registration for concrete Makepad surface modules"}
+    ],
+    "production_globs": ["native/Cargo.toml", "native/crates/tessera-core/**/*.rs", "native/crates/tessera-makepad/**/*.rs", "native/crates/tessera-gallery/**/*.rs"],
+    "forbidden_production_symbols": [
+      "eval_with_append_source", "runsplash", "Splash::set_text", "WebView", "tessera_iced", "iced::", "run_pending", "makepad-html renderer", "makepad-svg renderer", "network_request", "std::process::Command", "std::process::Stdio", "Command::new(", "std::fs"
+    ],
+    "untrusted_to_makepad_rule": "No user, remote_document, plugin, clipboard, drag_drop, file, or network bytes may flow into script_mod!, ScriptVm, LiveValue, LiveChange, HTML/SVG renderer, shader, or dynamic resource path.",
+    "negative_fixture_rule": "javascript: and forbidden runtime markers may occur only under native/testkit/makepad-security/fixtures/reject-*.json or security test constants; they are never an allowed parser or broker value."
+    ,"negative_literal_allowlist": [
+      {"path": "native/crates/tessera-makepad/src/security.rs", "region": "validate_markdown reject-scheme literal", "literal": "javascript:", "reason": "explicit production rejection policy; never an allow-path or broker value"},
+      {"path": "native/testkit/makepad-security/tests/test_policy.py", "region": "test constant", "literal": "javascript:", "reason": "negative URL corpus only"},
+      {"path_glob": "native/testkit/makepad-security/fixtures/reject-*.json", "region": "negative fixture", "literal": "javascript:", "reason": "negative fixture payload only"}
+    ]
+  }
+}

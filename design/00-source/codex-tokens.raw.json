@@ -1,0 +1,219 @@
+{
+  "$meta": {
+    "source": "/Applications/Codex.app/Contents/Resources/app.asar :: webview/assets/app-jOJotR-N.css",
+    "extractedAt": "2026-07-04",
+    "note": "Raw values as shipped by Codex.app. color-mix entries use the modern @supports branch. Hex fallbacks kept where Codex ships them.",
+    "mixSyntax": "color-mix(in oklab, <base> <pct>, transparent) unless stated"
+  },
+  "palette": {
+    "gray": { "0": "#ffffff", "50": "#f9f9f9", "100": "#ededed", "300": "#afafaf", "500": "#5d5d5d", "550": "#4f4f4f", "600": "#414141", "700": "#303030", "750": "#282828", "800": "#212121", "900": "#181818", "1000": "#0d0d0d" },
+    "blue": { "50": "#e5f3ff", "100": "#99ceff", "300": "#339cff", "400": "#0285ff", "900": "#00284d" },
+    "green": { "50": "#d9f4e4", "300": "#40c977", "400": "#04b84c", "500": "#00a240", "700": "#00692a", "800": "#004f1f" },
+    "red": { "50": "#ffd9d9", "300": "#ff6764", "400": "#fa423e", "500": "#e02e2a", "600": "#ba2623", "900": "#4d100e" },
+    "orange": { "50": "#ffe7d9", "300": "#ff8549", "400": "#fb6a22", "500": "#e25507", "700": "#923b0f", "900": "#4a2206" },
+    "yellow": { "300": "#ffd240", "400": "#ffc300" },
+    "purple": { "300": "#ad7bf9", "400": "#924ff7" },
+    "pink": { "400": "#ff66ad" }
+  },
+  "light": {
+    "background": {
+      "surface": "gray-0",
+      "surfaceUnder": "gray-50",
+      "editorOpaque": "mix(gray-100, 40%)",
+      "elevatedPrimary": "mix(gray-0, 70%)",
+      "elevatedPrimaryOpaque": "gray-0",
+      "elevatedSecondary": "mix(fg, 2%)",
+      "elevatedSecondaryOpaque": "mix(gray-100, 40%)",
+      "buttonPrimary": "fg",
+      "buttonPrimaryHover": "mix(fg, 8%)",
+      "buttonPrimaryActive": "mix(fg, 16%)",
+      "buttonPrimaryInactive": "mix(fg, 24%)",
+      "buttonSecondary": "mix(fg, 5%)",
+      "buttonSecondaryHover": "mix(fg, 5%)",
+      "buttonSecondaryActive": "mix(fg, 4%)",
+      "buttonSecondaryInactive": "mix(fg, 2%)",
+      "buttonTertiary": "mix(fg, 0%)",
+      "buttonTertiaryHover": "mix(fg, 10%)",
+      "buttonTertiaryActive": "mix(fg, 20%)",
+      "accent": "blue-50",
+      "statusSuccess": "mix(green-500, 7%)",
+      "statusWarning": "orange-50",
+      "statusError": "red-50",
+      "dangerActive": "mix(red-500, 90%)"
+    },
+    "text": {
+      "foreground": "#1a1c1f",
+      "foregroundSecondary": "mix(fg, 70%)",
+      "foregroundTertiary": "mix(fg, 50%)",
+      "buttonPrimary": "gray-0",
+      "buttonSecondary": "fg",
+      "buttonTertiary": "gray-500",
+      "accent": "blue-300",
+      "success": "green-500",
+      "warning": "orange-500",
+      "error": "red-500"
+    },
+    "icon": {
+      "primary": "fg",
+      "secondary": "mix(fg, 70%)",
+      "tertiary": "mix(fg, 50%)",
+      "accent": "blue-300",
+      "success": "green-500",
+      "warning": "orange-500",
+      "error": "red-500"
+    },
+    "accentScale": { "red": "red-500", "blue": "blue-300", "yellow": "yellow-400", "orange": "orange-500", "green": "green-500", "purple": "purple-400" },
+    "border": {
+      "default": "mix(fg, 8%)",
+      "light": "mix(fg, 5%)",
+      "heavy": "mix(fg, 12%)",
+      "elevation": "mix(fg, 12%)",
+      "warning": "mix(orange-500, 15%)",
+      "error": "mix(red-500, 15%)",
+      "focus": "blue-300"
+    },
+    "decoration": { "added": "green-500", "modified": "orange-700", "deleted": "red-600", "unchanged": "gray-300" },
+    "editor": { "added": "mix(green-500, 15%)", "deleted": "mix(red-600, 15%)" },
+    "scrim": "#0000001a"
+  },
+  "dark": {
+    "background": {
+      "surface": "gray-900",
+      "surfaceUnder": "black",
+      "editorOpaque": "gray-800",
+      "elevatedPrimary": "mix(gray-800, 96%)",
+      "elevatedPrimaryOpaque": "gray-750",
+      "elevatedSecondary": "mix(gray-0, 3%)",
+      "elevatedSecondaryOpaque": "gray-800",
+      "buttonPrimary": "gray-1000",
+      "buttonPrimaryHover": "mix(gray-1000, 6%)",
+      "buttonPrimaryActive": "mix(gray-1000, 10%)",
+      "buttonPrimaryInactive": "mix(gray-1000, 3%)",
+      "buttonSecondary": "mix(gray-0, 5%)",
+      "buttonSecondaryHover": "mix(gray-0, 8%)",
+      "buttonSecondaryActive": "mix(gray-0, 12%)",
+      "buttonSecondaryInactive": "mix(gray-0, 4%)",
+      "buttonTertiary": "mix(gray-0, 3%)",
+      "buttonTertiaryHover": "mix(gray-0, 7%)",
+      "buttonTertiaryActive": "mix(gray-0, 10%)",
+      "accent": "blue-900",
+      "statusSuccess": "mix(green-400, 16%)",
+      "statusWarning": "orange-900",
+      "statusError": "red-900",
+      "dangerActive": "mix(red-400, 36%)"
+    },
+    "text": {
+      "foreground": "gray-0",
+      "foregroundSecondary": "mix(gray-0, 70%)",
+      "foregroundTertiary": "mix(gray-0, 50%)",
+      "buttonPrimary": "gray-1000",
+      "buttonSecondary": "gray-300",
+      "buttonTertiary": "gray-500",
+      "accent": "blue-100",
+      "success": "green-300",
+      "warning": "orange-300",
+      "error": "red-300"
+    },
+    "icon": {
+      "primary": "mix(white, 90%)",
+      "secondary": "mix(white, 70%)",
+      "tertiary": "mix(white, 50%)",
+      "accent": "blue-300",
+      "success": "green-300",
+      "warning": "orange-300",
+      "error": "red-300"
+    },
+    "accentScale": { "red": "red-300", "blue": "blue-300", "yellow": "yellow-300", "orange": "orange-400", "green": "green-300", "purple": "purple-300" },
+    "border": {
+      "default": "mix(white, 8%)",
+      "light": "mix(white, 4%)",
+      "heavy": "mix(white, 16%)",
+      "elevation": "mix(fg, 20%)",
+      "warning": "mix(orange-300, 40%)",
+      "error": "mix(red-400, 40%)",
+      "focus": "mix(blue-300, 70%)"
+    },
+    "decoration": { "added": "green-300", "modified": "orange-300", "deleted": "red-400", "unchanged": "gray-600" },
+    "editor": { "added": "mix(green-300, 23%)", "deleted": "mix(red-400, 23%)" },
+    "scrim": "#ffffff1a"
+  },
+  "typography": {
+    "fontSansDefault": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+    "fontOpenAISans": "\"OpenAI Sans\", var(--font-sans-default)",
+    "fontMonoDefault": "ui-monospace, \"SFMono-Regular\", \"SF Mono\", Menlo, Consolas, \"Liberation Mono\", monospace",
+    "fontSize": { "xs": "11px", "sm": "12px", "base": "14px", "lg": "16px", "headingSm": "18px", "headingMd": "20px", "headingLg": "24px", "xl": "28px", "2xl": "36px", "3xl": "48px", "4xl": "72px" },
+    "fontWeight": { "light": 300, "normal": 400, "medium": 500, "semibold": 600, "bold": 700 },
+    "headings": {
+      "3xl": { "size": "3xl", "weight": "medium", "lineHeight": 1 },
+      "2xl": { "size": "2xl", "weight": "medium", "lineHeight": 1 },
+      "xl": { "size": "xl", "weight": "medium", "lineHeight": 1.2 },
+      "lg": { "size": "headingLg", "weight": "medium", "lineHeight": 1.2 },
+      "base": { "size": "headingMd", "weight": "medium", "lineHeight": 1.33 },
+      "subsection": { "size": "headingSm", "weight": "medium", "lineHeight": 1.33 },
+      "dialog": { "size": "headingMd", "weight": "medium", "letterSpacing": "-0.36px", "lineHeight": "28px" },
+      "sm": { "size": "sm", "weight": "medium", "lineHeight": 1.4 },
+      "xs": { "size": "xs", "weight": "medium", "lineHeight": 1.4 }
+    },
+    "tracking": { "tight": "-0.025em", "normal": "0em", "wide": "0.025em" },
+    "leading": { "tight": 1.25, "snug": 1.375, "normal": 1.5, "relaxed": 1.625 }
+  },
+  "spacing": {
+    "unit": "0.25rem",
+    "rowPaddingY": "4px",
+    "rowPaddingX": "8px",
+    "navRowHeight": "calc(14px * 1.5 + 4px * 2)",
+    "navRowHeightCompactOverride": "30px",
+    "rowRadius": "9999px",
+    "panelPadding": "12px",
+    "toolbarPadding": "16px",
+    "toolbarHeight": "46px",
+    "toolbarHeightSm": "36px",
+    "toolbarHeightPane": "40px",
+    "sidebarWidth": "clamp(240px, 300px, min(520px, calc(100vw - 320px)))",
+    "conversationBlockGap": "12px",
+    "conversationToolAssistantGap": "16px",
+    "markdownWideBlockMaxWidth": "64rem"
+  },
+  "radius": {
+    "base": { "2xs": "2px", "xs": "4px", "sm": "6px", "md": "8px", "lg": "10px", "xl": "12px", "2xl": "16px", "3xl": "20px", "4xl": "24px" },
+    "full": "9999px",
+    "scaleDefault": 1,
+    "superellipse": { "supports": "corner-shape: superellipse(1.5)", "scale": 1.25, "cornerShape": "superellipse(1.5)", "appliesTo": ["md", "lg", "xl", "2xl", "3xl", "4xl"] }
+  },
+  "shadow": {
+    "hairline": "0px 0px 0px 0.5px #0000001a",
+    "sm": "0px 1px 2px -1px #00000014",
+    "md": "0px 2px 4px -1px #00000014",
+    "lg": "0px 4px 8px -2px #0000001a",
+    "xl": "0px 8px 16px -4px #0000001f",
+    "2xl": "0px 16px 32px -8px #00000030",
+    "elevationStroke": "0 0 0 0.5px var(--color-token-elevation-stroke)",
+    "elevationProminent": "var(--elevation-stroke), 0 3px 7.5px #0000000a, 0 0 20px #0000000d",
+    "blurScale": { "xs": "4px", "sm": "8px", "md": "12px", "lg": "16px", "xl": "24px" }
+  },
+  "motion": {
+    "durationBasic": "0.15s",
+    "durationRelaxed": "0.3s",
+    "defaultTransition": "0.15s cubic-bezier(.4,0,.2,1)",
+    "cubicEnter": "cubic-bezier(.19,1,.22,1)",
+    "cubicExitSnappy": "cubic-bezier(.65,0,.4,1)",
+    "easeBasic": "ease",
+    "shimmer": { "duration": "2s", "timing": "steps(48,end)", "iteration": "infinite" },
+    "placeholderPulse": { "duration": "2.4s", "timing": "ease-in-out" },
+    "reducedMotion": "all decorative animations disabled under prefers-reduced-motion"
+  },
+  "focus": {
+    "outline": "2px solid var(--color-token-focus-border)",
+    "outlineOffset": "2px",
+    "forcedColors": "outline-hidden elements get 2px solid transparent placeholder"
+  },
+  "chartCss": {
+    "axisTickFill": "var(--color-text-secondary)",
+    "gridStroke": "var(--color-border)",
+    "tooltipCursorStroke": "rgba(127,127,127,0.16)",
+    "barCursorFill": "rgba(127,127,127,0.08)",
+    "tooltip": { "padding": "8px 12px", "radius": "var(--radius-md)", "background": "var(--color-surface-elevated)", "shadow": "var(--shadow), var(--shadow-hairline)", "fontSize": "xs" },
+    "legendItem": { "gap": "6px", "padding": "4px 8px", "radius": "var(--radius-sm)", "hoverBackground": "var(--color-surface-tertiary)", "hiddenOpacity": 0.4, "marker": "10px circle" },
+    "valueLabel": { "fontSize": "sm", "fontWeight": 600 }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "schema_version": "tessera.iced.coverage/v1",
+  "catalog_version": "coverage-g0-v1",
+  "authority": {
+    "expanded_cell_count": 216,
+    "visual": {
+      "software": {
+        "changed_pixel_ratio_max": 0.0005,
+        "delta_e_2000_max": 3.0,
+        "dimension_error_dip_max": 1.0,
+        "text_contrast_min": 4.5,
+        "large_text_and_non_text_contrast_min": 3.0,
+        "mask_config_sha256": "d7d15a395ed8a8df8f0f98f5bca3c1b1a40e89b329a3fb916b4e9d9fdeee01f0",
+        "mask_area_ratio_max": 0.002
+      },
+      "hardware": {
+        "ssim_min": 0.995,
+        "diff_area_ratio_max": 0.002,
+        "delta_e_2000_max": 3.0,
+        "dimension_error_dip_max": 1.0,
+        "text_contrast_min": 4.5,
+        "large_text_and_non_text_contrast_min": 3.0,
+        "mask_config_sha256": "d7d15a395ed8a8df8f0f98f5bca3c1b1a40e89b329a3fb916b4e9d9fdeee01f0",
+        "mask_area_ratio_max": 0.002
+      }
+    }
+  },
+  "source_baseline": "b9c797d8dcd8ed044bd6a4f5bc479bfe52296810",
+  "product_requirements": [
+    {"id": "P0-ACC", "source": "product.md#9.2"},
+    {"id": "P0-PERF", "source": "product.md#9.2"},
+    {"id": "P0-PLAT", "source": "product.md#9.2"},
+    {"id": "P1-DOC-01", "source": "product.md#9.4"},
+    {"id": "P1-W4-01", "source": "product.md#9.4"},
+    {"id": "P1-W0-01", "source": "product.md#9.4"}
+  ],
+  "test_requirements": [
+    {"id": "REQ-G0-BASE-01", "product_requirement_ids": ["P1-W0-01"], "test_id": "T-G0-001"},
+    {"id": "REQ-G0-TOOL-01", "product_requirement_ids": ["P1-W0-01"], "test_id": "T-G0-001"},
+    {"id": "REQ-G0-SUP-01", "product_requirement_ids": ["P1-W0-01"], "test_id": "T-G0-001"},
+    {"id": "REQ-G0-EVID-01", "product_requirement_ids": ["P1-W0-01"], "test_id": "T-G0-001"},
+    {"id": "REQ-G0-REN-01", "product_requirement_ids": ["P0-PLAT"], "test_id": "T-G0-002"},
+    {"id": "REQ-G0-INPT-01", "product_requirement_ids": ["P0-ACC"], "test_id": "T-G0-003"},
+    {"id": "REQ-G0-TEST-01", "product_requirement_ids": ["P1-W0-01"], "test_id": "T-G0-003"},
+    {"id": "REQ-G0-VIS-01", "product_requirement_ids": ["P0-ACC"], "test_id": "T-G0-004"},
+    {"id": "REQ-G0-A11Y-01", "product_requirement_ids": ["P0-ACC"], "test_id": "T-G0-005"},
+    {"id": "REQ-G0-DPI-01", "product_requirement_ids": ["P0-ACC"], "test_id": "T-G0-006"},
+    {"id": "REQ-G0-PLAT-01", "product_requirement_ids": ["P0-PLAT"], "test_id": "T-G0-007"},
+    {"id": "REQ-G0-IDLE-01", "product_requirement_ids": ["P0-PERF"], "test_id": "T-G0-008"},
+    {"id": "REQ-G0-START-01", "product_requirement_ids": ["P0-PERF"], "test_id": "T-G0-008"},
+    {"id": "REQ-G0-REG-01", "product_requirement_ids": ["P0-PERF"], "test_id": "T-G0-008"},
+    {"id": "REQ-G0-FAULT-01", "product_requirement_ids": ["P1-W0-01"], "test_id": "T-G0-009"},
+    {"id": "REQ-G0-HAND-01", "product_requirement_ids": ["P1-W0-01"], "test_id": "T-G0-010"},
+    {"id": "REQ-G0-COV-01", "product_requirement_ids": ["P1-W0-01"], "test_id": "T-G0-011"},
+    {"id": "REQ-G0-DIGEST-01", "product_requirement_ids": ["P1-W0-01"], "test_id": "T-G0-012"},
+    {"id": "REQ-G0-SOURCE-01", "product_requirement_ids": ["P1-W0-01"], "test_id": "T-G0-013"},
+    {"id": "REQ-G0-RUNNER-01", "product_requirement_ids": ["P1-W0-01"], "test_id": "T-G0-014"},
+    {"id": "REQ-G0-STATUS-01", "product_requirement_ids": ["P1-W0-01"], "test_id": "T-G0-015"},
+    {"id": "REQ-G0-XWALK-01", "product_requirement_ids": ["P1-W0-01"], "test_id": "T-G0-016"},
+    {"id": "REQ-G0-VIS-METRIC-01", "product_requirement_ids": ["P0-ACC"], "test_id": "T-G0-017"},
+    {"id": "REQ-G0-SOAK-01", "product_requirement_ids": ["P0-PERF"], "test_id": "T-G0-018"},
+    {"id": "REQ-G0-CRATE-01", "product_requirement_ids": ["P1-W0-01"], "test_id": "T-G0-019"},
+    {"id": "REQ-G0-DOC-01", "product_requirement_ids": ["P1-DOC-01"], "test_id": "T-G0-020"}
+  ],
+  "tests": [
+    {"id": "T-G0-001", "scenario_id": "SCN-G0-001", "name": "baseline-build-supply"},
+    {"id": "T-G0-002", "scenario_id": "SCN-G0-002", "name": "renderer-isolation"},
+    {"id": "T-G0-003", "scenario_id": "SCN-G0-003", "name": "message-pointer-keyboard"},
+    {"id": "T-G0-004", "scenario_id": "SCN-G0-004", "name": "overlay-escape-focus-return"},
+    {"id": "T-G0-005", "scenario_id": "SCN-G0-005", "name": "ime-locale-accessibility"},
+    {"id": "T-G0-006", "scenario_id": "SCN-G0-006", "name": "software-visual-sentinels"},
+    {"id": "T-G0-007", "scenario_id": "SCN-G0-007", "name": "hardware-visual-renderer"},
+    {"id": "T-G0-008", "scenario_id": "SCN-G0-008", "name": "idle-start-resource"},
+    {"id": "T-G0-009", "scenario_id": "SCN-G0-009", "name": "fault-probes"},
+    {"id": "T-G0-010", "scenario_id": "SCN-G0-010", "name": "evidence-handback"},
+    {"id": "T-G0-011", "scenario_id": "SCN-G0-011", "name": "coverage-ledger-negative"},
+    {"id": "T-G0-012", "scenario_id": "SCN-G0-012", "name": "digest-provenance-negative"},
+    {"id": "T-G0-013", "scenario_id": "SCN-G0-013", "name": "source-preflight-negative"},
+    {"id": "T-G0-014", "scenario_id": "SCN-G0-014", "name": "runner-finalization"},
+    {"id": "T-G0-015", "scenario_id": "SCN-G0-015", "name": "status-separation-negative"},
+    {"id": "T-G0-016", "scenario_id": "SCN-G0-016", "name": "crosswalk-negative"},
+    {"id": "T-G0-017", "scenario_id": "SCN-G0-017", "name": "visual-metric-negative"},
+    {"id": "T-G0-018", "scenario_id": "SCN-G0-018", "name": "complete-window-soak"},
+    {"id": "T-G0-019", "scenario_id": "SCN-G0-019", "name": "three-production-crates"},
+    {"id": "T-G0-020", "scenario_id": "SCN-G0-020", "name": "documentation-dod"}
+  ],
+  "platform_profiles": [
+    {"id": "PLAT-LOGICAL", "gate_class": "required", "release_level": "GA", "description": "tooling-only logical profile"},
+    {"id": "PLAT-LINUX-SW-GOLDEN", "gate_class": "required", "release_level": "Beta", "description": "deterministic Linux software-renderer golden host"},
+    {"id": "PLAT-MAC-M1-8G", "gate_class": "required", "release_level": "GA", "description": "MacBook Air M1, 8 GiB, SSD, 60 Hz, Metal"},
+    {"id": "PLAT-WIN-I5-8250U-8G", "gate_class": "required", "release_level": "GA", "description": "Windows 11 i5-8250U, 8 GiB, UHD 620, NVMe, 60 Hz, DX12"},
+    {"id": "PLAT-M4-PRO-48G", "gate_class": "trend_only", "release_level": "GA", "description": "development-machine trend profile only"}
+  ],
+  "metric_definitions": [
+    {"id": "MET-VIS-PIXEL-01", "evidence_scope": "scene_local", "required_by_gate": ["G0", "G1", "G2", "G3", "G4", "G5", "G6"], "kind": "visual"},
+    {"id": "MET-VIS-DELTAE-01", "evidence_scope": "scene_local", "required_by_gate": ["G0", "G1", "G2", "G3", "G4", "G5", "G6"], "kind": "visual"},
+    {"id": "MET-VIS-DIP-01", "evidence_scope": "scene_local", "required_by_gate": ["G0", "G1", "G2", "G3", "G4", "G5", "G6"], "kind": "visual"},
+    {"id": "MET-VIS-CONTRAST-01", "evidence_scope": "scene_local", "required_by_gate": ["G0", "G1", "G2", "G3", "G4", "G5", "G6"], "kind": "visual"},
+    {"id": "MET-VIS-MASK-01", "evidence_scope": "scene_local", "required_by_gate": ["G0", "G1", "G2", "G3", "G4", "G5", "G6"], "kind": "visual"},
+    {"id": "MET-VIS-STRUCTURE-01", "evidence_scope": "scene_local", "required_by_gate": ["G0", "G1", "G2", "G3", "G4", "G5", "G6"], "kind": "visual"},
+    {"id": "MET-SOAK-8H-01", "evidence_scope": "shared_nightly", "required_by_gate": ["G4", "G6"], "kind": "soak", "aggregation_scope": "platform"},
+    {"id": "MET-SOAK-24H-01", "evidence_scope": "shared_rc", "required_by_gate": ["G6"], "kind": "soak", "aggregation_scope": "platform"},
+    {"id": "MET-G0-STRIPPED-EXECUTABLE-SIZE-01", "evidence_scope": "shared_nightly", "required_by_gate": ["G0"], "kind": "package", "aggregation_scope": "artifact", "scope_key": "stripped-example-executable", "target_max_mib": 30, "hard_max_mib": 40},
+    {"id": "MET-G0-GZIP-EXECUTABLE-TREND-01", "evidence_scope": "shared_nightly", "required_by_gate": ["G0"], "kind": "package", "aggregation_scope": "artifact", "scope_key": "gzip-example-executable", "trend_only_against_frozen_baseline": true},
+    {"id": "MET-G6-COMPRESSED-DISTRIBUTION-SIZE-01", "evidence_scope": "shared_rc", "required_by_gate": ["G6"], "kind": "package", "aggregation_scope": "artifact", "scope_key": "signed-compressed-distribution", "target_max_mib": 20, "hard_max_mib": 28},
+    {"id": "MET-INSTALL-ROLLBACK-01", "evidence_scope": "shared_rc", "required_by_gate": ["G6"], "kind": "release", "aggregation_scope": "artifact", "scope_key": "installable-release-artifact"},
+    {"id": "MET-GPU-RESOURCE-01", "evidence_scope": "shared_nightly", "required_by_gate": ["G4", "G6"], "kind": "performance", "aggregation_scope": "platform"},
+    {"id": "MET-LOW-SPEC-MATRIX-01", "evidence_scope": "shared_nightly", "required_by_gate": ["G0", "G6"], "kind": "performance", "aggregation_scope": "platform"}
+  ],
+  "matrix_sets": [
+    {"id": "CELLSET-G0-L1", "test_ids": ["T-G0-001", "T-G0-002", "T-G0-010", "T-G0-011", "T-G0-012", "T-G0-013", "T-G0-014", "T-G0-015", "T-G0-016", "T-G0-019"], "dimensions": {"layer": ["L1"], "platform_profile_id": ["PLAT-LOGICAL"], "renderer": ["not_applicable"], "system_scale": [100], "ui_scale": [100], "theme": ["not_applicable"], "locale": ["not_applicable"], "assistive_tech": ["not_applicable"]}},
+    {"id": "CELLSET-G0-L2", "test_ids": ["T-G0-003", "T-G0-004", "T-G0-009", "T-G0-020"], "dimensions": {"layer": ["L2"], "platform_profile_id": ["PLAT-LOGICAL"], "renderer": ["not_applicable"], "system_scale": [100], "ui_scale": [100], "theme": ["light"], "locale": ["en-US"], "assistive_tech": ["not_applicable"]}},
+    {"id": "CELLSET-G0-L3-VIS", "test_ids": ["T-G0-006", "T-G0-017"], "metric_ids": ["MET-VIS-PIXEL-01", "MET-VIS-DELTAE-01", "MET-VIS-DIP-01", "MET-VIS-CONTRAST-01", "MET-VIS-MASK-01", "MET-VIS-STRUCTURE-01"], "dimensions": {"layer": ["L3"], "platform_profile_id": ["PLAT-LINUX-SW-GOLDEN"], "renderer": ["tiny-skia"], "system_scale": [100, 125, 150, 200], "ui_scale": [100, 125, 150], "theme": ["light", "dark"], "locale": ["zh-CN", "en-US"], "assistive_tech": ["not_applicable"]}},
+    {"id": "CELLSET-G0-L4-MAC-VIS", "test_ids": ["T-G0-007"], "metric_ids": ["MET-VIS-PIXEL-01", "MET-VIS-DELTAE-01", "MET-VIS-DIP-01", "MET-VIS-CONTRAST-01", "MET-VIS-MASK-01", "MET-VIS-STRUCTURE-01"], "dimensions": {"layer": ["L4"], "platform_profile_id": ["PLAT-MAC-M1-8G"], "renderer": ["wgpu-metal"], "system_scale": [100, 125, 150, 200], "ui_scale": [100, 125, 150], "theme": ["light", "dark"], "locale": ["zh-CN", "en-US"], "assistive_tech": ["not_applicable"]}},
+    {"id": "CELLSET-G0-L4-WIN-VIS", "test_ids": ["T-G0-007"], "metric_ids": ["MET-VIS-PIXEL-01", "MET-VIS-DELTAE-01", "MET-VIS-DIP-01", "MET-VIS-CONTRAST-01", "MET-VIS-MASK-01", "MET-VIS-STRUCTURE-01"], "dimensions": {"layer": ["L4"], "platform_profile_id": ["PLAT-WIN-I5-8250U-8G"], "renderer": ["wgpu-dx12"], "system_scale": [100, 125, 150, 200], "ui_scale": [100, 125, 150], "theme": ["light", "dark"], "locale": ["zh-CN", "en-US"], "assistive_tech": ["not_applicable"]}},
+    {"id": "CELLSET-G0-L4-MAC-INFRA", "test_ids": ["T-G0-002", "T-G0-004", "T-G0-009"], "dimensions": {"layer": ["L4"], "platform_profile_id": ["PLAT-MAC-M1-8G"], "renderer": ["wgpu-metal"], "system_scale": [100], "ui_scale": [100], "theme": ["light"], "locale": ["zh-CN"], "assistive_tech": ["not_applicable"]}},
+    {"id": "CELLSET-G0-L4-MAC-PERF", "test_ids": ["T-G0-008"], "metric_ids": ["MET-G0-STRIPPED-EXECUTABLE-SIZE-01", "MET-G0-GZIP-EXECUTABLE-TREND-01", "MET-LOW-SPEC-MATRIX-01"], "dimensions": {"layer": ["L4"], "platform_profile_id": ["PLAT-MAC-M1-8G"], "renderer": ["wgpu-metal"], "system_scale": [100], "ui_scale": [100], "theme": ["light"], "locale": ["zh-CN"], "assistive_tech": ["not_applicable"]}},
+    {"id": "CELLSET-G0-L4-MAC-A11Y", "test_ids": ["T-G0-005"], "dimensions": {"layer": ["L4"], "platform_profile_id": ["PLAT-MAC-M1-8G"], "renderer": ["wgpu-metal"], "system_scale": [100], "ui_scale": [100], "theme": ["light"], "locale": ["zh-CN"], "assistive_tech": ["VoiceOver"]}},
+    {"id": "CELLSET-G0-L4-WIN-INFRA", "test_ids": ["T-G0-002", "T-G0-004", "T-G0-009"], "dimensions": {"layer": ["L4"], "platform_profile_id": ["PLAT-WIN-I5-8250U-8G"], "renderer": ["wgpu-dx12"], "system_scale": [100], "ui_scale": [100], "theme": ["light"], "locale": ["zh-CN"], "assistive_tech": ["not_applicable"]}},
+    {"id": "CELLSET-G0-L4-WIN-PERF", "test_ids": ["T-G0-008"], "metric_ids": ["MET-G0-STRIPPED-EXECUTABLE-SIZE-01", "MET-G0-GZIP-EXECUTABLE-TREND-01", "MET-LOW-SPEC-MATRIX-01"], "dimensions": {"layer": ["L4"], "platform_profile_id": ["PLAT-WIN-I5-8250U-8G"], "renderer": ["wgpu-dx12"], "system_scale": [100], "ui_scale": [100], "theme": ["light"], "locale": ["zh-CN"], "assistive_tech": ["not_applicable"]}},
+    {"id": "CELLSET-G0-L4-WIN-A11Y", "test_ids": ["T-G0-005"], "dimensions": {"layer": ["L4"], "platform_profile_id": ["PLAT-WIN-I5-8250U-8G"], "renderer": ["wgpu-dx12"], "system_scale": [100], "ui_scale": [100], "theme": ["light"], "locale": ["zh-CN"], "assistive_tech": ["Narrator"]}}
+  ],
+  "future_non_required_cellsets": [
+    {"id": "CELLSET-G0-L4-MAC-SOAK", "test_ids": ["T-G0-018"], "metric_ids": ["MET-SOAK-8H-01", "MET-SOAK-24H-01"], "dimensions": {"layer": ["L4"], "platform_profile_id": ["PLAT-MAC-M1-8G"], "renderer": ["wgpu-metal"], "system_scale": [100], "ui_scale": [100], "theme": ["light"], "locale": ["zh-CN"], "assistive_tech": ["not_applicable"]}, "future_gate_boundary": {"status": "future_non_required", "not_required_by_gate": ["G0"], "required_by_gate": ["G4", "G6"], "reason": "Soak metrics are retained as later-gate boundary only and do not expand into G0 required cells."}},
+    {"id": "CELLSET-G0-L4-WIN-SOAK", "test_ids": ["T-G0-018"], "metric_ids": ["MET-SOAK-8H-01", "MET-SOAK-24H-01"], "dimensions": {"layer": ["L4"], "platform_profile_id": ["PLAT-WIN-I5-8250U-8G"], "renderer": ["wgpu-dx12"], "system_scale": [100], "ui_scale": [100], "theme": ["light"], "locale": ["zh-CN"], "assistive_tech": ["not_applicable"]}, "future_gate_boundary": {"status": "future_non_required", "not_required_by_gate": ["G0"], "required_by_gate": ["G4", "G6"], "reason": "Soak metrics are retained as later-gate boundary only and do not expand into G0 required cells."}}
+  ]
+}

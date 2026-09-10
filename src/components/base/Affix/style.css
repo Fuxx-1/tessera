@@ -1,0 +1,42 @@
+.c-affix {
+  position: sticky;
+  top: var(--c-affix-offset-top, auto);
+  bottom: var(--c-affix-offset-bottom, auto);
+  z-index: 100;
+  min-width: 0;
+  transition:
+    background-color var(--ct-motion-fast) ease,
+    border-color var(--ct-motion-fast) ease,
+    box-shadow var(--ct-motion-fast) ease;
+}
+
+.c-affix--bottom {
+  top: auto;
+}
+
+.c-affix--top {
+  bottom: auto;
+}
+
+.c-affix--disabled {
+  position: static;
+}
+
+.c-affix--affixed,
+.c-affix[data-affixed="true"] {
+  background: var(--ct-surface-glass);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--ct-shadow-hairline);
+}
+
+@media (max-width: 640px) {
+  .c-affix--mobile-sticky {
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-affix {
+    transition: none;
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "broker_requests": [],
+  "case_id": "REJECT-EXECUTABLE-CONTENT",
+  "expect": {
+    "codes": [
+      "HTML_TAG",
+      "EVENT_HANDLER",
+      "LIVE_INPUT",
+      "SCRIPT_INPUT",
+      "RAW_SVG",
+      "FOREIGN_OBJECT",
+      "SHADER_INPUT",
+      "SAFE_IR_FORBIDDEN_KEY"
+    ],
+    "verdict": "BLOCKED"
+  },
+  "input": {
+    "declared_byte_length": 153,
+    "media_type": "text/markdown",
+    "text": "&lt;svg onload=alert(1)&gt;&lt;foreignObject&gt;&lt;/foreignObject&gt;&lt;/svg&gt;\n```runsplash\nscript_mod! { live_design! { shader: fn pixel(){} } }\n```"
+  },
+  "operation": "markdown_to_safe_ir",
+  "resources": [],
+  "runtime_constraints": {
+    "external_actions_outside_broker": 0,
+    "forbidden_runtime_paths": [
+      "ScriptVm"
+    ],
+    "ui_thread_sync_io_bytes": 0,
+    "ui_thread_sync_io_operations": 0
+  },
+  "safe_ir": {
+    "kind": "markdown_document",
+    "links": [],
+    "max_depth": 2,
+    "node_count": 1,
+    "raw_svg": "<svg><foreignObject></foreignObject></svg>",
+    "resource_counters": {
+      "dom_node_count": 1,
+      "external_resource_count": 0,
+      "raw_svg_count": 1,
+      "script_count": 1,
+      "shader_count": 1
+    }
+  },
+  "schema_version": "tessera.makepad.security.fixture/v1",
+  "task": {
+    "active_generation": 1,
+    "cancelled": false,
+    "deadline_ms": 3500,
+    "elapsed_ms": 9,
+    "generation": 1,
+    "timed_out": false
+  },
+  "trust_boundary": {
+    "may_accept_raw_svg": false,
+    "may_accept_shader": false,
+    "may_create_live": false,
+    "may_execute_js": false,
+    "may_execute_script": false,
+    "may_use_dom": false,
+    "source": "remote_document"
+  }
+}

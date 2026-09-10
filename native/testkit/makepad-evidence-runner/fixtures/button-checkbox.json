@@ -1,0 +1,13 @@
+{
+  "fixture_id": "button-checkbox",
+  "profile": "button-checkbox-switch",
+  "required_events": [
+    "focus",
+    "enter",
+    "space",
+    "toggle",
+    "disabled-state",
+    "ax-state"
+  ],
+  "notes": "Contract fixture only; interaction and AX artifacts must be captured from a real runtime."
+}

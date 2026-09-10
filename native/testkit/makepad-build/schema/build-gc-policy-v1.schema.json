@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tessera/build-gc-policy/v1",
+  "title": "Tessera Makepad build cache GC policy",
+  "type": "object",
+  "required": ["schema_version", "min_free_bytes", "min_free_percent", "failed_grace_seconds", "successful_profiles_per_key", "ssd_preferred", "quarantine_required"],
+  "properties": {
+    "schema_version": {"const": "tessera/build-gc-policy/v1"},
+    "min_free_bytes": {"type": "integer", "minimum": 0},
+    "min_free_percent": {"type": "number", "minimum": 0, "maximum": 100},
+    "failed_grace_seconds": {"type": "integer", "minimum": 0},
+    "successful_profiles_per_key": {"type": "integer", "minimum": 1},
+    "ssd_preferred": {"type": "boolean"},
+    "quarantine_required": {"type": "boolean"}
+  },
+  "additionalProperties": false
+}

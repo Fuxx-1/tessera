@@ -1,0 +1,52 @@
+.c-heatmap__cell {
+  stroke: var(--chart-surface);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.c-heatmap__cell--missing {
+  stroke: var(--chart-grid-strong);
+  stroke-dasharray: 4 3;
+}
+
+.c-heatmap__aggregate-count {
+  color: var(--chart-text-subtle);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.c-heatmap__x-labels text,
+.c-heatmap__y-labels text {
+  text-anchor: end;
+}
+
+.c-heatmap__legend text {
+  fill: var(--chart-text-muted);
+  font-size: 12px;
+  font-weight: 620;
+}
+
+.c-heatmap__legend text:last-child {
+  text-anchor: end;
+}
+
+.c-heatmap__table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  border-top: 1px solid var(--chart-border-subtle);
+  -webkit-overflow-scrolling: touch;
+}
+
+.c-heatmap__table {
+  min-width: 520px;
+}
+
+.c-heatmap__table th,
+.c-heatmap__table td {
+  text-align: right;
+}
+
+.c-heatmap__table th:first-child,
+.c-heatmap__table td:first-child {
+  text-align: left;
+}

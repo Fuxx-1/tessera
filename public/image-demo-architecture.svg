@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-labelledby="title desc">
+  <title id="title">Angular concrete building facade</title>
+  <desc id="desc">A neutral geometric facade with window cutouts and warm daylight.</desc>
+  <rect width="900" height="675" fill="#e8e5dc"/>
+  <path d="M96 610 258 70h484L582 610z" fill="#c9c7be"/>
+  <path d="M185 610 332 130h344L530 610z" fill="#f5f1e6"/>
+  <g fill="#4d5e68">
+    <path d="M352 176h92l-28 86h-91z"/>
+    <path d="M482 176h92l-28 86h-92z"/>
+    <path d="M315 306h92l-28 86h-92z"/>
+    <path d="M446 306h92l-28 86h-92z"/>
+    <path d="M278 436h92l-28 86h-92z"/>
+    <path d="M409 436h92l-28 86h-92z"/>
+  </g>
+  <path d="M0 608h900v67H0z" fill="#757a72"/>
+</svg>

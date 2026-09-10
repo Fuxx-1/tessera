@@ -1,0 +1,137 @@
+name: Release
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing annotated version tag
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: release-${{ inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+env:
+  CARGO_TERM_COLOR: always
+  CARGO_INCREMENTAL: '0'
+jobs:
+  source-safety:
+    runs-on: ubuntu-24.04
+    outputs:
+      tag: ${{ steps.version.outputs.tag }}
+      revision: ${{ steps.version.outputs.revision }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag || github.ref_name }}
+          fetch-depth: 0
+      - name: Validate annotated tag and versions
+        id: version
+        env:
+          RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+        run: node scripts/validate-release.mjs
+      - run: node --test scripts/public-release-scan.test.mjs
+      - run: node scripts/public-release-scan.mjs --history
+      - run: git diff --check
+  libraries:
+    needs: source-safety
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.source-safety.outputs.revision }}
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.2.21'
+      - uses: actions/cache@v4
+        with:
+          path: ~/.bun/install/cache
+          key: bun-${{ runner.os }}-${{ hashFiles('bun.lock') }}
+      - run: bun install --frozen-lockfile
+      - run: bun run build
+      - run: bun run build:library
+      - run: bun run scan:deps
+      - run: node scripts/public-release-scan.mjs --dir dist-library
+      - name: Package libraries
+        env:
+          RELEASE_TAG: ${{ needs.source-safety.outputs.tag }}
+        run: |
+          mkdir -p release-assets
+          npm pack ./dist-library --pack-destination release-assets
+          git archive --format=tar.gz --prefix=tessera-native-sdk/ -o release-assets/tessera-native-sdk.tar.gz HEAD native design LICENSE docs/component-library.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: libraries
+          path: release-assets/*
+          if-no-files-found: error
+  native:
+    needs: source-safety
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: macos-arm64
+            runner: macos-15
+          - platform: macos-x64
+            runner: macos-15-intel
+          - platform: linux-x64
+            runner: ubuntu-22.04
+          - platform: windows-x64
+            runner: windows-2022
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.source-safety.outputs.revision }}
+      - if: runner.os == 'Linux'
+        run: bash scripts/install-linux-deps.sh
+      - name: External build cache
+        shell: bash
+        run: echo "CARGO_TARGET_DIR=$RUNNER_TEMP/tessera-target" >> "$GITHUB_ENV"
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: 1.88.0
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: native -> ${{ env.CARGO_TARGET_DIR }}
+          shared-key: ${{ matrix.platform }}-rust188
+      - name: Configure portable compiler paths
+        shell: bash
+        run: |
+          echo "RUSTFLAGS=--remap-path-prefix=$GITHUB_WORKSPACE=/tessera --remap-path-prefix=$HOME=/builder" >> "$GITHUB_ENV"
+      - run: cargo test --manifest-path native/Cargo.toml --locked --workspace
+      - run: cargo build --manifest-path native/Cargo.toml --locked --release -p tessera-gallery
+      - name: Package application
+        env:
+          RELEASE_TAG: ${{ needs.source-safety.outputs.tag }}
+          RELEASE_PLATFORM: ${{ matrix.platform }}
+        run: python scripts/package-native-release.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: native-${{ matrix.platform }}
+          path: release-assets/*
+          if-no-files-found: error
+  publish:
+    needs: [source-safety, libraries, native]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.source-safety.outputs.revision }}
+      - uses: actions/download-artifact@v4
+        with:
+          path: release-assets
+          merge-multiple: true
+      - name: Checksums
+        working-directory: release-assets
+        run: sha256sum * > SHA256SUMS
+      - name: Publish preview
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ needs.source-safety.outputs.tag }}
+        run: |
+          gh release create "$RELEASE_TAG" release-assets/* --repo "$GITHUB_REPOSITORY" --verify-tag --prerelease --title "Tessera $RELEASE_TAG (Preview)" --notes-file docs/release-notes.md

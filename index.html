@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <script>
+      // 应用挂载前先确定主题，避免暗色用户出现亮色闪烁（FOUC）。
+      (function () {
+        try {
+          var saved = localStorage.getItem("tessera-theme");
+          var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.dataset.theme =
+            saved === "light" || saved === "dark" ? saved : prefersDark ? "dark" : "light";
+        } catch (e) {}
+      })();
+    </script>
+    <title>Tessera</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

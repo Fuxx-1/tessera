@@ -1,0 +1,85 @@
+.c-divider {
+  --c-divider-line: var(--c-config-color-border, var(--ct-border));
+  --c-divider-label: var(--c-config-color-text-subtle, var(--ct-text-tertiary));
+  --c-divider-label-plain: var(--c-config-color-text-muted, var(--ct-text-secondary));
+  --c-divider-margin: 16px;
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: 1px;
+  margin: var(--c-divider-margin) 0;
+  border: 0;
+  background: var(--c-divider-line);
+}
+
+.c-divider--vertical {
+  display: inline-block;
+  width: 1px;
+  min-width: 1px;
+  max-width: 1px;
+  height: 1.1em;
+  margin: 0 var(--c-divider-margin);
+  vertical-align: middle;
+}
+
+.c-divider--dashed {
+  background: repeating-linear-gradient(90deg, var(--c-divider-line) 0 6px, transparent 6px 10px);
+}
+
+.c-divider--vertical.c-divider--dashed {
+  background: repeating-linear-gradient(180deg, var(--c-divider-line) 0 6px, transparent 6px 10px);
+}
+
+.c-divider--with-label {
+  display: grid;
+  grid-template-columns: minmax(18px, 1fr) minmax(0, auto) minmax(18px, 1fr);
+  align-items: center;
+  gap: 10px;
+  height: auto;
+  min-height: 18px;
+  background: transparent;
+  color: var(--c-divider-label);
+  font-size: 12px;
+  font-weight: 620;
+  line-height: 1.4;
+}
+
+.c-divider--with-label > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.c-divider--with-label::before,
+.c-divider--with-label::after {
+  content: "";
+  height: 1px;
+  background: var(--c-divider-line);
+}
+
+.c-divider--with-label.c-divider--dashed::before,
+.c-divider--with-label.c-divider--dashed::after {
+  background: repeating-linear-gradient(90deg, var(--c-divider-line) 0 6px, transparent 6px 10px);
+}
+
+.c-divider--plain {
+  color: var(--c-divider-label-plain);
+  font-weight: 520;
+}
+
+.c-divider--start {
+  grid-template-columns: minmax(18px, 0.18fr) minmax(0, auto) minmax(18px, 1fr);
+}
+
+.c-divider--start > span {
+  text-align: left;
+}
+
+.c-divider--end {
+  grid-template-columns: minmax(18px, 1fr) minmax(0, auto) minmax(18px, 0.18fr);
+}
+
+.c-divider--end > span {
+  text-align: right;
+}

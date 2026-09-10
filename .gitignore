@@ -1,0 +1,68 @@
+# Dependency installs and package-manager caches. Keep bun.lock under version control.
+/node_modules/
+/.bun/
+/.pnp.*
+.yarn/cache/
+.yarn/unplugged/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+bun-debug.log*
+
+# Rebuildable Web output and incremental compiler state.
+/dist/
+/dist-library/
+/release-assets/
+/output/
+/.vite/
+/.cache/
+/.eslintcache
+/coverage/
+/playwright-report/
+/test-results/
+*.tsbuildinfo
+*.log
+
+# Native build, profile, and benchmark output. Keep Cargo.lock when native work starts.
+/target/
+/native/target/
+/native/dist/
+/native/.cargo/registry/
+/native/.cargo/git/
+/benchmark-results/
+*.dSYM/
+*.profraw
+*.profdata
+
+# Root-level temporary, render-audit, and evidence material. These are regenerated.
+/tmp/
+/tmp-*/
+/.tmp-*/
+/.tessera-evidence/
+/evidence/
+/artifacts/
+/screenshots/
+
+# Local configuration and operating-system metadata.
+.env
+.env.*
+!.env.example
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Existing zero-byte malformed temporary filename in the audited source tree.
+/\}))
+# G0 integration append: reproducibility and generated-artifact exclusions.
+# Apply this complete block once through the declared G record; do not rewrite prior lines.
+/cache/
+/.app/
+__pycache__/
+*.py[cod]
+*.ttf
+*.otf
+*.ttc
+*.woff
+*.woff2
+*.eot

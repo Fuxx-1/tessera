@@ -1,0 +1,10 @@
+{
+  "fixture_id": "shell-basic",
+  "profile": "basic-shell",
+  "required_visible_content": [
+    "shell chrome",
+    "focusable primary action",
+    "idle frame"
+  ],
+  "notes": "Small manifest fixture only; not runtime evidence."
+}

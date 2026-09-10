@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tessera full-native GUI capture hook result",
+  "type": "object",
+  "required": ["schema_version", "scenario_id", "status", "evidence"],
+  "properties": {
+    "schema_version": {"const": "tessera.full-native.capture/v1"},
+    "scenario_id": {"type": "string", "minLength": 1},
+    "status": {"const": "captured"},
+    "capture_png": {"type": "string"},
+    "geometry_json": {"type": "string"},
+    "evidence": {
+      "type": "object",
+      "required": ["evidence_id", "revision", "capture_kind"],
+      "properties": {
+        "evidence_id": {"type": "string", "minLength": 1},
+        "revision": {"type": "string", "minLength": 1},
+        "capture_kind": {"const": "gui"},
+        "assertion_facts": {
+          "description": "One observed GUI fact for every assertion requested by the scene. A blocked or missing fact leaves the scene blocked.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["assertion", "status"],
+            "properties": {
+              "assertion": {"type": "string", "minLength": 1},
+              "status": {"type": "string"},
+              "facts": {"type": "object"},
+              "reason": {"type": "string"}
+            },
+            "additionalProperties": true
+          }
+        },
+        "blocked_capabilities": {"type": "array", "items": {"type": "string"}},
+        "keyboard_trace": {"type": "object"},
+        "ax_snapshot": {"type": "object"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,106 @@
+.c-sparkline {
+  --sparkline-height: 52px;
+  --sparkline-width: 220px;
+  gap: 6px;
+}
+
+.c-sparkline--compact {
+  width: min(100%, 260px);
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.c-sparkline--compact .c-chart__body {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--sparkline-height);
+  overflow: hidden;
+  padding: 0;
+}
+
+.c-sparkline--compact .c-chart__svg--sparkline {
+  flex: 1 1 128px;
+  width: var(--sparkline-width);
+  height: var(--sparkline-height);
+  min-width: 96px;
+}
+
+.c-sparkline--xs {
+  --sparkline-height: 36px;
+  --sparkline-width: 180px;
+}
+
+.c-sparkline--xs .c-chart__svg--sparkline {
+  max-height: 40px;
+}
+
+.c-sparkline--sm {
+  --sparkline-height: 52px;
+}
+
+.c-sparkline--sm .c-chart__svg--sparkline {
+  max-height: 58px;
+}
+
+.c-sparkline--md {
+  --sparkline-height: 80px;
+}
+
+.c-sparkline--md .c-chart__svg--sparkline {
+  max-height: 88px;
+}
+
+.c-sparkline__baseline {
+  stroke: var(--chart-grid-strong);
+  stroke-dasharray: 4 4;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.c-sparkline__endpoint {
+  stroke: var(--ct-text-on-accent);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.c-sparkline__bar {
+  opacity: 0.88;
+  shape-rendering: crispEdges;
+}
+
+.c-sparkline__trend-label {
+  flex: 0 0 auto;
+  max-width: 72px;
+  overflow: hidden;
+  color: var(--chart-text-muted);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.b-mini-chart-card .c-sparkline--compact {
+  width: 100%;
+}
+
+.b-mini-chart-card .c-sparkline--compact .c-chart__body {
+  width: 100%;
+}
+
+.b-mini-chart-card .c-sparkline__trend-label {
+  flex: 0 1 46px;
+  min-width: 0;
+}
+
+@media (max-width: 430px) {
+.c-sparkline--compact .c-chart__body {
+    gap: 6px;
+  }
+
+.c-sparkline--compact .c-chart__svg--sparkline {
+    min-width: 88px;
+  }
+}

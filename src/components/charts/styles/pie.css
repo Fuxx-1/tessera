@@ -1,0 +1,42 @@
+.c-chart__pie path {
+  stroke: var(--ct-surface);
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  transition: opacity var(--ct-motion-fast) ease;
+  transform-origin: center;
+}
+
+.c-chart__pie path:hover {
+  opacity: 0.85;
+}
+
+.c-chart__pie-hole {
+  fill: var(--ct-surface);
+}
+
+.c-chart__legend-label {
+  fill: var(--ct-text-secondary);
+  font-family: var(--ct-font-sans);
+  font-size: var(--ct-text-sm);
+}
+
+.c-chart__legend-value {
+  fill: var(--ct-text);
+  font-family: var(--ct-font-sans);
+  font-size: var(--ct-text-sm);
+  font-weight: var(--ct-weight-medium);
+  font-variant-numeric: tabular-nums;
+  text-anchor: end;
+}
+
+.c-chart__legend-more {
+  fill: var(--ct-text-tertiary);
+  font-family: var(--ct-font-sans);
+  font-size: var(--ct-text-xs);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-chart__pie path {
+    transition: none;
+  }
+}

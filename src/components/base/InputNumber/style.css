@@ -1,0 +1,198 @@
+.c-number-field {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.c-number-field__control {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: stretch;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: var(--ct-control-height);
+  overflow: hidden;
+  border: 1px solid var(--ct-border);
+  border-radius: var(--ct-radius-md);
+  background: var(--ct-surface);
+  transition:
+    border-color var(--ct-motion-fast) ease,
+    background-color var(--ct-motion-fast) ease;
+}
+
+.c-number-field__control--with-buttons {
+  grid-template-columns: auto minmax(0, 1fr) auto 24px;
+}
+
+.c-number-field__control:hover {
+  border-color: var(--ct-border-heavy);
+}
+
+.c-number-field__control:has(.c-number-field__input:focus-visible),
+.c-number-field__control:focus-within {
+  border-color: var(--ct-accent);
+  outline: 2px solid var(--ct-focus-ring);
+  outline-offset: 2px;
+}
+
+.c-number-field--error .c-number-field__control {
+  border-color: var(--ct-danger-border);
+}
+
+.c-number-field--error .c-number-field__control:has(.c-number-field__input:focus-visible),
+.c-number-field--error .c-number-field__control:focus-within {
+  border-color: var(--ct-danger);
+  outline-color: var(--ct-danger);
+}
+
+.c-number-field--disabled .c-number-field__control {
+  border-color: var(--ct-border-light);
+  background: var(--ct-surface-muted);
+  cursor: not-allowed;
+}
+
+.c-number-field--readonly .c-number-field__control {
+  background: var(--ct-surface-muted);
+}
+
+.c-number-field .c-number-field__input {
+  grid-column: 2;
+  min-width: 0;
+  min-height: calc(var(--ct-control-height) - 2px);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  outline: 0;
+}
+
+.c-number-field .c-number-field__input:focus-visible {
+  outline: 0;
+}
+
+.c-number-field .c-number-field__input:disabled {
+  border: 0;
+  background: transparent;
+  color: var(--ct-text-disabled);
+}
+
+.c-number-field .c-number-field__input:read-only {
+  border: 0;
+  background: transparent;
+}
+
+.c-number-field__affix {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  max-width: min(36%, 11rem);
+  overflow: hidden;
+  color: var(--ct-text-tertiary);
+  font-size: 13px;
+  line-height: 1;
+  pointer-events: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.c-number-field__prefix {
+  grid-column: 1;
+  padding-inline-start: 12px;
+  padding-inline-end: 2px;
+}
+
+.c-number-field__suffix {
+  grid-column: 3;
+  padding-inline-start: 2px;
+  padding-inline-end: 10px;
+}
+
+.c-number-field__buttons {
+  grid-column: 4;
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  width: 24px;
+  min-width: 24px;
+  min-height: 100%;
+}
+
+.c-number-field__buttons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ct-text-tertiary);
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+  opacity: 0;
+  transition:
+    opacity var(--ct-motion-fast) ease,
+    background-color var(--ct-motion-fast) ease,
+    color var(--ct-motion-fast) ease;
+  touch-action: manipulation;
+}
+
+.c-number-field__control:hover .c-number-field__buttons button,
+.c-number-field__control:focus-within .c-number-field__buttons button,
+.c-number-field__buttons button:focus-visible {
+  opacity: 1;
+}
+
+.c-number-field__buttons button:hover:not(:disabled) {
+  background: var(--ct-surface-hover);
+  color: var(--ct-text);
+}
+
+.c-number-field__buttons button:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid var(--ct-focus-ring);
+  outline-offset: -2px;
+}
+
+.c-number-field__buttons button:disabled {
+  color: var(--ct-text-disabled);
+  cursor: not-allowed;
+}
+
+@media (max-width: 760px), (pointer: coarse) {
+  .c-number-field__control {
+    min-height: var(--ct-control-height-lg);
+  }
+
+  .c-number-field .c-number-field__input {
+    min-height: calc(var(--ct-control-height-lg) - 2px);
+    font-size: 16px;
+  }
+
+  .c-number-field__control--with-buttons {
+    grid-template-columns: auto minmax(0, 1fr) auto 44px;
+  }
+
+  .c-number-field__buttons {
+    width: 44px;
+    min-width: 44px;
+  }
+
+  .c-number-field__buttons button {
+    min-width: 44px;
+    min-height: 22px;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-number-field__control,
+  .c-number-field__buttons button {
+    transition: none;
+  }
+}

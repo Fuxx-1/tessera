@@ -1,0 +1,157 @@
+.c-mind-map__links path {
+  fill: none;
+  opacity: 0.58;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.c-mind-map .c-chart__body {
+  display: grid;
+  gap: 8px;
+}
+
+.c-mind-map.c-chart--has-state .c-chart__svg {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c-mind-map__viewbar {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  gap: 4px;
+  padding: 3px;
+  border: 1px solid var(--chart-grid);
+  border-radius: var(--ct-radius-md);
+  background: color-mix(in srgb, var(--chart-surface) 96%, transparent);
+  box-shadow: var(--chart-shadow);
+}
+
+.c-mind-map__control {
+  display: inline-grid;
+  width: 27px;
+  height: 27px;
+  min-width: 27px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--ct-radius-sm);
+  background: transparent;
+  color: var(--chart-text-muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 720;
+  line-height: 1;
+}
+
+@media (pointer: coarse), (max-width: 760px) {
+.c-mind-map__viewbar {
+    width: min(100%, calc(100vw - 64px));
+    flex-wrap: wrap;
+  }
+
+.c-mind-map__control {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+}
+
+.c-mind-map__control:hover {
+  border-color: var(--chart-border);
+  background: var(--chart-surface-subtle);
+  color: var(--chart-text);
+}
+
+.c-mind-map__control:focus-visible {
+  outline: 2px solid var(--ct-focus-ring);
+  outline-offset: 1px;
+}
+
+.c-mind-map__viewbar-separator {
+  width: 1px;
+  height: 18px;
+  margin: 0 2px;
+  background: var(--chart-grid);
+}
+
+.c-mind-map__zoom-readout {
+  min-width: 39px;
+  color: var(--chart-text-muted);
+  font-size: 11px;
+  font-weight: 680;
+  line-height: 1;
+  text-align: center;
+}
+
+.c-mind-map__viewport {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.c-mind-map .c-chart__svg--mind-map {
+  cursor: grab;
+}
+
+.c-mind-map .c-chart__svg--mind-map[data-panning="true"] {
+  cursor: grabbing;
+}
+
+.c-mind-map__node-box {
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.03));
+  stroke-width: 1.25;
+  vector-effect: non-scaling-stroke;
+}
+
+.c-mind-map__node-label,
+.c-mind-map__node-value,
+.c-mind-map__toggle text {
+  font-family: inherit;
+  pointer-events: none;
+  text-anchor: middle;
+  dominant-baseline: alphabetic;
+}
+
+.c-mind-map__node-label {
+  font-size: 11.5px;
+  font-weight: 680;
+}
+
+.c-mind-map__node-value {
+  fill: var(--ct-text-tertiary);
+  font-size: 10px;
+  font-weight: 590;
+}
+
+.c-mind-map__toggle circle {
+  fill: var(--chart-surface-subtle);
+  stroke: var(--chart-border);
+  stroke-width: 1;
+}
+
+.c-mind-map__toggle text {
+  fill: var(--chart-text-muted);
+  font-size: 12px;
+  font-weight: 760;
+}
+
+.c-mind-map__hit {
+  fill: transparent;
+  outline: none;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.c-mind-map__hit:focus-visible {
+  fill: color-mix(in srgb, var(--ct-focus-ring) 12%, transparent);
+  stroke: var(--ct-focus-ring);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "tessera/makepad-component-manifest-fixtures/v1",
+  "cases": [
+    {
+      "id": "missing-component",
+      "expected_codes": ["MANIFEST_COMPONENT_MISSING"]
+    },
+    {
+      "id": "duplicate-component",
+      "expected_codes": ["MANIFEST_COMPONENT_DUPLICATE"]
+    },
+    {
+      "id": "extra-component",
+      "expected_codes": ["MANIFEST_COMPONENT_EXTRA"]
+    },
+    {
+      "id": "unsealed-verified",
+      "expected_codes": ["MANIFEST_EVIDENCE_SEALED"]
+    },
+    {
+      "id": "old-iced-path",
+      "expected_codes": ["MANIFEST_IMPLEMENTATION"]
+    },
+    {
+      "id": "bad-hash",
+      "expected_codes": ["MANIFEST_EVIDENCE_HASH"]
+    },
+    {
+      "id": "component-preview-path",
+      "expected_codes": ["MANIFEST_FORBIDDEN_FALLBACK"]
+    },
+    {
+      "id": "invalid-state-transition",
+      "expected_codes": ["MANIFEST_STATE_TRANSITION"]
+    }
+  ]
+}

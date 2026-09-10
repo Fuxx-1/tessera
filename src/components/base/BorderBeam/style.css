@@ -1,0 +1,98 @@
+.c-border-beam {
+  --c-border-beam-size: 2px;
+  --c-border-beam-duration: 3600ms;
+  --c-border-beam-delay: 0ms;
+  --c-border-beam-radius: 8px;
+  --c-border-beam-color: rgba(0, 0, 0, 0.72);
+  --c-border-beam-muted-color: rgba(0, 0, 0, 0.1);
+  --c-border-beam-inset: 0px;
+  position: absolute;
+  inset: var(--c-border-beam-inset);
+  z-index: 0;
+  overflow: hidden;
+  border-radius: var(--c-border-beam-radius);
+  box-shadow: inset 0 0 0 1px var(--c-border-beam-muted-color);
+  contain: paint;
+  isolation: isolate;
+  pointer-events: none;
+}
+
+.c-border-beam::before {
+  position: absolute;
+  inset: 0;
+  padding: var(--c-border-beam-size);
+  border-radius: inherit;
+  background:
+    linear-gradient(90deg, transparent 0 36%, var(--c-border-beam-color) 48%, transparent 64%) top left / 240% var(--c-border-beam-size) no-repeat,
+    linear-gradient(180deg, transparent 0 36%, var(--c-border-beam-color) 48%, transparent 64%) top right / var(--c-border-beam-size) 240% no-repeat,
+    linear-gradient(270deg, transparent 0 36%, var(--c-border-beam-color) 48%, transparent 64%) bottom right / 240% var(--c-border-beam-size) no-repeat,
+    linear-gradient(0deg, transparent 0 36%, var(--c-border-beam-color) 48%, transparent 64%) bottom left / var(--c-border-beam-size) 240% no-repeat;
+  content: "";
+  animation: c-border-beam-flow var(--c-border-beam-duration) linear var(--c-border-beam-delay) infinite;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  will-change: background-position;
+}
+
+.c-border-beam--paused::before {
+  animation-play-state: paused;
+}
+
+.c-border-beam--sm {
+  --c-border-beam-size: 1px;
+}
+
+.c-border-beam--lg {
+  --c-border-beam-size: 3px;
+}
+
+.c-border-beam--subtle {
+  --c-border-beam-color: rgba(89, 89, 84, 0.58);
+  --c-border-beam-muted-color: rgba(0, 0, 0, 0.08);
+}
+
+.c-border-beam--contrast {
+  --c-border-beam-color: rgba(0, 0, 0, 0.86);
+  --c-border-beam-muted-color: rgba(0, 0, 0, 0.16);
+}
+
+:root[data-theme="dark"] .c-border-beam,
+.c-config-provider[data-theme="dark"] .c-border-beam {
+  --c-border-beam-color: color-mix(in oklab, var(--ct-text) 72%, transparent);
+  --c-border-beam-muted-color: var(--ct-border);
+}
+
+:root[data-theme="dark"] .c-border-beam--subtle,
+.c-config-provider[data-theme="dark"] .c-border-beam--subtle {
+  --c-border-beam-color: color-mix(in oklab, var(--ct-text) 46%, transparent);
+  --c-border-beam-muted-color: var(--ct-border-light);
+}
+
+:root[data-theme="dark"] .c-border-beam--contrast,
+.c-config-provider[data-theme="dark"] .c-border-beam--contrast {
+  --c-border-beam-color: color-mix(in oklab, var(--ct-text) 86%, transparent);
+  --c-border-beam-muted-color: var(--ct-border-heavy);
+}
+
+@keyframes c-border-beam-flow {
+  0% {
+    background-position: -120% 0, 100% -120%, 220% 100%, 0 220%;
+  }
+
+  100% {
+    background-position: 220% 0, 100% 220%, -120% 100%, 0 -120%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+.c-border-beam::before {
+    animation: none;
+  }
+
+.c-border-beam::before {
+    opacity: 0.62;
+    will-change: auto;
+  }
+}

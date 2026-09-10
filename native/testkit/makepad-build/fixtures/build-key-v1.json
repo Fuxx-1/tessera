@@ -1,0 +1,19 @@
+{
+  "authority": "tessera-makepad-production",
+  "namespace": "production",
+  "source_revision": "0123456789abcdef0123456789abcdef01234567",
+  "toolchain": "rust-1.88.0",
+  "host": "darwin-arm64",
+  "target": ["aarch64-apple-darwin", "aarch64-apple-darwin"],
+  "profile": "release",
+  "features": ["makepad", "default", "makepad"],
+  "renderer": "makepad",
+  "backend": "metal",
+  "lockfile_sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+  "commands": [
+    ["cargo", "build", "--locked", "--release"]
+  ],
+  "environment": [
+    {"name": "CARGO_BUILD_JOBS", "value": "2"}
+  ]
+}

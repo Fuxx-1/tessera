@@ -1,0 +1,13 @@
+{
+  "fixture_id": "keyboard-focus",
+  "profile": "keyboard-focus",
+  "expected_events": [
+    "Tab",
+    "Shift+Tab",
+    "Enter",
+    "Space",
+    "Escape",
+    "focus-return"
+  ],
+  "notes": "Runner contract fixture only; a real keyboard trace must be captured separately."
+}

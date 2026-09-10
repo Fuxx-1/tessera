@@ -1,0 +1,41 @@
+.c-watermark {
+  position: relative;
+  min-width: 0;
+  min-height: 120px;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.c-watermark--empty {
+  min-height: 180px;
+}
+
+.c-watermark__content {
+  position: relative;
+  z-index: 0;
+  min-width: 0;
+}
+
+.c-watermark__layer {
+  position: absolute;
+  inset: 0;
+  z-index: var(--c-watermark-z-index, 1);
+  background-image: var(--c-watermark-image);
+  background-repeat: repeat;
+  background-size: var(--c-watermark-tile-width, 180px) var(--c-watermark-tile-height, 120px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.c-watermark {
+  contain: paint;
+}
+
+.c-watermark__layer {
+  inset: 0;
+  mix-blend-mode: multiply;
+}
+
+:root[data-theme="dark"] .c-watermark__layer {
+    mix-blend-mode: screen;
+  }
