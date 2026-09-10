@@ -1,29 +1,24 @@
-# Tessera Component Libraries
+# Tessera Native SDK
+The Native SDK contains the Rust workspace, pinned Makepad dependency, core
+models, widgets, resources and Gallery integration examples.
+It is distributed as `tessera-native-sdk.tar.gz` in Rust `v*` releases.
 
-The Web release is an ESM React library with TypeScript declarations, component
-styles, and theme tokens. Install the downloaded tarball with your package manager.
-React 19 and React DOM 19 are peer dependencies.
-
-```tsx
-import { Button, Input, LineChart } from "@fuxx-1/tessera";
-import "@fuxx-1/tessera/tokens.css";
-import "@fuxx-1/tessera/components.css";
-```
-
-The native SDK release contains the Rust workspace, locked Makepad revision, core
-contracts, widget library, and Gallery integration examples. Point your Cargo
-dependency at the extracted `native/crates/tessera-makepad` directory, or use:
+Use a released tag or point Cargo to the extracted
+`native/crates/tessera-makepad` directory:
 
 ```toml
 [dependencies]
-tessera-makepad = { git = "https://github.com/Fuxx-1/tessera", tag = "v0.1.0" }
-tessera-core = { git = "https://github.com/Fuxx-1/tessera", tag = "v0.1.0" }
+tessera-makepad = { git = "https://github.com/Fuxx-1/tessera", tag = "v0.1.1" }
+tessera-core = { git = "https://github.com/Fuxx-1/tessera", tag = "v0.1.1" }
 ```
 
-Native hosts call `tessera_makepad::script_mod` during trusted UI registration.
-The Makepad library has no application binary; `tessera-gallery` is the example
-host. The SDK is source distribution, not a stable C ABI or a crates.io publication.
+Hosts call `tessera_makepad::script_mod` during trusted UI registration.
+`tessera-makepad` has no application binary; `tessera-gallery` is the example
+host. This SDK is source distribution, not a stable C ABI or crates.io publication.
 
-These are preview components. Native product acceptance remains blocked pending
-the per-component visual, interaction, accessibility and performance evidence in
-`native/docs/product-acceptance.md`. Build success is not GUI acceptance.
+Native acceptance remains blocked where per-component visual, interaction,
+accessibility and performance evidence is missing. See
+[native acceptance](../native/docs/product-acceptance.md).
+
+The React library is maintained and released independently from
+[codex/web](https://github.com/Fuxx-1/tessera/tree/codex/web).

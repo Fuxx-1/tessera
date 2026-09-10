@@ -1,7 +1,0 @@
-.c-config-provider {
-  display: block;
-  width: 100%;
-  min-width: 0;
-  color: var(--c-config-color-text, var(--ct-text));
-  font-family: var(--c-config-font-sans, inherit);
-}

@@ -1,6 +1,7 @@
 # Tessera Makepad
 
-Tessera Makepad is the native sibling of the Tessera Web component library. The production workspace
+Tessera Makepad is the Rust implementation on the default `main` branch.
+The independent React implementation is on [codex/web](https://github.com/Fuxx-1/tessera/tree/codex/web). The production workspace
 contains exactly three crates:
 
 - `tessera-core`: renderer-independent state, workflow types, and invariants.

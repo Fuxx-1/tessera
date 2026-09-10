@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import tarfile
 import tempfile
+import tomllib
 import zipfile
 
 def run(*args):
@@ -38,7 +39,7 @@ def main():
     tag = os.environ["RELEASE_TAG"]
     if platform not in {"macos-arm64", "macos-x64", "linux-x64", "windows-x64"}:
         raise ValueError("Unknown release platform")
-    version = json.loads(Path("package.json").read_text())["version"]
+    version = tomllib.loads(Path("native/Cargo.toml").read_text())["workspace"]["package"]["version"]
     if tag != "v" + version:
         raise ValueError("Version mismatch")
     target = Path(os.environ["CARGO_TARGET_DIR"]).resolve()

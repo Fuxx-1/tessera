@@ -1,13 +1,17 @@
-Tessera's first public preview includes the native Makepad Gallery and reusable Web and native component libraries.
+This Rust preview contains the Tessera Makepad Gallery and Native SDK.
 
-- macOS 14+ Apple Silicon and Intel: DMG with the application and bundled font notices.
-- Linux x64 (Ubuntu 22.04 or newer): application tarball. Requires a graphical session and system X11/Wayland, EGL/OpenGL and audio libraries.
+- macOS 14+ Apple Silicon and Intel: application DMGs with dependency and font notices.
+- Linux x64 (Ubuntu 22.04 or newer): application tarball, requiring a graphical session and system graphics/audio libraries.
 - Windows x64: application ZIP.
-- Web: install the `fuxx-1-tessera-*.tgz` package with npm, Bun or pnpm. Includes ESM, TypeScript declarations, component CSS and theme tokens.
-- Native: `tessera-native-sdk.tar.gz` includes the Rust workspace, locked Makepad dependency, resources and acceptance contracts.
-- `SHA256SUMS` covers all assets; platform manifests record the source revision, lockfile hash and binary hash.
+- `tessera-native-sdk.tar.gz`: Rust workspace, locked Makepad dependency, resources and acceptance contracts.
+- `SHA256SUMS` and platform manifests: source revision, lockfile and binary hashes.
 
-This is a preview, not a claim that all 101 components have passed visual, interaction, accessibility or performance acceptance. The native acceptance manifest remains blocked where sealed runtime evidence is missing. CI builds and Rust tests do not replace GUI verification.
+Rust is maintained on `main`. The independent React library and browser
+Gallery are on `codex/web`, released under `web-v*` tags.
 
-macOS bundles are ad-hoc signed, not Developer ID signed or notarized; Windows binaries are not Authenticode signed. The operating system may require explicit approval to open them. No automatic updater is installed.
+This is a preview. All 101 components are not asserted to have passed visual,
+interaction, accessibility, performance or runtime security acceptance. Missing
+sealed native evidence remains blocked; CI does not replace GUI verification.
 
+macOS bundles are ad-hoc signed, not Developer ID signed or notarized. Windows
+binaries are unsigned. No automatic updater is installed.
