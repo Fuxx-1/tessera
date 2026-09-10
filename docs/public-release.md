@@ -38,6 +38,11 @@ Windows ZIP creation clamps out-of-range file timestamps to ZIP's supported
 1980-2107 range without changing source files or license contents. Packaging
 regressions run on every native release platform.
 
+Platform provenance hashes `native/Cargo.lock` from the checked-out Git blob,
+not runner worktree bytes. `native/Cargo.lock` is also pinned to LF through
+`.gitattributes`, so a Windows checkout cannot produce a platform-specific
+lockfile digest.
+
 The archive scanner checks unpacked application bytes and notices before
 packaging. Platform manifests contain source revision, Cargo lockfile digest,
 packaged binary digest, compiler version and signing status. They contain no

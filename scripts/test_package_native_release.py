@@ -1,7 +1,9 @@
 """Exercise the actual ZIP writer with dependency-style file timestamps."""
+import hashlib
 import importlib.util
 import os
 from pathlib import Path
+import subprocess
 import tempfile
 import time
 import unittest
@@ -16,6 +18,29 @@ spec.loader.exec_module(package)
 
 
 class WindowsArchiveTests(unittest.TestCase):
+    def test_lockfile_digest_uses_committed_blob_not_worktree_line_endings(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            repository = Path(temporary)
+            lockfile = repository / "native" / "Cargo.lock"
+            lockfile.parent.mkdir()
+            lockfile.write_bytes(b"version = 4\n")
+            subprocess.run(["git", "init", "--quiet", repository], check=True)
+            subprocess.run(["git", "-C", repository, "add", "native/Cargo.lock"], check=True)
+            subprocess.run([
+                "git", "-C", repository, "-c", "user.name=Test", "-c",
+                "user.email=test@example.invalid", "commit", "--quiet", "-m", "fixture",
+            ], check=True)
+            lockfile.write_bytes(b"version = 4\r\n")
+
+            self.assertEqual(
+                package.git_blob_sha("native/Cargo.lock", cwd=repository),
+                hashlib.sha256(b"version = 4\n").hexdigest(),
+            )
+            self.assertNotEqual(
+                package.git_blob_sha("native/Cargo.lock", cwd=repository),
+                hashlib.sha256(lockfile.read_bytes()).hexdigest(),
+            )
+
     def check_timestamp(self, timestamp, expected):
         with tempfile.TemporaryDirectory() as temporary:
             stage = Path(temporary)

@@ -16,6 +16,11 @@ def run(*args):
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
+def git_blob_sha(path, cwd=None):
+    return hashlib.sha256(
+        subprocess.check_output(["git", "show", "HEAD:" + path], cwd=cwd)
+    ).hexdigest()
+
 def archive_info(info):
     info.uid = info.gid = 0
     info.uname = info.gname = ""
@@ -98,7 +103,9 @@ def main():
         manifest = {
             "schema_version": 1, "tag": tag, "platform": platform,
             "source_revision": run("git", "rev-parse", "HEAD"),
-            "cargo_lock_sha256": sha(Path("native/Cargo.lock")),
+            # The release source is the checked-out commit, never its platform-specific
+            # line-ending conversion in a runner worktree.
+            "cargo_lock_sha256": git_blob_sha("native/Cargo.lock"),
             "binary_sha256": sha(packaged),
             "rustc": run("rustc", "--version"),
             "profile": "release-opt2-thin-lto",
